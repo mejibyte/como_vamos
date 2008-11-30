@@ -1,6 +1,6 @@
 class Problem < ActiveRecord::Base
   belongs_to :judge
-
+  has_many :solutions, :dependent => :destroy
 
   validates_presence_of :title, :url, :number, :judge_id
   validates_uniqueness_of :number, :url

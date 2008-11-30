@@ -1,0 +1,18 @@
+<p>
+  <b>Explanation:</b>
+  <%=h @solution.explanation %>
+</p>
+
+<p>
+  <b>Problem:</b>
+  <%=h @solution.problem_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @solution.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_solution_path(@solution) %> |
+<%= link_to 'Back', solutions_path %>

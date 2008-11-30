@@ -13,5 +13,10 @@
 
 
 <div>
-  0 solutions.
+  <%= pluralize @problem.solutions.size, "solution" %>.
+</div>
+
+<div class="bottom_link">
+  <%= link_to image_tag("icons/add.png", :alt => "Add new solution"), new_problem_solution_path(@problem) %>
+  <%= link_to "Add new solution", new_problem_solution_path(@problem) %>
 </div>
