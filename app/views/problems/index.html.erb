@@ -2,13 +2,11 @@
 
 <table>
   <tr>
-    <th>Judge</th>
     <th>Title</th>
     <th>Url</th>
   </tr>
   <% for problem in @problems %>
     <tr>
-      <td><%=h problem.judge_id %></td>
       <td><%=h problem.title %></td>
       <td><%=h problem.url %></td>
       <td><%= link_to "Show", problem %></td>
@@ -17,5 +15,3 @@
     </tr>
   <% end %>
 </table>
-
-<p><%= link_to "New Problem", new_problem_path %></p>

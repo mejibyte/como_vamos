@@ -1,5 +1,5 @@
 body {
-  background-color: #4B7399;
+  background-color: #FFF;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
 }
@@ -10,6 +10,10 @@ a img {
 
 a {
   color: #0000FF;
+}
+
+h1 {
+  color: #003333;
 }
 
 h3, h3 a {
@@ -86,7 +90,7 @@ h3, h3 a {
 }
 
 #main{
-  padding: 0px 50px;
+  padding: 0px 0px;
 }
 
 #container{
@@ -100,31 +104,35 @@ h3, h3 a {
 }
 
 #sidebar {
-           float:left;
-           width:15%;
-           background-color:#ABCDEF;
-           color:black;
-           border: 1px solid black;
+  float:left;
+  width:12%;
+  background-color:#ABCDEF;
+  color:black;
+  border: 1px solid black;
 }
 
 #sidebar h3{
-             padding: 0px 0px 0px 10px;
+  padding: 0px 0px 0px 10px;
 }
 
 
+.hidden {
+ display: none;
+}
 
-.judge {
+
+.list_element {
   border: dashed 1px #AAA;
   padding: 10px;
   margin-top: 10px;
 }
 
-.judge .actions{
+.actions{
   padding: 8px;
   margin-top: 0px;
 }
 
-.judge .actions a{
+.actions a{
   color: #003333;
 }
 

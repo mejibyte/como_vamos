@@ -1,13 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :problems
 
   map.resources :users
-
   map.resource :session
-
-  map.resources :judges
-
-
+  map.resources :judges do |judge|
+    judge.resources :problems, :only => :new
+  end
+  map.resources :problems, :except => :new
   map.root :controller => "home", :action => "index"
 
   # The priority is based upon order of creation: first created -> highest priority.

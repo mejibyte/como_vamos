@@ -2,15 +2,17 @@ class ProblemsController < ApplicationController
   def index
     @problems = Problem.find(:all)
   end
-  
+
   def show
     @problem = Problem.find(params[:id])
   end
-  
+
   def new
+    @judge = Judge.find(params[:judge_id])
     @problem = Problem.new
+    @problem.judge_id = @judge.id
   end
-  
+
   def create
     @problem = Problem.new(params[:problem])
     if @problem.save
@@ -20,11 +22,11 @@ class ProblemsController < ApplicationController
       render :action => 'new'
     end
   end
-  
+
   def edit
     @problem = Problem.find(params[:id])
   end
-  
+
   def update
     @problem = Problem.find(params[:id])
     if @problem.update_attributes(params[:problem])
@@ -34,7 +36,7 @@ class ProblemsController < ApplicationController
       render :action => 'edit'
     end
   end
-  
+
   def destroy
     @problem = Problem.find(params[:id])
     @problem.destroy

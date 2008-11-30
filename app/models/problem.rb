@@ -2,7 +2,8 @@ class Problem < ActiveRecord::Base
   belongs_to :judge
 
 
-  validates_presence_of :title, :url, :judge_id
+  validates_presence_of :title, :url, :number, :judge_id
+  validates_uniqueness_of :number, :url
   validate :url_is_valid
 
   protected

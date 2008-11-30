@@ -1,9 +1,11 @@
 <% form_for @problem do |f| %>
   <%= f.error_messages %>
 
+
+  <%= f.text_field :judge_id, :class => "hidden" %>
   <p>
-    <%= f.label :judge_id %><br />
-    <%= f.text_field :judge_id %>
+    <%= f.label :number %><br />
+    <%= f.text_field :number %>
   </p>
   <p>
     <%= f.label :title %><br />
