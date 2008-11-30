@@ -21,6 +21,11 @@ h3, h3 a {
   font-size: 18px;
 }
 
+h2, h2 a {
+  color: #732F1A;
+  font-size: 20px;
+}
+
 
 .clear {
   clear: both;

@@ -1,6 +1,11 @@
 class ProblemsController < ApplicationController
   def index
-    @problems = Problem.find(:all)
+    @judges = Judge.find(:all)
+    @problems_by_judge = Hash.new
+    for judge in @judges
+      @problems_by_judge[judge] = judge.problems
+    end
+
   end
 
   def show

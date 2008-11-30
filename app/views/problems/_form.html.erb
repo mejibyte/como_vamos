@@ -1,7 +1,9 @@
 <% form_for @problem do |f| %>
   <%= f.error_messages %>
 
-
+  <div>
+    <%= link_to @problem.judge.name, @problem.judge %>
+  </div>
   <%= f.text_field :judge_id, :class => "hidden" %>
   <p>
     <%= f.label :number %><br />

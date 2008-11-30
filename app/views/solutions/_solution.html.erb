@@ -1,0 +1,29 @@
+<div class="list_element">
+  <h3>
+    <%= h "Solution ##{solution_counter + 1}" %>
+    <%= link_to image_tag("icons/pencil.png", :alt => "Edit"), edit_solution_path(solution) %>
+    <%= link_to image_tag("icons/cross.png", :alt =>"Delete"), solution, :confirm => 'Are you sure?', :method => :delete %>
+ </h3>
+  <%=h "Submitted by " %> <%= link_to solution.user.name, solution.user %> <%= h "on #{solution.created_at}" %>
+
+  <div class="list_element">
+    <h4>Explanation</h4>
+    <div>
+      <%= solution.explanation %>
+    </div>
+  </div>
+
+  <div class="list_element">
+    <h4>Source code</h4>
+    <div>
+      <code class="prettyprint">
+        <%= solution.source_code_as_text  %>
+      </code>
+    </div>
+    <div class="bottom_link">
+    <%= link_to image_tag("icons/arrow_down.png", :alt => "Download source"), solution.source_code.url %>
+    <%= link_to "Download source", solution.source_code.url %>
+    </div>
+  </div>
+
+</div>

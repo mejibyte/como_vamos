@@ -1,0 +1,10 @@
+<div class="list_element">
+  <h3>
+    <%= link_to problem.full_title, problem %>
+    <%= link_to image_tag("icons/world.png", :alt => "Go to problem statement"), problem.url, :target => "_blank" %>
+    <%= link_to image_tag("icons/pencil.png", :alt => "Edit"), edit_problem_path(problem) %>
+    <%= link_to image_tag("icons/cross.png", :alt =>"Delete"), problem, :confirm => 'Are you sure?', :method => :delete %>
+  </h3>
+
+  <%= pluralize problem.solutions.size, "solution" %>.
+</div>

@@ -8,8 +8,8 @@ ActionController::Routing::Routes.draw do |map|
     problem.resources :solutions, :only => :new
   end
 
-
   map.resources :solutions, :except => [:new, :show, :index]
+
   map.root :controller => "home", :action => "index"
 
   map.connect ':controller/:action/:id'

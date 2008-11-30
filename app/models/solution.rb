@@ -19,6 +19,11 @@ class Solution < ActiveRecord::Base
     ["cpp", "cc", "c", "pas", "java"]
   end
 
+  def source_code_as_text
+    filename = source_code.url.gsub(/\?.*/, "")
+    File.read(RAILS_ROOT + "/public/" + filename)
+  end
+
   protected
   def source_code_has_valid_extension
     extension = source_code_file_name.split(".").last.downcase || ""
