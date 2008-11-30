@@ -1,0 +1,20 @@
+<% title "Problem" %>
+
+<p>
+  <strong>Judge:</strong>
+  <%=h @problem.judge_id %>
+</p>
+<p>
+  <strong>Title:</strong>
+  <%=h @problem.title %>
+</p>
+<p>
+  <strong>Url:</strong>
+  <%=h @problem.url %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_problem_path(@problem) %> |
+  <%= link_to "Destroy", @problem, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", problems_path %>
+</p>

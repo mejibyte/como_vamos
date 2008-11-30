@@ -9,10 +9,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081130043634) do
+ActiveRecord::Schema.define(:version => 20081130050007) do
 
   create_table "judges", :force => true do |t|
     t.string   "name"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "problems", :force => true do |t|
+    t.integer  "judge_id"
+    t.string   "title"
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"

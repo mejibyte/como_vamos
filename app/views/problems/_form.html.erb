@@ -1,0 +1,17 @@
+<% form_for @problem do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :judge_id %><br />
+    <%= f.text_field :judge_id %>
+  </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

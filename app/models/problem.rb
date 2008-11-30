@@ -1,8 +1,8 @@
-class Judge < ActiveRecord::Base
+class Problem < ActiveRecord::Base
+  belongs_to :judge
 
-  has_many :problems
 
-  validates_presence_of :name, :url
+  validates_presence_of :title, :url, :judge_id
   validate :url_is_valid
 
   protected
