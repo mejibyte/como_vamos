@@ -12,6 +12,12 @@ a {
   color: #0000FF;
 }
 
+h3, h3 a {
+  color: #E98C08;
+  font-size: 18px;
+}
+
+
 .clear {
   clear: both;
   height: 0px;
@@ -77,4 +83,19 @@ a {
 #errorExplanation ul li {
   font-size: 12px;
   list-style: disc;
+}
+
+.judge {
+  border: dashed 1px #AAA;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.judge .actions{
+  padding: 8px;
+  margin-top: 0px;
+}
+
+.judge .actions a{
+  color: #003333;
 }
