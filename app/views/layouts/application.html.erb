@@ -18,7 +18,19 @@
         <li>
           <%= link_to "Users", users_path %>
         </li>
+
+        <br />
+
+        <li>
+          <% if logged_in? %>
+          <%= link_to "Logout", session_path, :method => :delete %>
+          <% else %>
+          <%= link_to "Login", new_session_path %>
+          <% end %>
+        </li>
       </ul>
+
+
     </div>
 
     <div id="main">
