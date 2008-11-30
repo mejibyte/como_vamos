@@ -5,6 +5,7 @@ class ProblemsController < ApplicationController
 
   def show
     @problem = Problem.find(params[:id])
+    @judge = @problem.judge
   end
 
   def new
@@ -39,8 +40,9 @@ class ProblemsController < ApplicationController
 
   def destroy
     @problem = Problem.find(params[:id])
+    judge = @problem.judge
     @problem.destroy
     flash[:notice] = "Successfully destroyed problem."
-    redirect_to problems_url
+    redirect_to judge_path(judge)
   end
 end

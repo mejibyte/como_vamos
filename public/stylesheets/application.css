@@ -144,3 +144,10 @@ h3, h3 a {
   color: #003333;
 }
 
+.bottom_link{
+  margin-top: 10px;
+}
+
+.left-align{
+  text-align: left;
+}

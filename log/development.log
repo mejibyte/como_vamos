@@ -10659,3 +10659,700 @@ Rendering judges/show
   [4;36;1mSQL (1.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 2) [0m
   [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
 Completed in 69ms (View: 43, DB: 1) | 200 OK [http://127.0.0.1/judges/2]
+
+
+Processing JudgesController#show (for 127.0.0.1 at 2008-11-30 12:49:11) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering judges/show
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 2) [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 94ms (View: 60, DB: 1) | 200 OK [http://127.0.0.1/judges/2]
+
+
+Processing JudgesController#show (for 127.0.0.1 at 2008-11-30 12:49:40) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mJudge Load (0.7ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering judges/show
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 2) [0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 207ms (View: 44, DB: 1) | 200 OK [http://127.0.0.1/judges/2]
+
+
+Processing JudgesController#index (for 127.0.0.1 at 2008-11-30 12:49:46) [GET]
+  [4;36;1mJudge Load (6.9ms)[0m   [0;1mSELECT * FROM "judges" [0m
+Rendering template within layouts/application
+Rendering judges/index
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 2) [0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 3) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 99ms (View: 76, DB: 7) | 200 OK [http://127.0.0.1/judges]
+
+
+Processing JudgesController#show (for 127.0.0.1 at 2008-11-30 12:49:50) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mJudge Load (0.7ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering judges/show
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;35;1mProblem Load (1.2ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 72ms (View: 45, DB: 1) | 200 OK [http://127.0.0.1/judges/7]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 12:49:54) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mProblem Load (0.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 167ms (View: 146, DB: 1) | 200 OK [http://127.0.0.1/problems/9]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 12:50:48) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mProblem Load (1.1ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 50ms (View: 35, DB: 1) | 200 OK [http://127.0.0.1/problems/9]
+
+
+Processing JudgesController#index (for 127.0.0.1 at 2008-11-30 12:50:49) [GET]
+  [4;35;1mJudge Load (1.5ms)[0m   [0mSELECT * FROM "judges" [0m
+Rendering template within layouts/application
+Rendering judges/index
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 2) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 3) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 79ms (View: 62, DB: 1) | 200 OK [http://127.0.0.1/judges]
+
+
+Processing JudgesController#show (for 127.0.0.1 at 2008-11-30 12:50:51) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mJudge Load (1.4ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering judges/show
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;36;1mProblem Load (1.0ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 71ms (View: 44, DB: 1) | 200 OK [http://127.0.0.1/judges/7]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 12:51:06) [GET]
+  Parameters: {"id"=>"10"}
+  [4;36;1mProblem Load (9.4ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 10) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 67ms (View: 42, DB: 9) | 200 OK [http://127.0.0.1/problems/10]
+
+
+Processing JudgesController#show (for 127.0.0.1 at 2008-11-30 12:52:53) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mJudge Load (0.8ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering judges/show
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;36;1mProblem Load (1.0ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 103ms (View: 67, DB: 1) | 200 OK [http://127.0.0.1/judges/7]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 12:52:55) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mProblem Load (0.8ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering problems/show
+
+
+ActionView::TemplateError (undefined method `name' for #<Problem:0xb7004508>) on line #1 of app/views/problems/show.html.erb:
+1: <% title @problem.name %>
+2: 
+3: <div class="actions">
+4:   <%= link_to image_tag("icons/arrow_left.png", :alt => "Back to all problems"), judge_path(@problem.judge) %>
+
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/attribute_methods.rb:260:in `method_missing'
+    app/views/problems/show.html.erb:1
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1248:in `default_render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1254:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (274.3ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (2.0ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 12:53:08) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mProblem Load (1.0ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.name) on line #31 of app/views/problems/show.html.erb:
+28: </p>
+29: 
+30: 
+31: <% title @judge.name %>
+32: 
+33: <div class="actions">
+34:   <%= link_to image_tag("icons/arrow_left.png", :alt => "Back to all judges"), judges_path %>
+
+    app/views/problems/show.html.erb:31
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/renderable.rb:39:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/template.rb:73:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:256:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:367:in `_render_with_layout'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_view/base.rb:254:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1174:in `render_for_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:896:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:868:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1248:in `default_render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1254:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (82.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (1.8ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 12:53:32) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mProblem Load (0.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 78ms (View: 54, DB: 1) | 200 OK [http://127.0.0.1/problems/9]
+
+
+Processing JudgesController#show (for 127.0.0.1 at 2008-11-30 12:53:35) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering judges/show
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;36;1mProblem Load (1.2ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 84ms (View: 62, DB: 1) | 200 OK [http://127.0.0.1/judges/7]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 12:53:36) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mProblem Load (0.9ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;35;1mJudge Load (0.7ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 61ms (View: 46, DB: 1) | 200 OK [http://127.0.0.1/problems/9]
+
+
+Processing ProblemsController#edit (for 127.0.0.1 at 2008-11-30 12:53:39) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mProblem Load (0.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering problems/edit
+Rendered problems/_form (7.8ms)
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 89ms (View: 61, DB: 1) | 200 OK [http://127.0.0.1/problems/9/edit]
+
+
+Processing ProblemsController#update (for 127.0.0.1 at 2008-11-30 12:53:42) [PUT]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "id"=>"9", "problem"=>{"title"=>"Race tracks", "number"=>"298", "url"=>"http://icpcres.ecs.baylor.edu/onlinejudge/external/2/298.html", "judge_id"=>"7"}}
+  [4;35;1mProblem Load (0.9ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 9) [0m
+  [4;36;1mProblem Exists (0.3ms)[0m   [0;1mSELECT "problems".id FROM "problems" WHERE ("problems"."number" = '298' AND "problems".id <> 9) LIMIT 1[0m
+  [4;35;1mProblem Exists (0.3ms)[0m   [0mSELECT "problems".id FROM "problems" WHERE ("problems"."url" = 'http://icpcres.ecs.baylor.edu/onlinejudge/external/2/298.html' AND "problems".id <> 9) LIMIT 1[0m
+Redirected to #<Problem:0xb71072d4>
+Completed in 23ms (DB: 1) | 302 Found [http://127.0.0.1/problems/9]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 12:53:42) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mProblem Load (0.8ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;35;1mJudge Load (0.7ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+  [4;36;1mUser Load (2.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 66ms (View: 52, DB: 1) | 200 OK [http://127.0.0.1/problems/9]
+
+
+Processing ProblemsController#edit (for 127.0.0.1 at 2008-11-30 12:53:46) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mProblem Load (0.7ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering problems/edit
+Rendered problems/_form (6.3ms)
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 54ms (View: 36, DB: 1) | 200 OK [http://127.0.0.1/problems/9/edit]
+
+
+Processing ProblemsController#update (for 127.0.0.1 at 2008-11-30 12:53:51) [PUT]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "id"=>"9", "problem"=>{"title"=>"Race trackssas", "number"=>"298", "url"=>"http://icpcres.ecs.baylor.edu/onlinejudge/external/2/298.html", "judge_id"=>"7"}}
+  [4;35;1mProblem Load (0.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 9) [0m
+  [4;36;1mProblem Exists (0.3ms)[0m   [0;1mSELECT "problems".id FROM "problems" WHERE ("problems"."number" = '298' AND "problems".id <> 9) LIMIT 1[0m
+  [4;35;1mProblem Exists (0.3ms)[0m   [0mSELECT "problems".id FROM "problems" WHERE ("problems"."url" = 'http://icpcres.ecs.baylor.edu/onlinejudge/external/2/298.html' AND "problems".id <> 9) LIMIT 1[0m
+  [4;36;1mProblem Update (0.8ms)[0m   [0;1mUPDATE "problems" SET "title" = 'Race trackssas', "updated_at" = '2008-11-30 17:53:51' WHERE "id" = 9[0m
+Redirected to #<Problem:0xb71be04c>
+Completed in 56ms (DB: 2) | 302 Found [http://127.0.0.1/problems/9]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 12:53:51) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mProblem Load (0.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 71ms (View: 55, DB: 1) | 200 OK [http://127.0.0.1/problems/9]
+
+
+Processing ProblemsController#edit (for 127.0.0.1 at 2008-11-30 12:53:54) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mProblem Load (0.8ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering problems/edit
+Rendered problems/_form (6.2ms)
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 53ms (View: 37, DB: 1) | 200 OK [http://127.0.0.1/problems/9/edit]
+
+
+Processing ProblemsController#update (for 127.0.0.1 at 2008-11-30 12:53:56) [PUT]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "id"=>"9", "problem"=>{"title"=>"Race tracks", "number"=>"298", "url"=>"http://icpcres.ecs.baylor.edu/onlinejudge/external/2/298.html", "judge_id"=>"7"}}
+  [4;36;1mProblem Load (0.8ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 9) [0m
+  [4;35;1mProblem Exists (0.8ms)[0m   [0mSELECT "problems".id FROM "problems" WHERE ("problems"."number" = '298' AND "problems".id <> 9) LIMIT 1[0m
+  [4;36;1mProblem Exists (0.3ms)[0m   [0;1mSELECT "problems".id FROM "problems" WHERE ("problems"."url" = 'http://icpcres.ecs.baylor.edu/onlinejudge/external/2/298.html' AND "problems".id <> 9) LIMIT 1[0m
+  [4;35;1mProblem Update (0.4ms)[0m   [0mUPDATE "problems" SET "title" = 'Race tracks', "updated_at" = '2008-11-30 17:53:56' WHERE "id" = 9[0m
+Redirected to #<Problem:0xb6ef00cc>
+Completed in 131ms (DB: 2) | 302 Found [http://127.0.0.1/problems/9]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 12:53:57) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mProblem Load (0.8ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;35;1mJudge Load (1.1ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 74ms (View: 57, DB: 1) | 200 OK [http://127.0.0.1/problems/9]
+
+
+Processing JudgesController#show (for 127.0.0.1 at 2008-11-30 12:53:59) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mJudge Load (0.7ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering judges/show
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;35;1mProblem Load (1.4ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 65ms (View: 44, DB: 1) | 200 OK [http://127.0.0.1/judges/7]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 12:54:01) [GET]
+  Parameters: {"id"=>"10"}
+  [4;35;1mProblem Load (0.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 10) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 62ms (View: 47, DB: 1) | 200 OK [http://127.0.0.1/problems/10]
+
+
+Processing JudgesController#show (for 127.0.0.1 at 2008-11-30 12:54:05) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering judges/show
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;36;1mProblem Load (6.4ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 106ms (View: 70, DB: 1) | 200 OK [http://127.0.0.1/judges/7]
+
+
+Processing ProblemsController#new (for 127.0.0.1 at 2008-11-30 12:54:07) [GET]
+  Parameters: {"judge_id"=>"7"}
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering problems/new
+Rendered problems/_form (3.8ms)
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 64ms (View: 34, DB: 1) | 200 OK [http://127.0.0.1/judges/7/problems/new]
+
+
+Processing ProblemsController#new (for 127.0.0.1 at 2008-11-30 12:54:20) [GET]
+  Parameters: {"judge_id"=>"7"}
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering problems/new
+Rendered problems/_form (3.6ms)
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 117ms (View: 67, DB: 1) | 200 OK [http://127.0.0.1/judges/7/problems/new]
+
+
+Processing ProblemsController#create (for 127.0.0.1 at 2008-11-30 12:54:32) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "problem"=>{"title"=>"65468g", "number"=>"45", "url"=>"http://127.0.0.1:3000/", "judge_id"=>"7"}}
+  [4;36;1mProblem Exists (0.3ms)[0m   [0;1mSELECT "problems".id FROM "problems" WHERE ("problems"."number" = '45') LIMIT 1[0m
+  [4;35;1mProblem Exists (5.3ms)[0m   [0mSELECT "problems".id FROM "problems" WHERE ("problems"."url" = 'http://127.0.0.1:3000/') LIMIT 1[0m
+  [4;36;1mProblem Create (0.5ms)[0m   [0;1mINSERT INTO "problems" ("updated_at", "title", "number", "url", "judge_id", "created_at") VALUES('2008-11-30 17:54:33', '65468g', '45', 'http://127.0.0.1:3000/', 7, '2008-11-30 17:54:33')[0m
+Redirected to #<Problem:0xb6eb754c>
+Completed in 142ms (DB: 6) | 302 Found [http://127.0.0.1/problems]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 12:54:33) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mProblem Load (0.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 11) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 66ms (View: 50, DB: 1) | 200 OK [http://127.0.0.1/problems/11]
+
+
+Processing JudgesController#show (for 127.0.0.1 at 2008-11-30 12:54:36) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering judges/show
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;36;1mProblem Load (1.3ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;35;1mUser Load (4.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 93ms (View: 70, DB: 1) | 200 OK [http://127.0.0.1/judges/7]
+
+
+Processing JudgesController#index (for 127.0.0.1 at 2008-11-30 12:54:50) [GET]
+  [4;36;1mJudge Load (1.7ms)[0m   [0;1mSELECT * FROM "judges" [0m
+Rendering template within layouts/application
+Rendering judges/index
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 2) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 3) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 67ms (View: 54, DB: 2) | 200 OK [http://127.0.0.1/judges]
+
+
+Processing JudgesController#show (for 127.0.0.1 at 2008-11-30 12:54:52) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mJudge Load (0.7ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering judges/show
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;35;1mProblem Load (1.3ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 70ms (View: 47, DB: 1) | 200 OK [http://127.0.0.1/judges/7]
+
+
+Processing JudgesController#show (for 127.0.0.1 at 2008-11-30 12:56:01) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mJudge Load (0.7ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering judges/show
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;35;1mProblem Load (3.5ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 82ms (View: 60, DB: 1) | 200 OK [http://127.0.0.1/judges/7]
+
+
+Processing ProblemsController#destroy (for 127.0.0.1 at 2008-11-30 12:56:06) [DELETE]
+  Parameters: {"authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "id"=>"11"}
+  [4;35;1mProblem Load (0.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 11) [0m
+  [4;36;1mProblem Destroy (0.4ms)[0m   [0;1mDELETE FROM "problems" WHERE "id" = 11[0m
+Redirected to http://127.0.0.1:3000/problems
+Completed in 63ms (DB: 1) | 302 Found [http://127.0.0.1/problems/11]
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2008-11-30 12:56:06) [GET]
+  [4;35;1mProblem Load (2.7ms)[0m   [0mSELECT * FROM "problems" [0m
+Rendering template within layouts/application
+Rendering problems/index
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 176ms (View: 48, DB: 3) | 200 OK [http://127.0.0.1/problems]
+
+
+Processing JudgesController#show (for 127.0.0.1 at 2008-11-30 12:57:07) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mJudge Load (0.7ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering judges/show
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;35;1mProblem Load (1.1ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;36;1mUser Load (7.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 78ms (View: 55, DB: 1) | 200 OK [http://127.0.0.1/judges/7]
+
+
+Processing ProblemsController#new (for 127.0.0.1 at 2008-11-30 12:57:10) [GET]
+  Parameters: {"judge_id"=>"7"}
+  [4;35;1mJudge Load (0.7ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering problems/new
+Rendered problems/_form (3.6ms)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 61ms (View: 36, DB: 1) | 200 OK [http://127.0.0.1/judges/7/problems/new]
+
+
+Processing ProblemsController#create (for 127.0.0.1 at 2008-11-30 12:57:19) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "problem"=>{"title"=>"dfa", "number"=>"11495", "url"=>"http://google.com", "judge_id"=>"7"}}
+  [4;35;1mProblem Exists (0.5ms)[0m   [0mSELECT "problems".id FROM "problems" WHERE ("problems"."number" = '11495') LIMIT 1[0m
+  [4;36;1mProblem Exists (0.3ms)[0m   [0;1mSELECT "problems".id FROM "problems" WHERE ("problems"."url" = 'http://google.com') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering problems/new
+Rendered problems/_form (4.8ms)
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 159ms (View: 133, DB: 2) | 200 OK [http://127.0.0.1/problems]
+
+
+Processing ProblemsController#create (for 127.0.0.1 at 2008-11-30 12:57:24) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "problem"=>{"title"=>"dfa", "number"=>"114956", "url"=>"http://google.com", "judge_id"=>"7"}}
+  [4;36;1mProblem Exists (0.3ms)[0m   [0;1mSELECT "problems".id FROM "problems" WHERE ("problems"."number" = '114956') LIMIT 1[0m
+  [4;35;1mProblem Exists (0.3ms)[0m   [0mSELECT "problems".id FROM "problems" WHERE ("problems"."url" = 'http://google.com') LIMIT 1[0m
+  [4;36;1mProblem Create (0.4ms)[0m   [0;1mINSERT INTO "problems" ("updated_at", "title", "number", "url", "judge_id", "created_at") VALUES('2008-11-30 17:57:24', 'dfa', '114956', 'http://google.com', 7, '2008-11-30 17:57:24')[0m
+Redirected to #<Problem:0xb719f9d0>
+Completed in 76ms (DB: 1) | 302 Found [http://127.0.0.1/problems]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 12:57:24) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mProblem Load (0.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 12) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 65ms (View: 49, DB: 1) | 200 OK [http://127.0.0.1/problems/12]
+
+
+Processing ProblemsController#destroy (for 127.0.0.1 at 2008-11-30 12:57:29) [DELETE]
+  Parameters: {"authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "id"=>"12"}
+  [4;36;1mProblem Load (0.7ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 12) [0m
+  [4;35;1mJudge Load (0.7ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+  [4;36;1mProblem Destroy (0.4ms)[0m   [0;1mDELETE FROM "problems" WHERE "id" = 12[0m
+Redirected to /judges/7
+Completed in 38ms (DB: 2) | 302 Found [http://127.0.0.1/problems/12]
+
+
+Processing JudgesController#show (for 127.0.0.1 at 2008-11-30 12:57:30) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mJudge Load (0.7ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering judges/show
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;35;1mProblem Load (1.3ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 256ms (View: 230, DB: 1) | 200 OK [http://127.0.0.1/judges/7]
+
+
+Processing JudgesController#index (for 127.0.0.1 at 2008-11-30 12:57:36) [GET]
+  [4;35;1mJudge Load (5.8ms)[0m   [0mSELECT * FROM "judges" [0m
+Rendering template within layouts/application
+Rendering judges/index
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 2) [0m
+  [4;35;1mSQL (5.8ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 3) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 106ms (View: 82, DB: 6) | 200 OK [http://127.0.0.1/judges]
+
+
+Processing JudgesController#show (for 127.0.0.1 at 2008-11-30 12:57:38) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering judges/show
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;36;1mProblem Load (1.0ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 69ms (View: 48, DB: 1) | 200 OK [http://127.0.0.1/judges/7]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 12:57:40) [GET]
+  Parameters: {"id"=>"10"}
+  [4;36;1mProblem Load (0.8ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 10) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;35;1mJudge Load (0.7ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 98ms (View: 81, DB: 1) | 200 OK [http://127.0.0.1/problems/10]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 12:59:24) [GET]
+  Parameters: {"id"=>"10"}
+  [4;35;1mProblem Load (1.2ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 10) [0m
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 74ms (View: 44, DB: 2) | 200 OK [http://127.0.0.1/problems/10]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 12:59:47) [GET]
+  Parameters: {"id"=>"10"}
+  [4;36;1mProblem Load (0.8ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 10) [0m
+  [4;35;1mJudge Load (0.7ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 62ms (View: 36, DB: 1) | 200 OK [http://127.0.0.1/problems/10]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 13:00:22) [GET]
+  Parameters: {"id"=>"10"}
+  [4;35;1mProblem Load (1.3ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 10) [0m
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 175ms (View: 148, DB: 2) | 200 OK [http://127.0.0.1/problems/10]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 13:00:23) [GET]
+  Parameters: {"id"=>"10"}
+  [4;36;1mProblem Load (0.8ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 10) [0m
+  [4;35;1mJudge Load (8.3ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 91ms (View: 57, DB: 9) | 200 OK [http://127.0.0.1/problems/10]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 13:01:39) [GET]
+  Parameters: {"id"=>"10"}
+  [4;35;1mProblem Load (0.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 10) [0m
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;35;1mUser Load (1.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 76ms (View: 50, DB: 1) | 200 OK [http://127.0.0.1/problems/10]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 13:01:41) [GET]
+  Parameters: {"id"=>"10"}
+  [4;36;1mProblem Load (0.8ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 10) [0m
+  [4;35;1mJudge Load (7.6ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 187ms (View: 57, DB: 8) | 200 OK [http://127.0.0.1/problems/10]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 13:01:48) [GET]
+  Parameters: {"id"=>"10"}
+  [4;35;1mProblem Load (0.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 10) [0m
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 62ms (View: 36, DB: 1) | 200 OK [http://127.0.0.1/problems/10]
+  [4;36;1mProblem Load (1.8ms)[0m   [0;1mSELECT * FROM "problems" LIMIT 1[0m

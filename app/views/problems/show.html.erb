@@ -1,20 +1,17 @@
-<% title "Problem" %>
+<% title @problem.full_title %>
 
-<p>
-  <strong>Judge:</strong>
-  <%=h @problem.judge_id %>
-</p>
-<p>
-  <strong>Title:</strong>
-  <%=h @problem.title %>
-</p>
-<p>
-  <strong>Url:</strong>
-  <%=h @problem.url %>
-</p>
+<div class="left-align">
+  <%= link_to @judge.name, @judge %>
+</div>
 
-<p>
-  <%= link_to "Edit", edit_problem_path(@problem) %> |
-  <%= link_to "Destroy", @problem, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", problems_path %>
-</p>
+<div class="actions">
+  <%= link_to image_tag("icons/arrow_left.png", :alt => "Back to all problems"), judge_path(@problem.judge) %>
+  <%= link_to image_tag("icons/world.png", :alt => "Go to problem statement"), @problem.url, :target => "_blank" %>
+  <%= link_to image_tag("icons/pencil.png", :alt => "Edit"), edit_problem_path(@problem) %>
+  <%= link_to image_tag("icons/cross.png", :alt =>"Delete"), @problem, :confirm => 'Are you sure?', :method => :delete %>
+</div>
+
+
+<div>
+  0 solutions.
+</div>

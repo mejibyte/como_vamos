@@ -1,9 +1,10 @@
 <% title @judge.name %>
 
 <div class="actions">
-  <%= link_to "Edit", edit_judge_path(@judge) %> |
-  <%= link_to "Destroy", @judge, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View all judges", judges_path %>
+  <%= link_to image_tag("icons/arrow_left.png", :alt => "Back to all judges"), judges_path %>
+  <%= link_to image_tag("icons/world.png", :alt => "Go to judge site"), @judge.url, :target => "_blank" %>
+  <%= link_to image_tag("icons/pencil.png", :alt => "Edit"), edit_judge_path(@judge) %>
+  <%= link_to image_tag("icons/cross.png", :alt =>"Delete"), @judge, :confirm => 'Are you sure?', :method => :delete %>
 </div>
 
 
@@ -14,13 +15,15 @@
 <div class="list_element">
   <h3>
     <%= link_to problem.full_title, problem %>
-    <%= link_to( image_tag("icons/world.png", :alt => "Go to problem statement"), problem.url ) %>
+    <%= link_to image_tag("icons/world.png", :alt => "Go to problem statement"), problem.url, :target => "_blank" %>
+    <%= link_to image_tag("icons/pencil.png", :alt => "Edit"), edit_problem_path(problem) %>
+    <%= link_to image_tag("icons/cross.png", :alt =>"Delete"), problem, :confirm => 'Are you sure?', :method => :delete %>
   </h3>
   0 solutions.
 </div>
 <% end -%>
 
-<div>
+<div class="bottom_link">
 <%= link_to "Add problem", new_judge_problem_path(@judge) %>
 </div>
 
