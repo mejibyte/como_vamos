@@ -1,0 +1,16 @@
+<% title "Users" %>
+
+<% for user in @users %>
+<div class="list_element">
+  <h3>
+    <%= link_to user.name, user %>
+    <%= link_to image_tag("icons/magnifier.png", :alt => "Show profile"), user %>
+    <%= link_to image_tag("icons/cross.png", :alt => "Delete user"), user, :method => :delete, :confirm => "Are you sure?" %>
+  </h3>
+</div>
+<% end %>
+
+<% if logged_in? == false %>
+    <%= link_to "New user", new_user_path %>
+<% end %>
+

@@ -13,7 +13,7 @@
 <% for problem in @problems %>
 <div class="list_element">
   <h3>
-    <%= link_to problem.title, problem %>
+    <%= link_to problem.full_title, problem %>
     <%= link_to( image_tag("icons/world.png", :alt => "Go to problem statement"), problem.url ) %>
   </h3>
   0 solutions.

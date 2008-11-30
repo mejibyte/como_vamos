@@ -6,6 +6,10 @@ class Problem < ActiveRecord::Base
   validates_uniqueness_of :number, :url
   validate :url_is_valid
 
+  def full_title
+    "#{number} - #{title}"
+  end
+
   protected
   def url_is_valid
     begin
