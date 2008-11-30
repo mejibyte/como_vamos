@@ -85,6 +85,34 @@ h3, h3 a {
   list-style: disc;
 }
 
+#main{
+  padding: 0px 50px;
+}
+
+#container{
+  width: 80%;
+  padding: 20px 40px;
+  margin: 0 auto;
+  text-align: left;
+  background-color: #FFFFFF;
+  border: 1px solid black;
+  float:right;
+}
+
+#sidebar {
+           float:left;
+           width:15%;
+           background-color:#ABCDEF;
+           color:black;
+           border: 1px solid black;
+}
+
+#sidebar h3{
+             padding: 0px 0px 0px 10px;
+}
+
+
+
 .judge {
   border: dashed 1px #AAA;
   padding: 10px;
@@ -99,3 +127,4 @@ h3, h3 a {
 .judge .actions a{
   color: #003333;
 }
+

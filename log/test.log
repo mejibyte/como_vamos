@@ -1,0 +1,59 @@
+  [4;36;1mJudge Load (0.8ms)[0m   [0;1mSELECT * FROM "judges" LIMIT 1[0m
+
+
+Processing JudgesController#destroy (for 0.0.0.0 at 2008-11-29 23:16:00) [DELETE]
+  Parameters: {"id"=>#<Judge id: 953125641, name: "MyString", url: "MyString", created_at: "2008-11-30 04:16:00", updated_at: "2008-11-30 04:16:00">}
+  [4;35;1mJudge Load (0.8ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 953125641) [0m
+  [4;36;1mJudge Destroy (0.4ms)[0m   [0;1mDELETE FROM "judges" WHERE "id" = 953125641[0m
+Redirected to http://test.host/judges
+Completed in 13ms (DB: 4) | 302 Found [http://test.host/judges/953125641]
+  [4;35;1mJudge Exists (0.3ms)[0m   [0mSELECT "judges".id FROM "judges" WHERE ("judges"."id" = 953125641) LIMIT 1[0m
+  [4;36;1mJudge Load (0.8ms)[0m   [0;1mSELECT * FROM "judges" LIMIT 1[0m
+
+
+Processing JudgesController#edit (for 0.0.0.0 at 2008-11-29 23:16:00) [GET]
+  Parameters: {"id"=>#<Judge id: 953125641, name: "MyString", url: "MyString", created_at: "2008-11-30 04:16:00", updated_at: "2008-11-30 04:16:00">}
+  [4;35;1mJudge Load (0.8ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 953125641) [0m
+Rendering template within layouts/application
+Rendering judges/edit
+Rendered judges/_form (4.4ms)
+Completed in 13ms (View: 10, DB: 2) | 200 OK [http://test.host/judges/953125641/edit]
+
+
+Processing JudgesController#index (for 0.0.0.0 at 2008-11-29 23:16:00) [GET]
+  [4;36;1mJudge Load (1.1ms)[0m   [0;1mSELECT * FROM "judges" [0m
+Rendering template within layouts/application
+Rendering judges/index
+Completed in 11ms (View: 8, DB: 1) | 200 OK [http://test.host/judges]
+
+
+Processing JudgesController#new (for 0.0.0.0 at 2008-11-29 23:16:00) [GET]
+Rendering template within layouts/application
+Rendering judges/new
+Rendered judges/_form (2.7ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://test.host/judges/new]
+  [4;35;1mJudge Load (0.9ms)[0m   [0mSELECT * FROM "judges" LIMIT 1[0m
+
+
+Processing JudgesController#show (for 0.0.0.0 at 2008-11-29 23:16:00) [GET]
+  Parameters: {"id"=>#<Judge id: 953125641, name: "MyString", url: "MyString", created_at: "2008-11-30 04:16:00", updated_at: "2008-11-30 04:16:00">}
+  [4;36;1mJudge Load (0.8ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 953125641) [0m
+Rendering template within layouts/application
+Rendering judges/show
+Completed in 8ms (View: 5, DB: 2) | 200 OK [http://test.host/judges/953125641]
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
