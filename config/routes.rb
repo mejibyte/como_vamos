@@ -9,7 +9,7 @@ ActionController::Routing::Routes.draw do |map|
   end
 
 
-  map.resources :solutions, :except => :new
+  map.resources :solutions, :except => [:new, :show, :index]
   map.root :controller => "home", :action => "index"
 
   map.connect ':controller/:action/:id'
