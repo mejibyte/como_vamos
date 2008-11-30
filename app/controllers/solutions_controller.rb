@@ -10,9 +10,14 @@ class SolutionsController < ApplicationController
   def new
     @solution = Solution.new
     @user = current_user
-    @problem = Problem.find params[:problem_id]
-    @solution.user = @user
-    @solution.problem = @problem
+    if params[:problems_id].nil?
+      flash[:error] = "Please select a problem first"
+      redirect_to problems_path
+    else
+      @problem = Problem.find params[:problem_id]
+      @solution.user = @user
+      @solution.problem = @problem
+    end
   end
 
   def edit

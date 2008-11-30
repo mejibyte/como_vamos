@@ -20297,3 +20297,2120 @@ ActionController::UnknownAction (No action responded to destroy. Actions: create
     script/server:3
 
 Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 18:02:40) [GET]
+  Parameters: {"id"=>"14"}
+  [4;35;1mProblem Load (1.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 14) [0m
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 14) [0m
+  [4;36;1mSolution Load (0.9ms)[0m   [0;1mSELECT * FROM "solutions" WHERE ("solutions".problem_id = 14) [0m
+  [4;35;1mUser Load (1.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+[paperclip] Paperclip attachment source_code on Solution initialized.
+Rendered solutions/_solution (32.6ms)
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 145ms (View: 101, DB: 2) | 200 OK [http://127.0.0.1/problems/14]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-11-30 18:02:41) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/prettify/prettify.css" with {:method=>:get}):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 18:03:44) [GET]
+  Parameters: {"id"=>"14"}
+  [4;35;1mProblem Load (1.3ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 14) [0m
+  [4;36;1mJudge Load (0.8ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 14) [0m
+  [4;36;1mSolution Load (0.9ms)[0m   [0;1mSELECT * FROM "solutions" WHERE ("solutions".problem_id = 14) [0m
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+[paperclip] Paperclip attachment source_code on Solution initialized.
+Rendered solutions/_solution (34.3ms)
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 106ms (View: 78, DB: 2) | 200 OK [http://127.0.0.1/problems/14]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-11-30 18:03:44) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/prettify/prettify.css" with {:method=>:get}):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProblemsController#stylesheets to css (for 127.0.0.1 at 2008-11-30 18:04:00) [GET]
+  Parameters: {"id"=>"prettify"}
+
+
+ActionController::UnknownAction (No action responded to stylesheets. Actions: create, destroy, edit, index, new, show, and update):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProblemsController#stylesheets to css (for 127.0.0.1 at 2008-11-30 18:04:11) [GET]
+  Parameters: {"adsfa"=>nil, "id"=>"prettify"}
+
+
+ActionController::UnknownAction (No action responded to stylesheets. Actions: create, destroy, edit, index, new, show, and update):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProblemsController#stylesheets to css (for 127.0.0.1 at 2008-11-30 18:04:29) [GET]
+  Parameters: {"id"=>"prettify"}
+
+
+ActionController::UnknownAction (No action responded to stylesheets. Actions: create, destroy, edit, index, new, show, and update):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProblemsController#stylesheets to css (for 127.0.0.1 at 2008-11-30 18:04:34) [GET]
+  Parameters: {"id"=>"application"}
+
+
+ActionController::UnknownAction (No action responded to stylesheets. Actions: create, destroy, edit, index, new, show, and update):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProblemsController#stylesheets to css (for 127.0.0.1 at 2008-11-30 18:05:12) [GET]
+  Parameters: {"id"=>"application"}
+
+
+ActionController::UnknownAction (No action responded to stylesheets. Actions: create, destroy, edit, index, new, show, and update):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2008-11-30 18:05:15) [GET]
+  [4;35;1mJudge Load (1.5ms)[0m   [0mSELECT * FROM "judges" [0m
+Rendering template within layouts/application
+Rendering problems/index
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 2) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 3) [0m
+  [4;36;1mProblem Load (0.8ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems".judge_id = 3) [0m
+  [4;35;1mSQL (4.3ms)[0m   [0mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 14) [0m
+Rendered problems/_problem (27.2ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;35;1mProblem Load (2.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 9) [0m
+Rendered problems/_problem (4.9ms)
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 10) [0m
+Rendered problems/_problem (6.1ms)
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 144ms (View: 118, DB: 2) | 200 OK [http://127.0.0.1/problems/]
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2008-11-30 18:07:26) [GET]
+  [4;35;1mJudge Load (24.3ms)[0m   [0mSELECT * FROM "judges" [0m
+Rendering template within layouts/application
+Rendering problems/index
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 2) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 3) [0m
+  [4;36;1mProblem Load (0.8ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems".judge_id = 3) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 14) [0m
+Rendered problems/_problem (22.2ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;35;1mProblem Load (1.1ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 9) [0m
+Rendered problems/_problem (4.4ms)
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 10) [0m
+Rendered problems/_problem (5.5ms)
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 233ms (View: 106, DB: 24) | 200 OK [http://127.0.0.1/problems/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-11-30 18:07:26) [GET]
+
+
+ActionController::RoutingError (No route matches "/javascripts/prettify.js" with {:method=>:get}):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2008-11-30 18:07:58) [GET]
+  [4;35;1mJudge Load (1.6ms)[0m   [0mSELECT * FROM "judges" [0m
+Rendering template within layouts/application
+Rendering problems/index
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 2) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 3) [0m
+  [4;36;1mProblem Load (0.8ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems".judge_id = 3) [0m
+  [4;35;1mSQL (1.9ms)[0m   [0mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 14) [0m
+Rendered problems/_problem (18.5ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;35;1mProblem Load (1.0ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 9) [0m
+Rendered problems/_problem (11.7ms)
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 10) [0m
+Rendered problems/_problem (5.7ms)
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 129ms (View: 105, DB: 2) | 200 OK [http://127.0.0.1/problems/]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 18:08:14) [GET]
+  Parameters: {"id"=>"14"}
+  [4;35;1mProblem Load (0.9ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 14) [0m
+  [4;36;1mJudge Load (1.0ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 14) [0m
+  [4;36;1mSolution Load (0.9ms)[0m   [0;1mSELECT * FROM "solutions" WHERE ("solutions".problem_id = 14) [0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+[paperclip] Paperclip attachment source_code on Solution initialized.
+Rendered solutions/_solution (30.8ms)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 147ms (View: 105, DB: 2) | 200 OK [http://127.0.0.1/problems/14]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 18:08:51) [GET]
+  Parameters: {"id"=>"14"}
+  [4;35;1mProblem Load (0.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 14) [0m
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;35;1mSQL (1.8ms)[0m   [0mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 14) [0m
+  [4;36;1mSolution Load (1.0ms)[0m   [0;1mSELECT * FROM "solutions" WHERE ("solutions".problem_id = 14) [0m
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+[paperclip] Paperclip attachment source_code on Solution initialized.
+Rendered solutions/_solution (41.8ms)
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 123ms (View: 94, DB: 1) | 200 OK [http://127.0.0.1/problems/14]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 18:09:07) [GET]
+  Parameters: {"id"=>"14"}
+  [4;35;1mProblem Load (0.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 14) [0m
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 14) [0m
+  [4;36;1mSolution Load (0.9ms)[0m   [0;1mSELECT * FROM "solutions" WHERE ("solutions".problem_id = 14) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+[paperclip] Paperclip attachment source_code on Solution initialized.
+Rendered solutions/_solution (57.8ms)
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 156ms (View: 126, DB: 1) | 200 OK [http://127.0.0.1/problems/14]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 18:09:20) [GET]
+  Parameters: {"id"=>"14"}
+  [4;35;1mProblem Load (0.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 14) [0m
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 14) [0m
+  [4;36;1mSolution Load (0.9ms)[0m   [0;1mSELECT * FROM "solutions" WHERE ("solutions".problem_id = 14) [0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+[paperclip] Paperclip attachment source_code on Solution initialized.
+Rendered solutions/_solution (36.3ms)
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 135ms (View: 107, DB: 1) | 200 OK [http://127.0.0.1/problems/14]
+
+
+Processing SolutionsController#destroy (for 127.0.0.1 at 2008-11-30 18:09:29) [DELETE]
+  Parameters: {"authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "id"=>"20"}
+
+
+ActionController::UnknownAction (No action responded to destroy. Actions: create, edit, index, new, and show):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing JudgesController#show (for 127.0.0.1 at 2008-11-30 18:09:32) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mJudge Load (0.7ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering judges/show
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 3) [0m
+  [4;35;1mProblem Load (0.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems".judge_id = 3) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 14) [0m
+Rendered problems/_problem (16.8ms)
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 91ms (View: 66, DB: 1) | 200 OK [http://127.0.0.1/judges/3]
+
+
+Processing JudgesController#index (for 127.0.0.1 at 2008-11-30 18:09:35) [GET]
+  [4;36;1mJudge Load (1.5ms)[0m   [0;1mSELECT * FROM "judges" [0m
+Rendering template within layouts/application
+Rendering judges/index
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 2) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 3) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 80ms (View: 67, DB: 2) | 200 OK [http://127.0.0.1/judges]
+
+
+Processing JudgesController#show (for 127.0.0.1 at 2008-11-30 18:09:37) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mJudge Load (1.2ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering judges/show
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;35;1mProblem Load (1.1ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 9) [0m
+Rendered problems/_problem (18.1ms)
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 10) [0m
+Rendered problems/_problem (4.8ms)
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 100ms (View: 73, DB: 1) | 200 OK [http://127.0.0.1/judges/7]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 18:09:39) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mProblem Load (0.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 9) [0m
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 9) [0m
+  [4;36;1mSolution Load (1.3ms)[0m   [0;1mSELECT * FROM "solutions" WHERE ("solutions".problem_id = 9) [0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+[paperclip] Paperclip attachment source_code on Solution initialized.
+Rendered solutions/_solution (29.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+[paperclip] Paperclip attachment source_code on Solution initialized.
+Rendered solutions/_solution (6.4ms)
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 110ms (View: 83, DB: 2) | 200 OK [http://127.0.0.1/problems/9]
+
+
+Processing SolutionsController#destroy (for 127.0.0.1 at 2008-11-30 18:10:33) [DELETE]
+  Parameters: {"authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "id"=>"18"}
+
+
+ActionController::UnknownAction (No action responded to destroy. Actions: create, edit, index, new, and show):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 18:12:45) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mProblem Load (0.8ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 9) [0m
+  [4;35;1mJudge Load (0.7ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 9) [0m
+  [4;35;1mSolution Load (1.2ms)[0m   [0mSELECT * FROM "solutions" WHERE ("solutions".problem_id = 9) [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+[paperclip] Paperclip attachment source_code on Solution initialized.
+Rendered solutions/_solution (37.3ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+[paperclip] Paperclip attachment source_code on Solution initialized.
+Rendered solutions/_solution (10.9ms)
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 127ms (View: 96, DB: 1) | 200 OK [http://127.0.0.1/problems/9]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 18:14:01) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mProblem Load (1.3ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 9) [0m
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 9) [0m
+  [4;36;1mSolution Load (1.2ms)[0m   [0;1mSELECT * FROM "solutions" WHERE ("solutions".problem_id = 9) [0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+[paperclip] Paperclip attachment source_code on Solution initialized.
+/*
+Este código fue robado de:
+http://acm.informatik.uni-freiburg.de/
+*/
+
+#include <iostream>
+
+using namespace std;
+
+static bool a[65536], b[65536][8];
+
+main ()
+{
+  int num[8], sum;
+  int kase = 0;
+  while (1)
+  {
+    sum = 0;
+    for (int k=1 ; k<=6 ; k++)
+    {
+      cin >> num[k];
+      sum += num[k] * k;
+    }
+    if (sum == 0) break;
+    cout << "Collection #" << ++kase << ":" << endl;
+    if ((sum % 2) == 1)
+    {
+      cout << "Can't be divided." << endl;
+      cout << endl;
+      continue;
+    }
+    sum /= 2;
+    for (int i=0 ; i<=sum ; i++)
+    {
+      a[i] = false;
+      for (int k=1 ; k<=6 ; k++)
+        b[i][k] = false;
+    }
+    a[0] = true;
+    for (int k=1 ; k<=6 ; k++)
+    {
+      for (int i=sum ; i>=0 ; i--)
+        if (a[i])
+        {
+          b[i][k] = true;
+          for (int j=1 ; j<=num[k] ; j++)
+          {
+            int c = i+j*k;
+            if (c > sum) break;
+            if (b[c][k]) break;
+            a[c] = true;
+            b[c][k] = true;
+          }
+        }
+    }
+    if (a[sum])
+      cout << "Can be divided." << endl;
+    else
+      cout << "Can't be divided." << endl;
+    cout << endl;
+  }
+  return 0;
+}
+
+Rendered solutions/_solution (41.7ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+[paperclip] Paperclip attachment source_code on Solution initialized.
+ #include <iostream>
+ #include <vector>
+
+using namespace std;
+
+int main(){
+  int rows, cols;
+  while(cin >> rows >> cols){
+    //g = matriz de entrada
+    long long g[rows][cols];
+    //dp[i][j] = minimo peso para llegar a la casilla (i,j)
+    //empezando en cualquiera de la última columna
+    long long dp[rows][cols];
+    //p[i][j] = Fila en la que estuve antes de llegar a la casilla
+    //(i,j), pero recorriendo la matriz de derecha a izquierda
+    int p[rows][cols];
+    for (int i=0; i<rows; ++i){
+      for (int j=0; j<cols-1; ++j){
+	cin >> g[i][j];
+	dp[i][j] = LLONG_MAX;
+	p[i][j] = -1;
+      }
+      cin >> g[i][cols-1];
+      dp[i][cols-1] = g[i][cols-1];
+      p[i][cols-1] = -1;
+    }
+
+    for (int j=cols-2; j>=0; --j){
+      for (int i=0; i<rows; ++i){
+	int previousRows[] = {(i+rows-1)%rows, i, (i+1)%rows };
+	sort(previousRows, previousRows + 3);
+	for (int k=0; k<3; ++k){
+	  if (dp[previousRows[k]][j+1] < dp[i][j]){
+	    dp[i][j] = dp[previousRows[k]][j+1];
+	    p[i][j] = previousRows[k];
+	  }	  
+	}
+	dp[i][j] += g[i][j];
+      }
+    }
+
+    long long minWeight = LLONG_MAX, firstRow = -1;
+    for (int i=0; i<rows; ++i){
+      if (dp[i][0] < minWeight){
+	firstRow = i;
+	minWeight = dp[i][0];
+      }
+    }
+
+    vector<int> path;
+    int i = firstRow;
+    int j = 0;
+    while (j < cols-1){
+      path.push_back(p[i][j]);
+      i = p[i][j];
+      ++j;
+    }
+
+    cout << firstRow + 1;
+    for (int i=0; i<path.size(); ++i){
+      cout << " " << path[i] + 1;
+    }
+    cout << endl;
+    cout << minWeight << endl;
+  }
+  return 0;
+}
+Rendered solutions/_solution (6.6ms)
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 122ms (View: 94, DB: 2) | 200 OK [http://127.0.0.1/problems/9]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 18:14:26) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mProblem Load (0.8ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 9) [0m
+  [4;35;1mJudge Load (0.8ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 9) [0m
+  [4;35;1mSolution Load (1.2ms)[0m   [0mSELECT * FROM "solutions" WHERE ("solutions".problem_id = 9) [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+[paperclip] Paperclip attachment source_code on Solution initialized.
+Rendered solutions/_solution (40.3ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+[paperclip] Paperclip attachment source_code on Solution initialized.
+Rendered solutions/_solution (7.3ms)
+  [4;36;1mUser Load (2.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 128ms (View: 100, DB: 2) | 200 OK [http://127.0.0.1/problems/9]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 18:14:46) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mProblem Load (0.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 9) [0m
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 9) [0m
+  [4;36;1mSolution Load (1.2ms)[0m   [0;1mSELECT * FROM "solutions" WHERE ("solutions".problem_id = 9) [0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+[paperclip] Paperclip attachment source_code on Solution initialized.
+Rendered solutions/_solution (169.2ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+[paperclip] Paperclip attachment source_code on Solution initialized.
+Rendered solutions/_solution (14.3ms)
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 258ms (View: 230, DB: 1) | 200 OK [http://127.0.0.1/problems/9]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 18:24:28) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mProblem Load (0.8ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 9) [0m
+  [4;35;1mJudge Load (0.7ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 9) [0m
+  [4;35;1mSolution Load (1.2ms)[0m   [0mSELECT * FROM "solutions" WHERE ("solutions".problem_id = 9) [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+[paperclip] Paperclip attachment source_code on Solution initialized.
+Rendered solutions/_solution (28.8ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+[paperclip] Paperclip attachment source_code on Solution initialized.
+Rendered solutions/_solution (6.1ms)
+  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 110ms (View: 82, DB: 1) | 200 OK [http://127.0.0.1/problems/9]
+
+
+Processing SolutionsController#destroy (for 127.0.0.1 at 2008-11-30 18:24:37) [DELETE]
+  Parameters: {"authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "id"=>"17"}
+
+
+ActionController::UnknownAction (No action responded to destroy. Actions: create, edit, index, new, and show):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-30 18:25:02) [GET]
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 45ms (View: 41, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-11-30 18:25:04) [GET]
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 34ms (View: 30, DB: 0) | 200 OK [http://127.0.0.1/]
+
+
+Processing JudgesController#index (for 127.0.0.1 at 2008-11-30 18:25:06) [GET]
+  [4;36;1mJudge Load (1.5ms)[0m   [0;1mSELECT * FROM "judges" [0m
+Rendering template within layouts/application
+Rendering judges/index
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 2) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 3) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 75ms (View: 62, DB: 2) | 200 OK [http://127.0.0.1/judges]
+
+
+Processing JudgesController#new (for 127.0.0.1 at 2008-11-30 18:25:07) [GET]
+Rendering template within layouts/application
+Rendering judges/new
+Rendered judges/_form (5.5ms)
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 56ms (View: 42, DB: 0) | 200 OK [http://127.0.0.1/judges/new]
+
+
+Processing JudgesController#create (for 127.0.0.1 at 2008-11-30 18:25:09) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "judge"=>{"name"=>"", "url"=>""}}
+Rendering template within layouts/application
+Rendering judges/new
+Rendered judges/_form (4.6ms)
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 60ms (View: 35, DB: 1) | 200 OK [http://127.0.0.1/judges]
+
+
+Processing JudgesController#create (for 127.0.0.1 at 2008-11-30 18:25:14) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "judge"=>{"name"=>"adf", "url"=>""}}
+Rendering template within layouts/application
+Rendering judges/new
+Rendered judges/_form (4.1ms)
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 60ms (View: 36, DB: 1) | 200 OK [http://127.0.0.1/judges]
+
+
+Processing JudgesController#create (for 127.0.0.1 at 2008-11-30 18:25:16) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "judge"=>{"name"=>"adf", "url"=>"adf"}}
+Rendering template within layouts/application
+Rendering judges/new
+Rendered judges/_form (7.7ms)
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 60ms (View: 40, DB: 1) | 200 OK [http://127.0.0.1/judges]
+
+
+Processing JudgesController#create (for 127.0.0.1 at 2008-11-30 18:25:21) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "judge"=>{"name"=>"adf", "url"=>"http://acm.tju.edu.cn/"}}
+  [4;35;1mJudge Create (0.8ms)[0m   [0mINSERT INTO "judges" ("name", "updated_at", "url", "created_at") VALUES('adf', '2008-11-30 23:25:21', 'http://acm.tju.edu.cn/', '2008-11-30 23:25:21')[0m
+Redirected to /judges
+Completed in 51ms (DB: 1) | 302 Found [http://127.0.0.1/judges]
+
+
+Processing JudgesController#index (for 127.0.0.1 at 2008-11-30 18:25:21) [GET]
+  [4;36;1mJudge Load (1.7ms)[0m   [0;1mSELECT * FROM "judges" [0m
+Rendering template within layouts/application
+Rendering judges/index
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 2) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 3) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 8) [0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 90ms (View: 69, DB: 2) | 200 OK [http://127.0.0.1/judges]
+
+
+Processing JudgesController#destroy (for 127.0.0.1 at 2008-11-30 18:25:24) [DELETE]
+  Parameters: {"authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "id"=>"8"}
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 8) [0m
+  [4;35;1mProblem Load (0.4ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems".judge_id = 8) [0m
+  [4;36;1mJudge Destroy (0.4ms)[0m   [0;1mDELETE FROM "judges" WHERE "id" = 8[0m
+Redirected to /judges
+Completed in 179ms (DB: 2) | 302 Found [http://127.0.0.1/judges/8]
+
+
+Processing JudgesController#index (for 127.0.0.1 at 2008-11-30 18:25:24) [GET]
+  [4;35;1mJudge Load (1.5ms)[0m   [0mSELECT * FROM "judges" [0m
+Rendering template within layouts/application
+Rendering judges/index
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 2) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 3) [0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 74ms (View: 60, DB: 2) | 200 OK [http://127.0.0.1/judges]
+
+
+Processing JudgesController#new (for 127.0.0.1 at 2008-11-30 18:25:26) [GET]
+Rendering template within layouts/application
+Rendering judges/new
+Rendered judges/_form (5.0ms)
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 51ms (View: 37, DB: 0) | 200 OK [http://127.0.0.1/judges/new]
+
+
+Processing JudgesController#create (for 127.0.0.1 at 2008-11-30 18:25:31) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "judge"=>{"name"=>"adf", "url"=>"http://acm.zju.edu.cn/"}}
+  [4;35;1mJudge Create (0.4ms)[0m   [0mINSERT INTO "judges" ("name", "updated_at", "url", "created_at") VALUES('adf', '2008-11-30 23:25:31', 'http://acm.zju.edu.cn/', '2008-11-30 23:25:31')[0m
+Redirected to /judges
+Completed in 30ms (DB: 0) | 302 Found [http://127.0.0.1/judges]
+
+
+Processing JudgesController#index (for 127.0.0.1 at 2008-11-30 18:25:31) [GET]
+  [4;36;1mJudge Load (2.1ms)[0m   [0;1mSELECT * FROM "judges" [0m
+Rendering template within layouts/application
+Rendering judges/index
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 2) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 3) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 9) [0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 80ms (View: 65, DB: 2) | 200 OK [http://127.0.0.1/judges]
+
+
+Processing JudgesController#show (for 127.0.0.1 at 2008-11-30 18:25:33) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering judges/show
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 9) [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 65ms (View: 41, DB: 1) | 200 OK [http://127.0.0.1/judges/9]
+
+
+Processing ProblemsController#new (for 127.0.0.1 at 2008-11-30 18:25:35) [GET]
+  Parameters: {"judge_id"=>"9"}
+  [4;35;1mJudge Load (0.7ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering problems/new
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 9) [0m
+Rendered problems/_form (7.6ms)
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 168ms (View: 140, DB: 1) | 200 OK [http://127.0.0.1/judges/9/problems/new]
+
+
+Processing ProblemsController#create (for 127.0.0.1 at 2008-11-30 18:25:41) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "problem"=>{"title"=>"adf", "number"=>"11495", "url"=>"http://icpcres.ecs.baylor.edu/onlinejudge/external/114/11495.html", "judge_id"=>"9"}}
+  [4;36;1mProblem Exists (0.5ms)[0m   [0;1mSELECT "problems".id FROM "problems" WHERE ("problems"."number" = '11495') LIMIT 1[0m
+  [4;35;1mProblem Exists (0.5ms)[0m   [0mSELECT "problems".id FROM "problems" WHERE ("problems"."url" = 'http://icpcres.ecs.baylor.edu/onlinejudge/external/114/11495.html') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering problems/new
+  [4;36;1mJudge Load (0.8ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 9) [0m
+Rendered problems/_form (20.8ms)
+  [4;35;1mUser Load (1.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 85ms (View: 52, DB: 3) | 200 OK [http://127.0.0.1/problems]
+
+
+Processing ProblemsController#create (for 127.0.0.1 at 2008-11-30 18:25:45) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "problem"=>{"title"=>"adf", "number"=>"114953", "url"=>"http://icpcres.ecs.baylor.edu/onlinejudge/external/114/11495.html", "judge_id"=>"9"}}
+  [4;36;1mProblem Exists (0.3ms)[0m   [0;1mSELECT "problems".id FROM "problems" WHERE ("problems"."number" = '114953') LIMIT 1[0m
+  [4;35;1mProblem Exists (0.5ms)[0m   [0mSELECT "problems".id FROM "problems" WHERE ("problems"."url" = 'http://icpcres.ecs.baylor.edu/onlinejudge/external/114/11495.html') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering problems/new
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 9) [0m
+Rendered problems/_form (18.5ms)
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 79ms (View: 50, DB: 3) | 200 OK [http://127.0.0.1/problems]
+
+
+Processing ProblemsController#create (for 127.0.0.1 at 2008-11-30 18:27:45) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "problem"=>{"title"=>"adf", "number"=>"11495", "url"=>"http://icpcres.ecs.baylor.edu/onlinejudge/external/114/11495.html", "judge_id"=>"9"}}
+  [4;36;1mProblem Exists (2.5ms)[0m   [0;1mSELECT "problems".id FROM "problems" WHERE ("problems"."number" = '11495' AND "problems".judge_id = 9) LIMIT 1[0m
+  [4;35;1mProblem Exists (0.5ms)[0m   [0mSELECT "problems".id FROM "problems" WHERE ("problems"."url" = 'http://icpcres.ecs.baylor.edu/onlinejudge/external/114/11495.html') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering problems/new
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 9) [0m
+Rendered problems/_form (20.0ms)
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 185ms (View: 53, DB: 5) | 200 OK [http://127.0.0.1/problems]
+
+
+Processing ProblemsController#create (for 127.0.0.1 at 2008-11-30 18:27:51) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "problem"=>{"title"=>"adf", "number"=>"11495", "url"=>"http://icpcres.ecs.baylor.edu/onlinejudge/external/114/1149.html", "judge_id"=>"9"}}
+  [4;36;1mProblem Exists (0.3ms)[0m   [0;1mSELECT "problems".id FROM "problems" WHERE ("problems"."number" = '11495' AND "problems".judge_id = 9) LIMIT 1[0m
+  [4;35;1mProblem Exists (0.3ms)[0m   [0mSELECT "problems".id FROM "problems" WHERE ("problems"."url" = 'http://icpcres.ecs.baylor.edu/onlinejudge/external/114/1149.html') LIMIT 1[0m
+  [4;36;1mProblem Create (0.4ms)[0m   [0;1mINSERT INTO "problems" ("updated_at", "title", "number", "url", "judge_id", "created_at") VALUES('2008-11-30 23:27:51', 'adf', '11495', 'http://icpcres.ecs.baylor.edu/onlinejudge/external/114/1149.html', 9, '2008-11-30 23:27:51')[0m
+Redirected to #<Problem:0xb708b044>
+Completed in 43ms (DB: 1) | 302 Found [http://127.0.0.1/problems]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 18:27:51) [GET]
+  Parameters: {"id"=>"16"}
+  [4;35;1mProblem Load (0.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 16) [0m
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 16) [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 82ms (View: 54, DB: 1) | 200 OK [http://127.0.0.1/problems/16]
+
+
+Processing JudgesController#show (for 127.0.0.1 at 2008-11-30 18:27:55) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mJudge Load (0.7ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering judges/show
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 9) [0m
+  [4;35;1mProblem Load (0.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems".judge_id = 9) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 16) [0m
+Rendered problems/_problem (22.8ms)
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 208ms (View: 74, DB: 1) | 200 OK [http://127.0.0.1/judges/9]
+
+
+Processing ProblemsController#destroy (for 127.0.0.1 at 2008-11-30 18:27:59) [DELETE]
+  Parameters: {"authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "id"=>"16"}
+  [4;36;1mProblem Load (0.8ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 16) [0m
+  [4;35;1mJudge Load (0.7ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 9) [0m
+  [4;36;1mSolution Load (0.4ms)[0m   [0;1mSELECT * FROM "solutions" WHERE ("solutions".problem_id = 16) [0m
+  [4;35;1mProblem Destroy (0.4ms)[0m   [0mDELETE FROM "problems" WHERE "id" = 16[0m
+Redirected to /judges/9
+Completed in 58ms (DB: 2) | 302 Found [http://127.0.0.1/problems/16]
+
+
+Processing JudgesController#show (for 127.0.0.1 at 2008-11-30 18:28:00) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering judges/show
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 9) [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 124ms (View: 85, DB: 1) | 200 OK [http://127.0.0.1/judges/9]
+
+
+Processing ProblemsController#new (for 127.0.0.1 at 2008-11-30 18:28:01) [GET]
+  Parameters: {"judge_id"=>"9"}
+  [4;35;1mJudge Load (0.7ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering problems/new
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 9) [0m
+Rendered problems/_form (8.0ms)
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 77ms (View: 45, DB: 1) | 200 OK [http://127.0.0.1/judges/9/problems/new]
+
+
+Processing ProblemsController#create (for 127.0.0.1 at 2008-11-30 18:28:10) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "problem"=>{"title"=>"fsgfsg", "number"=>"34", "url"=>"http://icpcres.ecs.baylor.edu/onlinejudge/external/114/1149.html", "judge_id"=>"9"}}
+  [4;36;1mProblem Exists (0.3ms)[0m   [0;1mSELECT "problems".id FROM "problems" WHERE ("problems"."number" = '34' AND "problems".judge_id = 9) LIMIT 1[0m
+  [4;35;1mProblem Exists (0.2ms)[0m   [0mSELECT "problems".id FROM "problems" WHERE ("problems"."url" = 'http://icpcres.ecs.baylor.edu/onlinejudge/external/114/1149.html') LIMIT 1[0m
+  [4;36;1mProblem Create (0.4ms)[0m   [0;1mINSERT INTO "problems" ("updated_at", "title", "number", "url", "judge_id", "created_at") VALUES('2008-11-30 23:28:10', 'fsgfsg', '34', 'http://icpcres.ecs.baylor.edu/onlinejudge/external/114/1149.html', 9, '2008-11-30 23:28:10')[0m
+Redirected to #<Problem:0xb7079cb8>
+Completed in 35ms (DB: 1) | 302 Found [http://127.0.0.1/problems]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 18:28:10) [GET]
+  Parameters: {"id"=>"17"}
+  [4;35;1mProblem Load (0.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 17) [0m
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 17) [0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 83ms (View: 54, DB: 1) | 200 OK [http://127.0.0.1/problems/17]
+
+
+Processing SolutionsController#new (for 127.0.0.1 at 2008-11-30 18:28:12) [GET]
+  Parameters: {"problem_id"=>"17"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mProblem Load (0.8ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 17) [0m
+Rendering template within layouts/application
+Rendering solutions/new
+Rendered solutions/_form (7.4ms)
+Completed in 172ms (View: 21, DB: 2) | 200 OK [http://127.0.0.1/problems/17/solutions/new]
+
+
+Processing SolutionsController#create (for 127.0.0.1 at 2008-11-30 18:28:36) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "solution"=>{"explanation"=>"adsfdaf", "problem_id"=>"17", "source_code"=>#<ActionController::UploadedStringIO:0xb70b595c>, "user_id"=>"3"}}
+[paperclip] Paperclip attachment source_code on Solution initialized.
+[paperclip] Assigning #<ActionController::UploadedStringIO:0xb70b595c> to source_code
+[paperclip] Writing attributes for source_code
+[paperclip] Post-processing source_code
+  [4;35;1mSolution Create (0.5ms)[0m   [0mINSERT INTO "solutions" ("updated_at", "explanation", "source_code_content_type", "source_code_file_name", "source_code_file_size", "problem_id", "user_id", "source_code_updated_at", "created_at") VALUES('2008-11-30 23:28:36', 'adsfdaf', 'text/x-c', '305.cpp', 1660, 17, 3, '2008-11-30 23:28:36', '2008-11-30 23:28:36')[0m
+[paperclip] Saving attachments.
+[paperclip] Saving files for source_code
+[paperclip] Deleting files for source_code
+[paperclip] Writing files for source_code
+[paperclip] -> /media/almacen/Wack-a-Mole/Rails/como_vamos/public/uploads/solutions/21/305.cpp
+  [4;36;1mProblem Load (0.8ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 17) [0m
+Redirected to #<Problem:0xb7005570>
+Completed in 108ms (DB: 1) | 302 Found [http://127.0.0.1/solutions]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 18:28:36) [GET]
+  Parameters: {"id"=>"17"}
+  [4;35;1mProblem Load (0.7ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 17) [0m
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 17) [0m
+  [4;36;1mSolution Load (0.9ms)[0m   [0;1mSELECT * FROM "solutions" WHERE ("solutions".problem_id = 17) [0m
+  [4;35;1mUser Load (2.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+[paperclip] Paperclip attachment source_code on Solution initialized.
+Rendered solutions/_solution (34.1ms)
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 114ms (View: 81, DB: 1) | 200 OK [http://127.0.0.1/problems/17]
+
+
+Processing ProblemsController#destroy (for 127.0.0.1 at 2008-11-30 18:29:04) [DELETE]
+  Parameters: {"authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "id"=>"17"}
+  [4;35;1mProblem Load (0.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 17) [0m
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 9) [0m
+  [4;35;1mSolution Load (0.9ms)[0m   [0mSELECT * FROM "solutions" WHERE ("solutions".problem_id = 17) [0m
+[paperclip] Deleting attachments.
+[paperclip] Paperclip attachment source_code on Solution initialized.
+[paperclip] Queueing the existing files for source_code for deletion.
+[paperclip] Deleting files for source_code
+[paperclip] -> /media/almacen/Wack-a-Mole/Rails/como_vamos/public/uploads/solutions/21/305.cpp
+  [4;36;1mSolution Destroy (0.4ms)[0m   [0;1mDELETE FROM "solutions" WHERE "id" = 21[0m
+  [4;35;1mProblem Destroy (0.3ms)[0m   [0mDELETE FROM "problems" WHERE "id" = 17[0m
+Redirected to /judges/9
+Completed in 61ms (DB: 3) | 302 Found [http://127.0.0.1/problems/17]
+
+
+Processing JudgesController#show (for 127.0.0.1 at 2008-11-30 18:29:04) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering judges/show
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 9) [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 71ms (View: 47, DB: 1) | 200 OK [http://127.0.0.1/judges/9]
+
+
+Processing JudgesController#destroy (for 127.0.0.1 at 2008-11-30 18:29:08) [DELETE]
+  Parameters: {"authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "id"=>"9"}
+  [4;35;1mJudge Load (0.7ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 9) [0m
+  [4;36;1mProblem Load (0.3ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems".judge_id = 9) [0m
+  [4;35;1mJudge Destroy (0.4ms)[0m   [0mDELETE FROM "judges" WHERE "id" = 9[0m
+Redirected to /judges
+Completed in 36ms (DB: 1) | 302 Found [http://127.0.0.1/judges/9]
+
+
+Processing JudgesController#index (for 127.0.0.1 at 2008-11-30 18:29:08) [GET]
+  [4;36;1mJudge Load (1.6ms)[0m   [0;1mSELECT * FROM "judges" [0m
+Rendering template within layouts/application
+Rendering judges/index
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 2) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 3) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 84ms (View: 70, DB: 2) | 200 OK [http://127.0.0.1/judges]
+
+
+Processing JudgesController#new (for 127.0.0.1 at 2008-11-30 18:29:13) [GET]
+Rendering template within layouts/application
+Rendering judges/new
+Rendered judges/_form (13.4ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 100ms (View: 78, DB: 0) | 200 OK [http://127.0.0.1/judges/new]
+
+
+Processing JudgesController#create (for 127.0.0.1 at 2008-11-30 18:29:19) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "judge"=>{"name"=>"fg", "url"=>"http://acm.zju.edu.cn/"}}
+  [4;36;1mJudge Create (0.6ms)[0m   [0;1mINSERT INTO "judges" ("name", "updated_at", "url", "created_at") VALUES('fg', '2008-11-30 23:29:19', 'http://acm.zju.edu.cn/', '2008-11-30 23:29:19')[0m
+Redirected to /judges
+Completed in 58ms (DB: 1) | 302 Found [http://127.0.0.1/judges]
+
+
+Processing JudgesController#index (for 127.0.0.1 at 2008-11-30 18:29:19) [GET]
+  [4;35;1mJudge Load (1.7ms)[0m   [0mSELECT * FROM "judges" [0m
+Rendering template within layouts/application
+Rendering judges/index
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 2) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 3) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 10) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 186ms (View: 173, DB: 2) | 200 OK [http://127.0.0.1/judges]
+
+
+Processing JudgesController#show (for 127.0.0.1 at 2008-11-30 18:29:21) [GET]
+  Parameters: {"id"=>"10"}
+  [4;35;1mJudge Load (0.9ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 10) [0m
+Rendering template within layouts/application
+Rendering judges/show
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 10) [0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 64ms (View: 40, DB: 1) | 200 OK [http://127.0.0.1/judges/10]
+
+
+Processing ProblemsController#new (for 127.0.0.1 at 2008-11-30 18:29:23) [GET]
+  Parameters: {"judge_id"=>"10"}
+  [4;36;1mJudge Load (0.7ms)[0m   [0;1mSELECT * FROM "judges" WHERE ("judges"."id" = 10) [0m
+Rendering template within layouts/application
+Rendering problems/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 10) [0m
+Rendered problems/_form (7.7ms)
+  [4;36;1mUser Load (1.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 68ms (View: 40, DB: 1) | 200 OK [http://127.0.0.1/judges/10/problems/new]
+
+
+Processing ProblemsController#create (for 127.0.0.1 at 2008-11-30 18:29:28) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "problem"=>{"title"=>"arfad", "number"=>"ew4", "url"=>"dafdf", "judge_id"=>"10"}}
+  [4;35;1mProblem Exists (0.3ms)[0m   [0mSELECT "problems".id FROM "problems" WHERE ("problems"."number" = 'ew4' AND "problems".judge_id = 10) LIMIT 1[0m
+  [4;36;1mProblem Exists (0.3ms)[0m   [0;1mSELECT "problems".id FROM "problems" WHERE ("problems"."url" = 'dafdf') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering problems/new
+  [4;35;1mJudge Load (0.7ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 10) [0m
+Rendered problems/_form (26.5ms)
+  [4;36;1mUser Load (1.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 90ms (View: 61, DB: 3) | 200 OK [http://127.0.0.1/problems]
+
+
+Processing ProblemsController#create (for 127.0.0.1 at 2008-11-30 18:29:32) [POST]
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "problem"=>{"title"=>"arfad", "number"=>"ew4", "url"=>"http://google.com", "judge_id"=>"10"}}
+  [4;35;1mProblem Exists (0.3ms)[0m   [0mSELECT "problems".id FROM "problems" WHERE ("problems"."number" = 'ew4' AND "problems".judge_id = 10) LIMIT 1[0m
+  [4;36;1mProblem Exists (0.3ms)[0m   [0;1mSELECT "problems".id FROM "problems" WHERE ("problems"."url" = 'http://google.com') LIMIT 1[0m
+  [4;35;1mProblem Create (0.4ms)[0m   [0mINSERT INTO "problems" ("updated_at", "title", "number", "url", "judge_id", "created_at") VALUES('2008-11-30 23:29:32', 'arfad', 'ew4', 'http://google.com', 10, '2008-11-30 23:29:32')[0m
+Redirected to #<Problem:0xb704cc2c>
+Completed in 33ms (DB: 1) | 302 Found [http://127.0.0.1/problems]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 18:29:33) [GET]
+  Parameters: {"id"=>"18"}
+  [4;36;1mProblem Load (0.8ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 18) [0m
+  [4;35;1mJudge Load (0.7ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 10) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 18) [0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 82ms (View: 55, DB: 1) | 200 OK [http://127.0.0.1/problems/18]
+
+
+Processing SolutionsController#new (for 127.0.0.1 at 2008-11-30 18:29:35) [GET]
+  Parameters: {"problem_id"=>"18"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mProblem Load (0.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 18) [0m
+Rendering template within layouts/application
+Rendering solutions/new
+Rendered solutions/_form (7.3ms)
+Completed in 74ms (View: 21, DB: 2) | 200 OK [http://127.0.0.1/problems/18/solutions/new]
+
+
+Processing SolutionsController#create (for 127.0.0.1 at 2008-11-30 18:29:40) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "solution"=>{"explanation"=>"adf", "problem_id"=>"18", "source_code"=>#<ActionController::UploadedStringIO:0xb709b458>, "user_id"=>"3"}}
+[paperclip] Paperclip attachment source_code on Solution initialized.
+[paperclip] Assigning #<ActionController::UploadedStringIO:0xb709b458> to source_code
+[paperclip] Writing attributes for source_code
+[paperclip] Post-processing source_code
+  [4;36;1mSolution Create (1.0ms)[0m   [0;1mINSERT INTO "solutions" ("updated_at", "explanation", "source_code_content_type", "source_code_file_name", "source_code_file_size", "problem_id", "user_id", "source_code_updated_at", "created_at") VALUES('2008-11-30 23:29:40', 'adf', 'text/x-c', '305.cpp', 1660, 18, 3, '2008-11-30 23:29:40', '2008-11-30 23:29:40')[0m
+[paperclip] Saving attachments.
+[paperclip] Saving files for source_code
+[paperclip] Deleting files for source_code
+[paperclip] Writing files for source_code
+[paperclip] -> /media/almacen/Wack-a-Mole/Rails/como_vamos/public/uploads/solutions/22/305.cpp
+  [4;35;1mProblem Load (0.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 18) [0m
+Redirected to #<Problem:0xb702a140>
+Completed in 58ms (DB: 2) | 302 Found [http://127.0.0.1/solutions]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 18:29:40) [GET]
+  Parameters: {"id"=>"18"}
+  [4;36;1mProblem Load (0.7ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 18) [0m
+  [4;35;1mJudge Load (0.7ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 10) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 18) [0m
+  [4;35;1mSolution Load (0.9ms)[0m   [0mSELECT * FROM "solutions" WHERE ("solutions".problem_id = 18) [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+[paperclip] Paperclip attachment source_code on Solution initialized.
+Rendered solutions/_solution (29.0ms)
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 124ms (View: 80, DB: 1) | 200 OK [http://127.0.0.1/problems/18]
+
+
+Processing SolutionsController#destroy (for 127.0.0.1 at 2008-11-30 18:29:43) [DELETE]
+  Parameters: {"authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "id"=>"22"}
+
+
+ActionController::UnknownAction (No action responded to destroy. Actions: create, edit, index, new, and show):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing SolutionsController#destroy (for 127.0.0.1 at 2008-11-30 18:30:51) [DELETE]
+  Parameters: {"authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "id"=>"22"}
+
+
+ActionController::UnknownAction (No action responded to destroy. Actions: create, edit, index, new, and show):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing SolutionsController#destroy (for 127.0.0.1 at 2008-11-30 18:31:00) [DELETE]
+  Parameters: {"authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "id"=>"22"}
+
+
+ActionController::UnknownAction (No action responded to destroy. Actions: create, edit, index, new, and show):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing SolutionsController#22 (for 127.0.0.1 at 2008-11-30 18:31:04) [GET]
+  Parameters: {"id"=>"new"}
+
+
+ActionController::UnknownAction (No action responded to 22. Actions: create, edit, index, new, and show):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing SolutionsController#new (for 127.0.0.1 at 2008-11-30 18:31:11) [GET]
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Problem without an ID):
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:1509:in `find_from_ids'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:590:in `find'
+    /app/controllers/solutions_controller.rb:13:in `new'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (60.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (2.6ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing SolutionsController#destroy (for 127.0.0.1 at 2008-11-30 18:31:46) [DELETE]
+  Parameters: {"authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "id"=>"22"}
+
+
+ActionController::UnknownAction (No action responded to destroy. Actions: create, edit, index, new, and show):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing SolutionsController#new (for 127.0.0.1 at 2008-11-30 18:31:51) [GET]
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Problem without an ID):
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:1509:in `find_from_ids'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/base.rb:590:in `find'
+    /app/controllers/solutions_controller.rb:13:in `new'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_trace (158.1ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/_request_and_response (2.6ms)
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing SolutionsController#new (for 127.0.0.1 at 2008-11-30 18:33:27) [GET]
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Redirected to /problems
+Completed in 36ms (DB: 1) | 302 Found [http://127.0.0.1/solutions/new]
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2008-11-30 18:33:27) [GET]
+  [4;35;1mJudge Load (1.7ms)[0m   [0mSELECT * FROM "judges" [0m
+Rendering template within layouts/application
+Rendering problems/index
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 2) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 3) [0m
+  [4;36;1mProblem Load (1.6ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems".judge_id = 3) [0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 14) [0m
+Rendered problems/_problem (19.4ms)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;35;1mProblem Load (1.0ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems".judge_id = 7) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 9) [0m
+Rendered problems/_problem (5.0ms)
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 10) [0m
+Rendered problems/_problem (5.7ms)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" WHERE ("problems".judge_id = 10) [0m
+  [4;35;1mProblem Load (0.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems".judge_id = 10) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 18) [0m
+Rendered problems/_problem (4.8ms)
+  [4;35;1mUser Load (3.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 120ms (View: 95, DB: 2) | 200 OK [http://127.0.0.1/problems]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2008-11-30 18:33:33) [GET]
+  Parameters: {"id"=>"18"}
+  [4;36;1mProblem Load (0.8ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 18) [0m
+  [4;35;1mJudge Load (0.7ms)[0m   [0mSELECT * FROM "judges" WHERE ("judges"."id" = 10) [0m
+Rendering template within layouts/application
+Rendering problems/show
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "solutions" WHERE ("solutions".problem_id = 18) [0m
+  [4;35;1mSolution Load (0.9ms)[0m   [0mSELECT * FROM "solutions" WHERE ("solutions".problem_id = 18) [0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+[paperclip] Paperclip attachment source_code on Solution initialized.
+Rendered solutions/_solution (29.9ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 109ms (View: 78, DB: 1) | 200 OK [http://127.0.0.1/problems/18]
+
+
+Processing SolutionsController#destroy (for 127.0.0.1 at 2008-11-30 18:33:36) [DELETE]
+  Parameters: {"authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "id"=>"22"}
+
+
+ActionController::UnknownAction (No action responded to destroy. Actions: create, edit, index, new, and show):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing SolutionsController#destroy (for 127.0.0.1 at 2008-11-30 18:34:31) [DELETE]
+  Parameters: {"authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "id"=>"22"}
+
+
+ActionController::UnknownAction (No action responded to destroy. Actions: create, edit, index, new, and show):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing SolutionsController#edit (for 127.0.0.1 at 2008-11-30 18:34:34) [GET]
+  Parameters: {"id"=>"22"}
+  [4;36;1mSolution Load (1.0ms)[0m   [0;1mSELECT * FROM "solutions" WHERE ("solutions"."id" = 22) [0m
+Rendering template within layouts/application
+Rendering solutions/edit
+Rendered solutions/_form (8.8ms)
+  [4;35;1mProblem Load (0.8ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 18) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Completed in 188ms (View: 172, DB: 1) | 200 OK [http://127.0.0.1/solutions/22/edit]
+
+
+Processing SolutionsController#update (for 127.0.0.1 at 2008-11-30 18:34:41) [PUT]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "id"=>"22", "solution"=>{"explanation"=>"adfdfad", "problem_id"=>"18", "source_code"=>#<ActionController::UploadedStringIO:0xb70e7920>, "user_id"=>"3"}}
+
+
+ActionController::UnknownAction (No action responded to update. Actions: create, edit, index, new, and show):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing SolutionsController#update (for 127.0.0.1 at 2008-11-30 18:35:25) [PUT]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"399acc2fde714deecc3b8ef46654016f57c859aa", "id"=>"22", "solution"=>{"explanation"=>"adfdfad", "problem_id"=>"18", "source_code"=>#<ActionController::UploadedStringIO:0xb6e11f34>, "user_id"=>"3"}}
+
+
+ActionController::UnknownAction (No action responded to update. Actions: create, edit, index, new, and show):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:617:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.2.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/session_management.rb:134:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/base.rb:392:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)

@@ -3,7 +3,9 @@ class Problem < ActiveRecord::Base
   has_many :solutions, :dependent => :destroy
 
   validates_presence_of :title, :url, :number, :judge_id
-  validates_uniqueness_of :number, :url
+  validates_uniqueness_of :number, :scope => [:judge_id]
+  validates_uniqueness_of :url
+
   validate :url_is_valid
 
   def full_title

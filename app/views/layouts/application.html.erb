@@ -4,9 +4,13 @@
   <head>
     <title><%= h(yield(:title) || "") %></title>
     <%= stylesheet_link_tag 'application' %>
+    <!-- google-code-prettify to embelish source code -->
+    <%= stylesheet_link_tag 'prettify' %>
+    <%= javascript_include_tag 'prettify' %>
+
     <%= yield(:head) %>
   </head>
-  <body>
+  <body onload="prettyPrint()">
     <div id="wrap">
       <div id="header">
         <h1>¿Cómo vamos? </h1>

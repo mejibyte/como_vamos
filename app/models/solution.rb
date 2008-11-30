@@ -21,7 +21,7 @@ class Solution < ActiveRecord::Base
 
   def source_code_as_text
     filename = source_code.url.gsub(/\?.*/, "")
-    File.read(RAILS_ROOT + "/public/" + filename)
+    "\n" + File.read(RAILS_ROOT + "/public/" + filename)
   end
 
   protected
