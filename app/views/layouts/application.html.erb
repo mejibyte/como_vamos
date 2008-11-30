@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
   <head>
     <title><%= h(yield(:title) || "") %></title>
@@ -7,46 +7,38 @@
     <%= yield(:head) %>
   </head>
   <body>
-    <div id="sidebar">
-      <ul>
-        <li>
-          <%= link_to "Home", root_path %>
-        </li>
-        <li>
-          <%= link_to "Judges", judges_path %>
-        </li>
-        <li>
-          <%= link_to "Problems", problems_path %>
-        </li>
-        <li>
-          <%= link_to "Users", users_path %>
-        </li>
+    <div id="wrap">
+      <div id="header">
+        <h1>¿Cómo vamos? </h1>
 
-        <br />
+        <%= link_to "Home", root_path %> |
+        <%= link_to "Judges", judges_path %> |
+        <%= link_to "Problems", problems_path %> |
+        <%= link_to "Users", users_path %> |
 
-        <li>
-          <% if logged_in? %>
-          <%= link_to "Logout", session_path, :method => :delete %>
-          <% else %>
-          <%= link_to "Login", new_session_path %>
-          <% end %>
-        </li>
-      </ul>
+        <% if logged_in? %>
+        <%= link_to "Logout", session_path, :method => :delete %>
+        <% else %>
+        <%= link_to "Login", new_session_path %> |
+        <%= link_to "Sign up", new_user_path %>
+        <% end %>
+
+      </div>
 
 
-    </div>
+      <div id="main">
+          <%- flash.each do |name, msg| -%>
+          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+          <%- end -%>
 
-    <div id="main">
-      <div id="container">
-        <%- flash.each do |name, msg| -%>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-        <%- end -%>
+          <%- if show_title? -%>
+          <h1><%=h yield(:title) %></h1>
+          <%- end -%>
 
-        <%- if show_title? -%>
-        <h1><%=h yield(:title) %></h1>
-        <%- end -%>
-
-        <%= yield %>
+          <%= yield %>
+      </div>
+      <div id="footer">
+        Brought to you by Factor común.
       </div>
     </div>
   </body>

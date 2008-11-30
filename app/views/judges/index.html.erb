@@ -5,14 +5,14 @@
   <h3> <%= link_to judge.name, judge %>
 
   <%= link_to image_tag("icons/world.png", :alt => "Go to judge site"), judge.url, :target => "_blank" %>
+  <%= link_to image_tag("icons/pencil.png", :alt => "Edit"), edit_judge_path(judge) %>
+  <%= link_to image_tag("icons/cross.png", :alt =>"Delete"), judge, :confirm => 'Are you sure?', :method => :delete %>
 </h3>
 
   <%= pluralize judge.problems.size, "problem" %>.
 
-  <div class="actions">
-      <%= link_to "Edit", edit_judge_path(judge) %> |
-      <%= link_to "Destroy", judge, :confirm => 'Are you sure?', :method => :delete %>
-  </div>
+
+
 </div>
 <% end %>
 

@@ -90,31 +90,39 @@ h3, h3 a {
 }
 
 #main{
-  padding: 0px 0px;
-}
-
-#container{
-  width: 80%;
   padding: 20px 40px;
   margin: 0 auto;
   text-align: left;
   background-color: #FFFFFF;
   border: 1px solid black;
-  float:right;
+  margin-bottom: 10px;
 }
 
-#sidebar {
-  float:left;
-  width:12%;
-  background-color:#ABCDEF;
-  color:black;
+#container {
+  border: none;
+}
+
+#header {
+  padding: 10px 10px 10px 10px;
   border: 1px solid black;
+  min-height:10px;
+  clear: both;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
-#sidebar h3{
-  padding: 0px 0px 0px 10px;
+#footer {
+  padding: 10px 10px 10px 10px;
+  border: 1px solid black;
+  min-height:10px;
+  clear: both;
+  text-align: center;
 }
 
+#wrap {
+  margin: 0 auto;
+  width: 800px;
+}
 
 .hidden {
  display: none;
