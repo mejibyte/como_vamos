@@ -1,0 +1,13 @@
+<% form_for @judge do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

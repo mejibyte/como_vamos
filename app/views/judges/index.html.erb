@@ -1,0 +1,19 @@
+<% title "Judges" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Url</th>
+  </tr>
+  <% for judge in @judges %>
+    <tr>
+      <td><%=h judge.name %></td>
+      <td><%=h judge.url %></td>
+      <td><%= link_to "Show", judge %></td>
+      <td><%= link_to "Edit", edit_judge_path(judge) %></td>
+      <td><%= link_to "Destroy", judge, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Judge", new_judge_path %></p>
