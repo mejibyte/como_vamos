@@ -1,24 +1,17 @@
-<h1>Listing solutions</h1>
+<% title "Solutions" %>
 
 <table>
   <tr>
     <th>Explanation</th>
-    <th>Problem</th>
-    <th>User</th>
   </tr>
-
-<% for solution in @solutions %>
-  <tr>
-    <td><%=h solution.explanation %></td>
-    <td><%=h solution.problem_id %></td>
-    <td><%=h solution.user_id %></td>
-    <td><%= link_to 'Show', solution %></td>
-    <td><%= link_to 'Edit', edit_solution_path(solution) %></td>
-    <td><%= link_to 'Destroy', solution, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
+  <% for solution in @solutions %>
+    <tr>
+      <td><%=h solution.explanation %></td>
+      <td><%= link_to "Show", solution %></td>
+      <td><%= link_to "Edit", edit_solution_path(solution) %></td>
+      <td><%= link_to "Destroy", solution, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
 </table>
 
-<br />
-
-<%= link_to 'New solution', new_solution_path %>
+<p><%= link_to "New Solution", new_solution_path %></p>

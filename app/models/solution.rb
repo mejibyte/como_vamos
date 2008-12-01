@@ -7,7 +7,7 @@ class Solution < ActiveRecord::Base
 
 
   has_attached_file :source_code,
-                    :url  => "/uploads/solutions/:id/:basename.:extension",
+                    :url => "/uploads/solutions/:id/:basename.:extension",
                     :path => ":rails_root/public/uploads/solutions/:id/:basename.:extension"
 
 
@@ -21,12 +21,16 @@ class Solution < ActiveRecord::Base
 
   def source_code_as_text
     filename = source_code.url.gsub(/\?.*/, "")
-    "\n" + File.read(RAILS_ROOT + "/public/" + filename)
+    begin
+      "\n" + File.read(RAILS_ROOT + "/public/" + filename)
+    rescue
+      "There was an error while reading the source file."
+    end
   end
 
   protected
   def source_code_has_valid_extension
-    extension = source_code_file_name.split(".").last.downcase || ""
+    extension = (source_code_file_name || " . ").split(".").last.downcase
     unless accepted_extensions.include?(extension)
       errors.add(:source_code, " has invalid extension. Supported: #{accepted_extensions.inspect}")
     end

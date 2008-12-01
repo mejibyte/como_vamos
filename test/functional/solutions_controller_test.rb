@@ -1,45 +1,54 @@
 require 'test_helper'
 
 class SolutionsControllerTest < ActionController::TestCase
-  test "should get index" do
+  def test_index
     get :index
-    assert_response :success
-    assert_not_nil assigns(:solutions)
+    assert_template 'index'
   end
-
-  test "should get new" do
+  
+  def test_show
+    get :show, :id => Solution.first
+    assert_template 'show'
+  end
+  
+  def test_new
     get :new
-    assert_response :success
+    assert_template 'new'
   end
-
-  test "should create solution" do
-    assert_difference('Solution.count') do
-      post :create, :solution => { }
-    end
-
-    assert_redirected_to solution_path(assigns(:solution))
+  
+  def test_create_invalid
+    Solution.any_instance.stubs(:valid?).returns(false)
+    post :create
+    assert_template 'new'
   end
-
-  test "should show solution" do
-    get :show, :id => solutions(:one).id
-    assert_response :success
+  
+  def test_create_valid
+    Solution.any_instance.stubs(:valid?).returns(true)
+    post :create
+    assert_redirected_to solution_url(assigns(:solution))
   end
-
-  test "should get edit" do
-    get :edit, :id => solutions(:one).id
-    assert_response :success
+  
+  def test_edit
+    get :edit, :id => Solution.first
+    assert_template 'edit'
   end
-
-  test "should update solution" do
-    put :update, :id => solutions(:one).id, :solution => { }
-    assert_redirected_to solution_path(assigns(:solution))
+  
+  def test_update_invalid
+    Solution.any_instance.stubs(:valid?).returns(false)
+    put :update, :id => Solution.first
+    assert_template 'edit'
   end
-
-  test "should destroy solution" do
-    assert_difference('Solution.count', -1) do
-      delete :destroy, :id => solutions(:one).id
-    end
-
-    assert_redirected_to solutions_path
+  
+  def test_update_valid
+    Solution.any_instance.stubs(:valid?).returns(true)
+    put :update, :id => Solution.first
+    assert_redirected_to solution_url(assigns(:solution))
+  end
+  
+  def test_destroy
+    solution = Solution.first
+    delete :destroy, :id => solution
+    assert_redirected_to solutions_url
+    assert !Solution.exists?(solution.id)
   end
 end

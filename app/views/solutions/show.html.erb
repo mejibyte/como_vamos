@@ -1,3 +1,4 @@
+<% title "Solution" %>
 <p>
   <b>Explanation:</b>
   <%=h @solution.explanation %>
@@ -13,6 +14,8 @@
   <%=h @solution.user_id %>
 </p>
 
-
-<%= link_to 'Edit', edit_solution_path(@solution) %> |
-<%= link_to 'Back', solutions_path %>
+<p>
+  <%= link_to "Edit", edit_solution_path(@solution) %> |
+  <%= link_to "Destroy", @solution, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", solutions_path %>
+</p>

@@ -9,14 +9,18 @@ class SolutionsController < ApplicationController
 
   def new
     @solution = Solution.new
-    @user = current_user
-    if params[:problems_id].nil?
-      flash[:error] = "Please select a problem first"
-      redirect_to problems_path
+
+    @solution.user = current_user
+    @solution.problem_id = params[:problem_id]
+  end
+
+  def create
+    @solution = Solution.new(params[:solution])
+    if @solution.save
+      flash[:notice] = "Successfully created solution."
+      redirect_to @solution
     else
-      @problem = Problem.find params[:problem_id]
-      @solution.user = @user
-      @solution.problem = @problem
+      render :action => 'new'
     end
   end
 
@@ -24,34 +28,20 @@ class SolutionsController < ApplicationController
     @solution = Solution.find(params[:id])
   end
 
-  def create
-    @solution = Solution.new(params[:solution])
-    if @solution.save
-      flash[:notice] = 'Solution was successfully created.'
-      redirect_to(@solution.problem)
+  def update
+    @solution = Solution.find(params[:id])
+    if @solution.update_attributes(params[:solution])
+      flash[:notice] = "Successfully updated solution."
+      redirect_to @solution
     else
-      render :action => "new"
+      render :action => 'edit'
     end
   end
-end
 
   def destroy
     @solution = Solution.find(params[:id])
-    @problem = @solution.problem
     @solution.destroy
     flash[:notice] = "Successfully destroyed solution."
-    redirect_to problem_path(@problem)
+    redirect_to solutions_url
   end
-
-def update
-  @solution = Solution.find(params[:id])
-
-  if @solution.update_attributes(params[:solution])
-    flash[:notice] = 'Solution was successfully updated.'
-    redirect_to(@solution.problem)
-  else
-    render :action => "edit"
-  end
-
-
 end

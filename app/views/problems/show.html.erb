@@ -16,7 +16,9 @@
   <%= pluralize @problem.solutions.size, "solution" %>.
 </div>
 
+
 <%= render :partial => "solutions/solution", :collection => @problem.solutions %>
+
 
 <div class="bottom_link">
   <%= link_to image_tag("icons/add.png", :alt => "Add new solution"), new_problem_solution_path(@problem) %>
