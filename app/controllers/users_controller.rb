@@ -2,6 +2,24 @@ class UsersController < ApplicationController
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
 
+  def show
+    @user = User.find(params[:id])
+  end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    cookies.delete :auth_token
+    @user = User.find(params[:id])
+    if @user.update_attributes(params[:user])
+      flash[:notice] = "Successfully updated user."
+      redirect_back_or_default('/')
+    else
+      render :action => 'edit'
+    end
+  end
 
   # render new.rhtml
   def new

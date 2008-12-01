@@ -1,0 +1,12 @@
+<% title @user.name %>
+
+<div class="actions">
+  <%= link_to image_tag("icons/arrow_left.png", :alt => "Back to all users"), users_path %>
+  <%= link_to image_tag("icons/pencil.png", :alt => "Edit"), edit_user_path(@user) %>
+  <%= link_to image_tag("icons/cross.png", :alt =>"Delete"), @user, :confirm => 'Are you sure?', :method => :delete %>
+</div>
+
+
+<div class="list_element">
+<h3>Solved problems</h3>
+</div>
