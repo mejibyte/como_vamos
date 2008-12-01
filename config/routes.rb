@@ -1,7 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :solutions
-
-
+  map.resources :solutions, :except => [:show, :index, :new]
   map.resources :users
   map.resource :session
   map.resources :judges do |judge|
@@ -12,7 +10,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :problems, :except => :new do |problem|
     problem.resources :solutions, :only => :new
   end
-  map.resources :solutions, :except => [:show, :index]
+
 
   map.root :controller => "home", :action => "index"
 

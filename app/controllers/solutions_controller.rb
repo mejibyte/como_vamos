@@ -1,10 +1,10 @@
 class SolutionsController < ApplicationController
   def index
-    @solutions = Solution.find(:all)
+    redirect_to problems_path
   end
 
   def show
-    @solution = Solution.find(params[:id])
+    redirect_to problems_path
   end
 
   def new
@@ -12,13 +12,17 @@ class SolutionsController < ApplicationController
 
     @solution.user = current_user
     @solution.problem_id = params[:problem_id]
+    if @solution.problem_id.nil?
+      flash[:error] = "You must select a problem before submitting a solution"
+      redirect_to problems_path
+    end
   end
 
   def create
     @solution = Solution.new(params[:solution])
     if @solution.save
       flash[:notice] = "Successfully created solution."
-      redirect_to @solution
+      redirect_to @solution.problem
     else
       render :action => 'new'
     end
@@ -32,7 +36,7 @@ class SolutionsController < ApplicationController
     @solution = Solution.find(params[:id])
     if @solution.update_attributes(params[:solution])
       flash[:notice] = "Successfully updated solution."
-      redirect_to @solution
+      redirect_to @solution.problem
     else
       render :action => 'edit'
     end
@@ -40,8 +44,9 @@ class SolutionsController < ApplicationController
 
   def destroy
     @solution = Solution.find(params[:id])
+    problem = @solution.problem
     @solution.destroy
     flash[:notice] = "Successfully destroyed solution."
-    redirect_to solutions_url
+    redirect_to problem
   end
 end

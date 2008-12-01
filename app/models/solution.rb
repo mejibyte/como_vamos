@@ -7,8 +7,8 @@ class Solution < ActiveRecord::Base
 
 
   has_attached_file :source_code,
-                    :url => "/uploads/solutions/:id/:basename.:extension",
-                    :path => ":rails_root/public/uploads/solutions/:id/:basename.:extension"
+                    :url => "/uploads/solutions/:id_:basename.:extension",
+                    :path => ":rails_root/public/uploads/solutions/:id_:basename.:extension"
 
 
   validates_presence_of :source_code_file_name
