@@ -8,13 +8,18 @@ class SolutionsController < ApplicationController
   end
 
   def new
-    @solution = Solution.new
+    if !logged_in?
+      flash[:error] = "You must be logged in to submit a solution"
+      redirect_to new_session_path
+    else
+      @solution = Solution.new
 
-    @solution.user = current_user
-    @solution.problem_id = params[:problem_id]
-    if @solution.problem_id.nil?
-      flash[:error] = "You must select a problem before submitting a solution"
-      redirect_to problems_path
+      @solution.user = current_user
+      @solution.problem_id = params[:problem_id]
+      if @solution.problem_id.nil?
+        flash[:error] = "You must select a problem before submitting a solution"
+        redirect_to problems_path
+      end
     end
   end
 

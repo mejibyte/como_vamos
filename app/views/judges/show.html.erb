@@ -15,6 +15,7 @@
 <%= render :partial => "problems/problem", :collection => @problems %>
 
 <div class="bottom_link">
+<%= link_to  image_tag("icons/add.png", :alt =>"Add problem"), new_judge_problem_path(@judge) %>
 <%= link_to "Add problem", new_judge_problem_path(@judge) %>
 </div>
 

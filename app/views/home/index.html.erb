@@ -1,0 +1,41 @@
+<div class="list_element">
+  <% if !logged_in? %>
+
+  <h3>Welcome, guest.</h3>
+  Please <%= link_to "login", new_session_path %> or <%= link_to "signup", new_user_path %>.
+
+  Feel free to navigate anonymously, altough you won't be able to submit solutions until you register.
+
+  <% else -%>
+  <h3>Welcome back, <%= h current_user.name %></h3>
+
+  <div>
+    You have <%= h current_user.solved_problems.size %> solved problems.
+  </div>
+
+  <div>
+    These are the problems that other people have solved but you are still missing:
+    <div class="list_element">
+      <% if @missing_problems.size == 0 -%>
+      Hooray! Nobody has solved a problem that you haven't.
+      <% else -%>
+      <% for problem in @missing_problems -%>
+      <%= link_to problem.full_title, problem %> | Solved by <%= pluralize problem.solvers.size, "person" %> <br />
+      <% end -%>
+      <% end %>
+    </div>
+  </div>
+
+  <br />
+
+  <% if @unsolved_problems.size > 0 -%>
+  These are the problems that nobody has solved:
+  <div class="list_element">
+    <% for problem in @unsolved_problems -%>
+    <%= link_to problem.full_title, problem %> | From <%= link_to problem.judge.name, problem.judge -%> <br />
+    <% end -%>
+  </div>
+  <% end -%>
+
+  <% end -%>
+</div>

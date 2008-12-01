@@ -2,6 +2,8 @@ require 'digest/sha1'
 class User < ActiveRecord::Base
 
   has_many :solutions, :dependent => :destroy
+  has_many :solved_problems, :through => :solutions, :source => :problem
+
 
   # Virtual attribute for the unencrypted password
   attr_accessor :password
@@ -68,6 +70,19 @@ class User < ActiveRecord::Base
   # Returns true if the user has just been activated.
   def recently_activated?
     @activated
+  end
+
+
+  def missing_problems
+    # Find problems that other people has solved but I haven't.
+    problems = Problem.all
+    result = []
+    for p in problems
+      if p.solvers.size > 0 and !p.solvers.include?(self)
+        result << p
+      end
+    end
+    result
   end
 
   protected
