@@ -3,8 +3,8 @@
 <div class="actions">
   <%= link_to image_tag("icons/arrow_left.png", :alt => "Back to all judges"), judges_path %>
   <%= link_to image_tag("icons/world.png", :alt => "Go to judge site"), @judge.url, :target => "_blank" %>
-  <%= link_to image_tag("icons/pencil.png", :alt => "Edit"), edit_judge_path(@judge) %>
-  <%= link_to image_tag("icons/cross.png", :alt =>"Delete"), @judge, :confirm => 'Are you sure?', :method => :delete %>
+  <%= link_to image_tag("icons/pencil.png", :alt => "Edit"), edit_judge_path(@judge) if @judge.editable_by?(current_user) %>
+  <%= link_to image_tag("icons/cross.png", :alt =>"Delete"), @judge, :confirm => 'Are you sure?', :method => :delete if @judge.deletable_by?(current_user) %>
 </div>
 
 
