@@ -1,4 +1,6 @@
 class JudgesController < ApplicationController
+  before_filter :is_logged_in, :except => [:index, :show]
+
   def index
     @judges = Judge.find(:all)
   end
@@ -10,6 +12,7 @@ class JudgesController < ApplicationController
 
   def new
     @judge = Judge.new
+    @judge.owner_id = current_user.id
   end
 
   def create

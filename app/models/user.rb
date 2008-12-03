@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   has_many :solutions, :dependent => :destroy
   has_many :solved_problems, :through => :solutions, :source => :problem
 
+  has_many :created_problems, :class_name => "Problem", :foreign_key => "owner_id", :dependent => :nullify
+  has_many :created_judges, :class_name => "Judge", :foreign_key => "owner_id", :dependent => :nullify
 
   # Virtual attribute for the unencrypted password
   attr_accessor :password

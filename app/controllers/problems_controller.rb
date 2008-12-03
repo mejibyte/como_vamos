@@ -1,4 +1,6 @@
 class ProblemsController < ApplicationController
+  before_filter :is_logged_in, :except => [:index, :show]
+
   def index
     @judges = Judge.find(:all)
     @problems_by_judge = Hash.new
@@ -17,6 +19,8 @@ class ProblemsController < ApplicationController
     @judge = Judge.find(params[:judge_id])
     @problem = Problem.new
     @problem.judge_id = @judge.id
+    @problem.owner_id = current_user.id
+
   end
 
   def create
@@ -50,4 +54,5 @@ class ProblemsController < ApplicationController
     flash[:notice] = "Successfully destroyed problem."
     redirect_to judge_path(judge)
   end
+
 end

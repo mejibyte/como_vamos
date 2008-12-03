@@ -5,6 +5,7 @@
     <%= link_to @problem.judge.name, @problem.judge %>
   </div>
   <%= f.text_field :judge_id, :class => "hidden" %>
+  <%= f.text_field :owner_id, :class => "hidden" %>
   <p>
     <%= f.label :number %><br />
     <%= f.text_field :number %>

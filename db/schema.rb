@@ -9,13 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081130183034) do
+ActiveRecord::Schema.define(:version => 20081203023513) do
 
   create_table "judges", :force => true do |t|
     t.string   "name"
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "owner_id"
   end
 
   create_table "problems", :force => true do |t|
@@ -25,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20081130183034) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "number"
+    t.integer  "owner_id"
   end
 
   create_table "solutions", :force => true do |t|
