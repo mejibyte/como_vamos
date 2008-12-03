@@ -15,18 +15,20 @@ class ApplicationController < ActionController::Base
   # filter_parameter_logging :password
 
   protected
+
+  #this is a before filter, so it redirects
   def is_logged_in
-    if current_user.nil?
-      unauthorized("You must be logged in to perform this action.", :back)
+    if !logged_in?
+      redirect_unauthorized("You must be logged in to perform this action.", :back)
       return false
     else
       return true
     end
   end
 
-
-  def unauthorized(message, where)
+  def redirect_unauthorized(message, where)
     flash[:error] = message
     redirect_to where
   end
+
 end

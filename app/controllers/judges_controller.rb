@@ -45,4 +45,5 @@ class JudgesController < ApplicationController
     flash[:notice] = "Successfully destroyed judge."
     redirect_to judges_path
   end
+
 end

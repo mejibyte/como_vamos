@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+  before_filter :is_logged_in, :only => [:edit, :update, :destroy]
+
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
 

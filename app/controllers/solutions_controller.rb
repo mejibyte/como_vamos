@@ -1,4 +1,6 @@
 class SolutionsController < ApplicationController
+  before_filter :is_logged_in, :except => [:index, :show]
+
   def index
     redirect_to problems_path
   end
