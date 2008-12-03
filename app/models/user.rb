@@ -78,12 +78,23 @@ class User < ActiveRecord::Base
     self.is_admin? || self.is_moderator?
   end
 
-  def owns?(judge)
-    self.created_judges.include?(judge)
+  def owns?(record)
+    record.owner == self
   end
 
-  def authorized?(judge)
-    superuser? || owns?(judge)
+
+  def authorized?(record)
+    #authorized for edit/delete.
+    case record.class
+    when Judge
+      superuser? || owns?(record)
+    when Problem
+      superuser? || owns?(record)
+    when User
+      self.is_admin? || self == record
+    else
+      false
+    end
   end
 
 
@@ -100,16 +111,16 @@ class User < ActiveRecord::Base
   end
 
   protected
-    # before filter
-    def encrypt_password
-      return if password.blank?
-      self.salt = Digest::SHA1.hexdigest("--#{Time.now.to_s}--#{login}--") if new_record?
-      self.crypted_password = encrypt(password)
-    end
+  # before filter
+  def encrypt_password
+    return if password.blank?
+    self.salt = Digest::SHA1.hexdigest("--#{Time.now.to_s}--#{login}--") if new_record?
+    self.crypted_password = encrypt(password)
+  end
 
-    def password_required?
-      crypted_password.blank? || !password.blank?
-    end
+  def password_required?
+    crypted_password.blank? || !password.blank?
+  end
 
 
 end

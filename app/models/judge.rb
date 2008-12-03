@@ -6,20 +6,6 @@ class Judge < ActiveRecord::Base
   validates_presence_of :name, :url
   validate :url_is_valid
 
-
-  def editable_by?(user)
-    return false unless !user.nil?
-    return true if user.is_admin? || user.is_moderator? || self.owner == user
-    return false
-    #only admins, moderator, or owners can edi
-  end
-
-  def deletable_by?(user)
-    return false unless !user.nil?
-    return true if user.is_admin? || user.is_moderator? || self.owner == user
-    return false
-  end
-
   protected
   def url_is_valid
     begin

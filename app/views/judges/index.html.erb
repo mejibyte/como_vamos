@@ -6,11 +6,14 @@
 
   <%= link_to image_tag("icons/world.png", :alt => "Go to judge site"), judge.url, :target => "_blank" %>
 
-  <%= link_to(image_tag("icons/pencil.png", :alt => "Edit"), 
+  <% if logged_in? %>
+
+  <%= link_to(image_tag("icons/pencil.png", :alt => "Edit"),
               edit_judge_path(judge)) if current_user.authorized?(judge) %>
 
-  <%= link_to(image_tag("icons/cross.png", :alt =>"Delete"), judge, 
+  <%= link_to(image_tag("icons/cross.png", :alt =>"Delete"), judge,
               :confirm => 'Are you sure?', :method => :delete) if current_user.authorized?(judge) %>
+  <% end %>
 </h3>
 
   <%= pluralize judge.problems.size, "problem" %>.
@@ -20,4 +23,4 @@
 </div>
 <% end %>
 
-<p><%= link_to "New Judge", new_judge_path %></p>
+<p><%= link_to "New Judge", new_judge_path if logged_in?%></p>
