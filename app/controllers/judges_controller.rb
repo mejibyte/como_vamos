@@ -1,46 +1,39 @@
-
 class JudgesController < ApplicationController
   before_filter :is_logged_in, :except => [:index, :show]
+  before_filter :user_must_exist, :only => [:new, :create]
 
   def index
-    @judges = Judge.find(:all)
+    @judges = Judge.all
   end
 
   def show
-    @judge = Judge.find(params[:id])
+    find_judge
     @problems = @judge.problems
   end
 
   def new
-    if !Judge.createable_by?(current_user) then
-      redirect_unauthorized(judges_path)
-    else
-      @judge = Judge.new
-      @judge.owner_id = current_user.id
-    end
+    @judge = Judge.new
+    @judge.owner_id = current_user.id
   end
 
+
   def create
-    if !Judge.createable_by?(current_user) then
-      redirect_unauthorized(judges_path)
+    @judge = Judge.new(params[:judge])
+    if @judge.save
+      flash[:notice] = "Successfully created judge."
+      redirect_to judges_path
     else
-      @judge = Judge.new(params[:judge])
-      if @judge.save
-        flash[:notice] = "Successfully created judge."
-        redirect_to judges_path
-      else
-        render :action => 'new'
-      end
+      render :action => 'new'
     end
   end
 
   def edit
-    @judge = Judge.find(params[:id])
-    redirect_unauthorized(judges_path) unless @judge.editable_by?(current_user)
+    find_judge
+    redirect_unauthorized unless @judge.editable_by?(current_user)
   end
 
   def update
-    @judge = Judge.find(params[:id])
+    find_judge
     if !@judge.editable_by?(current_user) then
       redirect_unauthorized(judges_path)
     else
@@ -54,7 +47,7 @@ class JudgesController < ApplicationController
   end
 
   def destroy
-    @judge = Judge.find(params[:id])
+    find_judge
     if !@judge.editable_by?(current_user) then
       redirect_unauthorized(judges_path)
     else
@@ -64,4 +57,13 @@ class JudgesController < ApplicationController
     end
   end
 
+  protected
+
+  def user_must_exist
+    redirect_unauthorized if current_user.nil?
+  end
+
+  def find_judge
+    @judge = Judge.find(params[:id])
+  end
 end

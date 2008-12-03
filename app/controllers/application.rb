@@ -26,7 +26,9 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def redirect_unauthorized(where, message = "You are not authorized to perform this action.")
+  # Redirect to the current controller path (or where) with a message in teh flash
+  def redirect_unauthorized(where = "#{params[:controller]}_path", 
+                            message = "You are not authorized to perform this action.")
     flash[:error] = message
     redirect_to where
   end

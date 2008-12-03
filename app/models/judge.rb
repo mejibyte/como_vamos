@@ -20,13 +20,6 @@ class Judge < ActiveRecord::Base
     return false
   end
 
-  def self.createable_by?(user)
-    return false unless !user.nil?
-    return true
-    #any non-nil user can create
-  end
-
-
   protected
   def url_is_valid
     begin
