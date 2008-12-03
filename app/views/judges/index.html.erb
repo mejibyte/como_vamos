@@ -5,8 +5,12 @@
   <h3> <%= link_to judge.name, judge %>
 
   <%= link_to image_tag("icons/world.png", :alt => "Go to judge site"), judge.url, :target => "_blank" %>
-  <%= link_to(image_tag("icons/pencil.png", :alt => "Edit"), edit_judge_path(judge)) if judge.editable_by?(current_user) %>
-  <%= link_to(image_tag("icons/cross.png", :alt =>"Delete"), judge, :confirm => 'Are you sure?', :method => :delete) if judge.deletable_by?(current_user) %>
+
+  <%= link_to(image_tag("icons/pencil.png", :alt => "Edit"), 
+              edit_judge_path(judge)) if current_user.authorized?(judge) %>
+
+  <%= link_to(image_tag("icons/cross.png", :alt =>"Delete"), judge, 
+              :confirm => 'Are you sure?', :method => :delete) if current_user.authorized?(judge) %>
 </h3>
 
   <%= pluralize judge.problems.size, "problem" %>.

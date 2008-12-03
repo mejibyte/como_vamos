@@ -19,18 +19,18 @@ class ApplicationController < ActionController::Base
   #this is a before filter, so it redirects
   def is_logged_in
     if !logged_in?
-      redirect_unauthorized(:back, "You must be logged in to perform this action.")
-      return false
-    else
-      return true
+      redirect_unauthorized(judges_path, "You must be logged in to perform this action.")  
     end
   end
 
-  # Redirect to the current controller path (or where) with a message in teh flash
-  def redirect_unauthorized(where = "#{params[:controller]}_path", 
+  # Redirect to the current controller path (or where) with a message in the
+  # flash.
+  def redirect_unauthorized(where = eval("#{params[:controller]}_path"), 
                             message = "You are not authorized to perform this action.")
     flash[:error] = message
     redirect_to where
   end
-
 end
+
+
+

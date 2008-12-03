@@ -74,6 +74,18 @@ class User < ActiveRecord::Base
     @activated
   end
 
+  def superuser?
+    self.is_admin? || self.is_moderator?
+  end
+
+  def owns?(judge)
+    self.created_judges.include?(judge)
+  end
+
+  def authorized?(judge)
+    superuser? || owns?(judge)
+  end
+
 
   def missing_problems
     # Find problems that other people has solved but I haven't.
