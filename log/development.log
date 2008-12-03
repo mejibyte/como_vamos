@@ -33569,3 +33569,34 @@ Processing UsersController#index (for 127.0.0.1 at 2008-12-02 22:19:36) [GET]
 Rendering template within layouts/application
 Rendering users/index
 Completed in 48ms (View: 24, DB: 1) | 200 OK [http://127.0.0.1/users]
+  [4;36;1mSQL (2.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateJudges (20081130030835)
+Migrating to CreateUsers (20081130041716)
+Migrating to AddNameAndIsAdminToUser (20081130043634)
+Migrating to CreateProblems (20081130050007)
+Migrating to AddNumberToProblem (20081130092527)
+Migrating to CreateSolutions (20081130183034)
+Migrating to AddAttachmentsSourceCodeToSolution (20081201003256)
+Migrating to AddOwnerToProblemAndJudge (20081203023513)
+Migrating to AddIsModeratorToUser (20081203032203)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (7.5ms)[0m   [0mALTER TABLE "users" ADD "is_moderator" boolean[0m
+  [4;36;1mSQL (29.5ms)[0m   [0;1mVACUUM[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081203032203')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("judges")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("problems")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("solutions")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("users")[0m
