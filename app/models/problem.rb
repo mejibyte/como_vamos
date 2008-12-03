@@ -18,7 +18,7 @@ class Problem < ActiveRecord::Base
   def self.unsolved_problems
     result = []
     for p in Problem.all
-      result << p unless p.solvers.size > 0
+      result << p unless p.solutions.size > 0
     end
     result
   end

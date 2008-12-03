@@ -7,8 +7,11 @@
 <div class="actions">
   <%= link_to image_tag("icons/arrow_left.png", :alt => "Back to all problems"), judge_path(@problem.judge) %>
   <%= link_to image_tag("icons/world.png", :alt => "Go to problem statement"), @problem.url, :target => "_blank" %>
-  <%= link_to image_tag("icons/pencil.png", :alt => "Edit"), edit_problem_path(@problem) %>
-  <%= link_to image_tag("icons/cross.png", :alt =>"Delete"), @problem, :confirm => 'Are you sure?', :method => :delete %>
+
+  <% if logged_in? -%>
+  <%= link_to image_tag("icons/pencil.png", :alt => "Edit"), edit_problem_path(@problem) if current_user.authorized?(@problem) %>
+  <%= link_to image_tag("icons/cross.png", :alt =>"Delete"), @problem, :confirm => 'Are you sure?', :method => :delete if current_user.authorized?(@problem) %>
+  <% end -%>
 </div>
 
 
@@ -20,7 +23,9 @@
 <%= render :partial => "solutions/solution", :collection => @problem.solutions %>
 
 
+<% if logged_in? -%>
 <div class="bottom_link">
   <%= link_to image_tag("icons/add.png", :alt => "Add new solution"), new_problem_solution_path(@problem) %>
   <%= link_to "Add new solution", new_problem_solution_path(@problem) %>
 </div>
+<% end -%>

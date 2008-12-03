@@ -1,8 +1,10 @@
 class ProblemsController < ApplicationController
-  before_filter :is_logged_in, :except => [:index, :show]
+  before_filter :is_logged_in,     :except => [:index, :show]
+  before_filter :find_problem,     :only => [:show, :edit, :update, :destroy]
+  before_filter :user_authorized?, :only => [:edit, :update, :destroy]
 
   def index
-    @judges = Judge.find(:all)
+    @judges = Judge.all
     @problems_by_judge = Hash.new
     for judge in @judges
       @problems_by_judge[judge] = judge.problems
@@ -11,7 +13,6 @@ class ProblemsController < ApplicationController
   end
 
   def show
-    @problem = Problem.find(params[:id])
     @judge = @problem.judge
   end
 
@@ -34,11 +35,9 @@ class ProblemsController < ApplicationController
   end
 
   def edit
-    @problem = Problem.find(params[:id])
   end
 
   def update
-    @problem = Problem.find(params[:id])
     if @problem.update_attributes(params[:problem])
       flash[:notice] = "Successfully updated problem."
       redirect_to @problem
@@ -48,11 +47,21 @@ class ProblemsController < ApplicationController
   end
 
   def destroy
-    @problem = Problem.find(params[:id])
     judge = @problem.judge
     @problem.destroy
     flash[:notice] = "Successfully destroyed problem."
     redirect_to judge_path(judge)
+  end
+
+
+  protected
+
+  def user_authorized?
+    redirect_unauthorized unless current_user.authorized?(@problem)
+  end
+
+  def find_problem
+    @problem = Problem.find(params[:id])
   end
 
 end
