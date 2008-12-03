@@ -19,14 +19,14 @@ class ApplicationController < ActionController::Base
   #this is a before filter, so it redirects
   def is_logged_in
     if !logged_in?
-      redirect_unauthorized("You must be logged in to perform this action.", :back)
+      redirect_unauthorized(:back, "You must be logged in to perform this action.")
       return false
     else
       return true
     end
   end
 
-  def redirect_unauthorized(message, where)
+  def redirect_unauthorized(where, message = "You are not authorized to perform this action.")
     flash[:error] = message
     redirect_to where
   end
