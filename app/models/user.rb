@@ -85,12 +85,12 @@ class User < ActiveRecord::Base
 
   def authorized?(record)
     #authorized for edit/delete.
-    case record.class
-    when Judge
+    case record.class.to_s
+    when "Judge"
       superuser? || owns?(record)
-    when Problem
+    when "Problem"
       superuser? || owns?(record)
-    when User
+    when "User"
       self.is_admin? || self == record
     else
       false
