@@ -1,17 +1,23 @@
 <% title @user.name, false %>
 
-<div class="float-right">
-  <%= link_to (gravatar_for(@user, :size => 100, :alt => "Get your global net avatar now"), "http://www.gravatar.com", :target => "_blank") %>
-</div>
+
 
 <h1> <%= @user.name %></h1>
 
-<div class="actions">
+<div class="list_element">
+<div class="float-right">
+  <%= link_to (gravatar_for(@user, :size => 100, :alt => "Get your global net avatar now"), "http://www.gravatar.com", :target => "_blank") %>
+</div>
+  <div class="actions">
   <%= link_to image_tag("icons/arrow_left.png", :alt => "Back to all users"), users_path %>
-  <% if logged_in? -%>
-  <%= link_to image_tag("icons/pencil.png", :alt => "Edit"), edit_user_path(@user) if current_user.authorized?(@user) %>
-  <%= link_to image_tag("icons/cross.png", :alt =>"Delete"), @user, :confirm => 'Are you sure?', :method => :delete  if current_user.authorized?(@user) %>
+  <% if logged_in? && current_user.authorized?(@user)-%>
+  <%= link_to image_tag("icons/pencil.png", :alt => "Edit"), edit_user_path(@user) %>
+  <%= link_to image_tag("icons/cross.png", :alt =>"Delete"), @user, :confirm => 'Are you sure?', :method => :delete %>
+  <%= link_to image_tag("icons/key.png", :alt =>"Change password"), edit_password_user_path(@user) %>
+  <%= link_to "Change password", edit_password_user_path(@user) %>
   <% end -%>
+  </div>
+
 
 </div>
 
@@ -33,3 +39,4 @@
 </ul>
 
 </div>
+

@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
-  before_filter :is_logged_in,     :only => [:edit, :update, :destroy]
-  before_filter :find_user,        :only => [:show, :edit, :destroy]
+  before_filter :is_logged_in,     :only => [:edit, :edit_password, :update, :destroy]
+  before_filter :find_user,        :only => [:show, :edit, :edit_password, :update, :destroy]
   before_filter :user_authorized?, :only => [:edit, :update, :destroy]
 
 
@@ -16,18 +16,26 @@ class UsersController < ApplicationController
 
   def update
     cookies.delete :auth_token
-    @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
       flash[:notice] = "Successfully updated user."
-      redirect_back_or_default('/')
+      redirect_to user_path(@user)
     else
-      render :action => 'edit'
+      #if password wasn't sent, then we are editing the user
+      if params[:user][:password].nil?
+        render :action => 'edit'
+      else
+        render :action => 'edit_password'
+      end
+
     end
   end
 
   # render new.rhtml
   def new
     @user = User.new
+  end
+
+  def edit_password
   end
 
   def create

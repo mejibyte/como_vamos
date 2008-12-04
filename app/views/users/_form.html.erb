@@ -9,11 +9,18 @@
 <p><label for="email">Email</label><br/>
 <%= f.text_field :email %></p>
 
+<% if show_password_field -%>
 <p><label for="password">Password</label><br/>
 <%= f.password_field :password %></p>
 
 <p><label for="password_confirmation">Confirm Password</label><br/>
 <%= f.password_field :password_confirmation %></p>
+<% end -%>
+
+<p>
+  <%= f.check_box :wants_emails %>
+<label for="wants_emails"> I want to receive email notifications when new problems are solved</label>
+</p>
 
 <p><%= submit_tag "Submit" %></p>
 

@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :solutions, :except => [:show, :index, :new]
-  map.resources :users
+  map.resources :users, :member => [ :edit_password ]
   map.resource :session
   map.resources :judges do |judge|
     judge.resources :problems, :only => :new

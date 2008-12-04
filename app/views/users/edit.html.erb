@@ -1,6 +1,6 @@
 <% title "Edit user" %>
 <%= error_messages_for :user %>
 
-<%= render :partial => 'form' %>
+<%= render :partial => 'form', :locals => {:show_password_field => false} %>
 
 <p><%= link_to "Back to List", users_path %></p>
