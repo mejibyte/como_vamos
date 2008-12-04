@@ -3,6 +3,7 @@
 <% for user in @users %>
 <div class="list_element">
   <h3>
+    <%= link_to (gravatar_for(user, :alt => "Get your global net avatar now"), "http://www.gravatar.com", :target => "_blank") %>
     <%= link_to user.name, user %>
     <%= link_to image_tag("icons/magnifier.png", :alt => "Show profile"), user %>
     <% if logged_in? -%>
