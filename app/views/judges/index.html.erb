@@ -23,4 +23,12 @@
 </div>
 <% end %>
 
-<p><%= link_to "New Judge", new_judge_path if logged_in?%></p>
+
+
+
+<% if logged_in? %>
+<div class="bottom_link">
+<%= link_to image_tag("icons/add.png", :alt => "New judge"), new_judge_path %>
+<%= link_to "New Judge", new_judge_path%>
+</div>
+<% end %>

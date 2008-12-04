@@ -26,6 +26,9 @@ h2, h2 a {
   font-size: 20px;
 }
 
+ul {
+  list-style-image: url(/images/icons/bullet_orange.png);
+}
 
 .clear {
   clear: both;
