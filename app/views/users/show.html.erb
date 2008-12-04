@@ -2,8 +2,10 @@
 
 <div class="actions">
   <%= link_to image_tag("icons/arrow_left.png", :alt => "Back to all users"), users_path %>
-  <%= link_to image_tag("icons/pencil.png", :alt => "Edit"), edit_user_path(@user) %>
-  <%= link_to image_tag("icons/cross.png", :alt =>"Delete"), @user, :confirm => 'Are you sure?', :method => :delete %>
+  <% if logged_in? -%>
+  <%= link_to image_tag("icons/pencil.png", :alt => "Edit"), edit_user_path(@user) if current_user.authorized?(@user) %>
+  <%= link_to image_tag("icons/cross.png", :alt =>"Delete"), @user, :confirm => 'Are you sure?', :method => :delete  if current_user.authorized?(@user) %>
+  <% end -%>
 </div>
 
 
