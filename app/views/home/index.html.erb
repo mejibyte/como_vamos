@@ -23,7 +23,8 @@
       <ul>
         <% for problem in @missing_problems -%>
         <li>
-          <%= link_to problem.full_title, problem %> | Solved by <%= pluralize problem.solvers.size, "person" %> <br />
+          <%= link_to problem.full_title, problem %> | Solved by <%= pluralize problem.solvers.size, "person" %> .
+          <br />
         </li>
         <% end -%>
       </ul>
