@@ -3,14 +3,24 @@
 <% for user in @users %>
 <div class="list_element">
   <h3>
+    <%= link_to (gravatar_for(user, :alt => "Get your global net avatar now"), "http://www.gravatar.com", :target => "_blank") %>
     <%= link_to user.name, user %>
     <%= link_to image_tag("icons/magnifier.png", :alt => "Show profile"), user %>
-    <%= link_to image_tag("icons/cross.png", :alt => "Delete user"), user, :method => :delete, :confirm => "Are you sure?" %>
+    <% if logged_in? -%>
+    <%= link_to image_tag("icons/pencil.png", :alt => "Edit user profile"), edit_user_path(user) if current_user.authorized?(user) %>
+    <%= link_to image_tag("icons/cross.png", :alt =>"Delete user"), user, :confirm => 'Are you sure?', :method => :delete if current_user.authorized?(user) %>
+    <% end -%>
   </h3>
+
+ <%= pluralize user.solved_problems.size, "problem" -%> solved.
 </div>
 <% end %>
 
+
 <% if logged_in? == false %>
-    <%= link_to "New user", new_user_path %>
+<div class="bottom_link">
+<%= link_to image_tag("icons/add.png", :alt => "New user"), new_user_path %>
+<%= link_to "New user", new_user_path %>
+</div>
 <% end %>
 

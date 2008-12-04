@@ -90,6 +90,8 @@ class User < ActiveRecord::Base
       superuser? || owns?(record)
     when "Problem"
       superuser? || owns?(record)
+    when "Solution"
+      superuser? || self == record.user
     when "User"
       self.is_admin? || self == record
     else

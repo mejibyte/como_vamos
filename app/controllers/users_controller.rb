@@ -1,16 +1,17 @@
 class UsersController < ApplicationController
 
-  before_filter :is_logged_in, :only => [:edit, :update, :destroy]
+  before_filter :is_logged_in,     :only => [:edit, :update, :destroy]
+  before_filter :find_user,        :only => [:show, :edit, :destroy]
+  before_filter :user_authorized?, :only => [:edit, :update, :destroy]
+
 
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
 
   def show
-    @user = User.find(params[:id])
   end
 
   def edit
-    @user = User.find(params[:id])
   end
 
   def update
@@ -47,14 +48,23 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.find(:all)
+    @users = User.all
   end
 
   def destroy
-    @user = User.find(params[:id])
     @user.destroy
     flash[:notice] = "Successfully destroyed user."
     redirect_to users_path
+  end
+
+  protected
+
+  def user_authorized?
+    redirect_unauthorized unless current_user.authorized?(@user)
+  end
+
+  def find_user
+    @user = User.find(params[:id])
   end
 
 end

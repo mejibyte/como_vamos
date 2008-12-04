@@ -13,7 +13,8 @@ a {
 }
 
 h1 {
-  color: #003333;
+  color: #732F1A;
+  font-size: 22px;
 }
 
 h3, h3 a {
@@ -26,6 +27,9 @@ h2, h2 a {
   font-size: 20px;
 }
 
+ul {
+  list-style-image: url(/images/icons/bullet_orange.png);
+}
 
 .clear {
   clear: both;
@@ -156,4 +160,16 @@ h2, h2 a {
 
 .left-align{
   text-align: left;
+  float: left;
+}
+
+.float-right{
+  float: right;
+  margin-bottom: 10px;
+}
+
+.centered_image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
