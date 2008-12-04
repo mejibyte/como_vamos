@@ -1,8 +1,10 @@
 <div class="list_element">
   <h3>
     <%= h "Solution ##{solution_counter + 1}" %>
-    <%= link_to image_tag("icons/pencil.png", :alt => "Edit"), edit_solution_path(solution) %>
-    <%= link_to image_tag("icons/cross.png", :alt =>"Delete"), solution, :confirm => 'Are you sure?', :method => :delete %>
+    <% if logged_in? -%>
+    <%= link_to image_tag("icons/pencil.png", :alt => "Edit"), edit_solution_path(solution) if current_user.authorized?(solution) %>
+    <%= link_to image_tag("icons/cross.png", :alt =>"Delete"), solution, :confirm => 'Are you sure?', :method => :delete if current_user.authorized?(solution) %>
+    <% end -%>
  </h3>
   <%=h "Submitted by " %> <%= link_to solution.user.name, solution.user %> <%= h "on #{solution.created_at}" %>
 
