@@ -4,7 +4,7 @@ class ProblemsController < ApplicationController
   before_filter :user_authorized?, :only => [:edit, :update, :destroy]
 
   def index
-    @judges = Judge.all
+    @judges = Judge.all_sorted
     @problems_by_judge = Hash.new
     for judge in @judges
       @problems_by_judge[judge] = judge.problems

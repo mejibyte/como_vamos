@@ -4,7 +4,7 @@ class JudgesController < ApplicationController
   before_filter :user_authorized?, :only => [:edit, :update, :destroy]
 
   def index
-    @judges = Judge.all
+    @judges = Judge.all_sorted
   end
 
   def show
@@ -45,7 +45,7 @@ class JudgesController < ApplicationController
   end
 
   protected
-  
+
   def user_authorized?
     redirect_unauthorized unless current_user.authorized?(@judge)
   end

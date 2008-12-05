@@ -6,6 +6,10 @@ class Judge < ActiveRecord::Base
   validates_presence_of :name, :url
   validate :url_is_valid
 
+  def self.all_sorted
+    self.all :order => "name ASC"
+  end
+
   protected
   def url_is_valid
     begin
