@@ -1,6 +1,8 @@
-<% title @problem.full_title %>
+<% title @problem.full_title, false %>
 
-<div class="left-align">
+<h1> <%= link_to @problem.full_title, @problem.url %></h1>
+
+<div class="float-right">
   <%= link_to @judge.name, @judge %>
 </div>
 
