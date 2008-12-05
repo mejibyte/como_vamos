@@ -1,6 +1,6 @@
 class Judge < ActiveRecord::Base
 
-  has_many :problems, :dependent => :destroy
+  has_many :problems, :dependent => :destroy, :order => "number, title ASC"
   belongs_to :owner, :class_name => "User"
 
   validates_presence_of :name, :url
