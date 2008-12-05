@@ -32,7 +32,7 @@ class SolutionsController < ApplicationController
     if @solution.save
       flash[:notice] = "Successfully created solution."
 
-      MailOffice.deliver_new_solution(User.find_by_login("andmej"), @solution, solution_url(@solution), root_url);
+      #MailOffice.deliver_new_solution(User.find_by_login("andmej"), @solution, solution_url(@solution), root_url);
 
       redirect_to @solution.problem
     else

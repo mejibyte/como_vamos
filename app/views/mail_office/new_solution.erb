@@ -1,6 +1,6 @@
-Hello, <%= h @user.name %>.
+Hello, <%= @user.name %>.
 
-<%= @solver.name %> has submitted a solution to problem <%= h @problem.full_title %> from <%= h @judge.name %>.
+<%= @solver.name %> has submitted a solution to problem <%= @problem.full_title %> from <%= @judge.name %>.
 <% if @you_solved_it -%> You have already solved this problem.
 <% else -%> You haven't solved this problem yet!
 <% end -%>

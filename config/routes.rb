@@ -14,6 +14,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.root :controller => "home", :action => "index"
 
+  map.connect "/home/test_email", :controller => "home", :action => "test_email"
+
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end
