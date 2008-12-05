@@ -6,5 +6,6 @@ h2. Installation
 
 * git clone the project.
 * Edit the config/database.yml as appropiated.
+* Edit the SMTP server configuration in config/environment.rb
 * rake db:migrate the database.
 * Start the server. That's it!

@@ -40,3 +40,15 @@ Rails::Initializer.run do |config|
   }
 
 end
+
+
+ActionMailer::Base.raise_delivery_errors = true
+ActionMailer::Base.delivery_method = :smtp
+ActionMailer::Base.smtp_settings = {
+  :address => "mail.server.com",
+  :port => 25,
+  :domain => "server.com",
+  :authentication => :plain,
+  :user_name => "noreply@server.com",
+  :password => "th4_l33t_p4zZw0rd"
+}

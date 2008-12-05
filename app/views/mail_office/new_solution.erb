@@ -1,0 +1,16 @@
+Hello, <%= h @user.name %>.
+
+<%= @solver.name %> has submitted a solution to problem <%= h @problem.full_title %> from <%= h @judge.name %>.
+<% if @you_solved_it -%> You have already solved this problem.
+<% else -%> You haven't solved this problem yet!
+<% end -%>
+
+The address for the problem statement is:
+<%= @problem.url %>
+
+See you later!
+
+
+Please note: You received this message because you chose to. If you don't want to keep receiving these
+notifications log into <%= @site_url %> and modify your personal configuration.
+
