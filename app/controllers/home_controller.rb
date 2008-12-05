@@ -10,5 +10,6 @@ class HomeController < ApplicationController
 
   def test_email
     MailOffice.deliver_test_mail("andmej@gmail.com", "Andrés Mejía")
+    redirect_to root_path
   end
 end
