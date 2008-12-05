@@ -1,0 +1,10 @@
+h1. ¿Cómo vamos?
+
+Is an application to keeping track of solved problems by different users on online programming judges.
+
+h2. Installation
+
+* git clone the project.
+* Edit the config/database.yml as appropiated.
+* rake db:migrate the database.
+* That's it!
