@@ -12,7 +12,7 @@
     <% end -%>
   </h3>
 
- <%= pluralize user.solved_problems.size, "problem" -%> solved.
+ <%= pluralize user.solved_problems.uniq.size, "problem" -%> solved.
 </div>
 <% end %>
 

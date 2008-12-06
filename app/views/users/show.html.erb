@@ -3,6 +3,7 @@
 
 
 <h1> <%= @user.name %></h1>
+<h3><%= @user.login %></h3>
 
 <div class="list_element">
 <div class="float-right">
@@ -31,7 +32,7 @@
 </p>
 
 <ul>
-  <% for problem in @user.solved_problems -%>
+  <% for problem in @user.solved_problems.uniq -%>
   <li>
     <%= link_to problem.full_title, problem_path -%> from <%= link_to problem.judge.name, judge_path(problem.judge) -%>
   </li>
