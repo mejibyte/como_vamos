@@ -8,6 +8,9 @@ class HomeController < ApplicationController
     end
   end
 
+  def about
+  end
+
   def test_email
     # This method won't be called since the route was turned off.
     # This was only used for checking the SMTP server.
