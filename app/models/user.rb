@@ -101,14 +101,14 @@ class User < ActiveRecord::Base
 
   # Find problems that other people has solved but I haven't.
   def missing_problems
-    Problem.all.collect { |p| p.solved? && !p.solved_by?(self)}
+    Problem.all.select { |p| p.solved? && !p.solved_by?(self)}
   end
 
   # Returns the email addresses as an array of strings.
   def self.emails(options = {})
-    eligible.find_all_by_wants_emails(true)
+    eligible = find_all_by_wants_emails(true)
     eligible.delete(options[:except]) if options[:except]
-    eligible.collect { |user| user.email}
+    eligible.collect { |user| user.email }
   end
 
   protected
