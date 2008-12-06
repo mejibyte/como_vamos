@@ -16,7 +16,7 @@ class Problem < ActiveRecord::Base
   end
 
   def solved?
-    !self.solvers.empty?
+    !self.solutions.empty?
   end
 
   def solved_by?(user)
@@ -24,7 +24,7 @@ class Problem < ActiveRecord::Base
   end
 
   def self.unsolved_problems
-    Problem.all.select { |p| !p.solved?}
+    Problem.all.select { |p| !p.solved? }
   end
 
   protected
