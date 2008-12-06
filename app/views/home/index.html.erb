@@ -10,27 +10,24 @@
   <h3>Welcome back, <%= h current_user.name %></h3>
 
   <div>
-    You have <%= h current_user.solved_problems.size %> solved problems.
+    You have <%= h current_user.solved_problems.uniq.size %> solved problems and <%= pluralize current_user.solutions.size, "solution" %>.
   </div>
 
-  <div>
-    <div class="list_element">
-      <h3>Missing problems</h3>
-      These are the problems that other people have solved but you are still missing: <br />
-      <% if @missing_problems.size == 0 -%>
-      Hooray! Nobody has solved a problem that you haven't.
-      <% else -%>
-      <ul>
-        <% for problem in @missing_problems -%>
-        <li>
-          <%= link_to problem.full_title, problem %> | Solved by <%= pluralize problem.solvers.size, "person" %> .
-          <br />
-        </li>
-        <% end -%>
-      </ul>
-      <% end %>
-    </div>
+  <% if @missing_problems.size > 0 -%>
+  <div class="list_element">
+    <h3>Missing problems</h3>
+    These are the problems that other people have solved but you are still missing: <br />
+
+    <ul>
+      <% for problem in @missing_problems -%>
+      <li>
+        <%= link_to problem.full_title, problem %> | Solved by <%= pluralize problem.solvers.uniq.size, "person" %>.
+        <br />
+      </li>
+      <% end -%>
+    </ul>
   </div>
+  <% end %>
 
   <% if @unsolved_problems.size > 0 -%>
   <div class="list_element">
@@ -51,7 +48,7 @@
     <h3>Solved problems</h3>
     These are that problems that you have solved: <br />
     <ul>
-      <% for problem in @solved_problems -%>
+      <% for problem in @solved_problems.uniq -%>
       <li>
         <%= link_to problem.full_title, problem %> | From <%= link_to problem.judge.name, problem.judge -%> <br />
       </li>
