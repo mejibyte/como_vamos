@@ -2,13 +2,16 @@
 class MailOffice < ActionMailer::Base
 
 
-  def test_mail(address, name, sent_at = Time.now)
+  def test_mail(address, name, site_url, sent_at = Time.now)
+    # This method won't be called since the route was turned off.
+    # This was only used for checking the SMTP server.
+
     recipients address
     subject "Test message"
     from "¿Cómo vamos? <comovamos@factorcomun.org>"
     sent_on sent_at
 
-    body :name => name
+    body :name => name, :url => site_url
   end
 
 

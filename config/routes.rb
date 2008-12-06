@@ -14,7 +14,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.root :controller => "home", :action => "index"
 
-  map.connect "/home/test_email", :controller => "home", :action => "test_email"
+  # Uncomment these route and go to /home/test_mail to test the SMTP server.
+  # This sends a message to andmej@gmail.com (Change it in /controllers/home_controller.rb)
+  # map.connect "/home/test_email", :controller => "home", :action => "test_email"
 
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
