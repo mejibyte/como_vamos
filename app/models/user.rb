@@ -112,6 +112,17 @@ class User < ActiveRecord::Base
     result
   end
 
+  # Returns the email addresses as an array of strings
+  def self.emails(options = {})
+    eligible = self.all(:conditions => { :wants_emails => true })
+    eligible.delete(options[:except]) if options[:except]
+    result = []
+    for u in eligible
+      result << u.email
+    end
+    result
+  end
+
   protected
   # before filter
   def encrypt_password

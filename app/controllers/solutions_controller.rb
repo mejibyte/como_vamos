@@ -32,7 +32,16 @@ class SolutionsController < ApplicationController
     if @solution.save
       flash[:notice] = "Successfully created solution."
 
-      #MailOffice.deliver_new_solution(User.find_by_login("andmej"), @solution, solution_url(@solution), root_url);
+      begin
+        address_book = User.emails(:except => @solution.user)
+        MailOffice.deliver_new_solution(address_book, @solution, solution_url(@solution), root_url) if address_book.size > 0
+      rescue Exception => e
+        flash[:error] = "There was an error dispatching notification emails (This is not your fault!)"
+        logger.error("Error: solution#create")
+        logger.error("Exception rescued while trying to dispatch notification emails")
+        logger.error("Exception message: #{e.message}")
+
+      end
 
       redirect_to @solution.problem
     else

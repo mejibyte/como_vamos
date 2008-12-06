@@ -16,8 +16,8 @@ class MailOffice < ActionMailer::Base
 
 
   # This is the real message that should be sent. But it's not being called yet.
-  def new_solution(user, solution, solution_url, site_url, sent_at = Time.now)
-    recipients user.email
+  def new_solution(address_book, solution, solution_url, site_url, sent_at = Time.now)
+    bcc        address_book
     subject    "[¿Cómo vamos?] New problem solved!"
     from       "comovamos@factorcomun.org"
     sent_on    sent_at
@@ -26,8 +26,6 @@ class MailOffice < ActionMailer::Base
                :solution_url  => solution_url,
                :solver        => solution.user,
                :problem       => solution.problem,
-               :you_solved_it => user.solved_problems.include?(solution.problem),
-               :user          => user,
                :judge         => solution.problem.judge
   end
 
