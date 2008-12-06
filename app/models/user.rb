@@ -99,28 +99,16 @@ class User < ActiveRecord::Base
     end
   end
 
-
+  # Find problems that other people has solved but I haven't.
   def missing_problems
-    # Find problems that other people has solved but I haven't.
-    problems = Problem.all
-    result = []
-    for p in problems
-      if p.solvers.size > 0 and !p.solvers.include?(self)
-        result << p
-      end
-    end
-    result
+    Problem.all.collect { |p| p.solved? && !p.solved_by?(self)}
   end
 
-  # Returns the email addresses as an array of strings
+  # Returns the email addresses as an array of strings.
   def self.emails(options = {})
-    eligible = self.all(:conditions => { :wants_emails => true })
+    eligible.find_all_by_wants_emails(true)
     eligible.delete(options[:except]) if options[:except]
-    result = []
-    for u in eligible
-      result << u.email
-    end
-    result
+    eligible.collect { |user| user.email}
   end
 
   protected

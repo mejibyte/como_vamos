@@ -15,12 +15,16 @@ class Problem < ActiveRecord::Base
     "#{number} - #{title}"
   end
 
+  def solved?
+    !self.solvers.empty?
+  end
+
+  def solved_by?(user)
+    self.solvers.include?(user)
+  end
+
   def self.unsolved_problems
-    result = []
-    for p in Problem.all
-      result << p unless p.solutions.size > 0
-    end
-    result
+    Problem.all.select { |p| !p.solved?}
   end
 
   protected
