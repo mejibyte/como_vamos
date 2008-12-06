@@ -31,18 +31,7 @@ class SolutionsController < ApplicationController
     @solution = Solution.new(params[:solution])
     if @solution.save
       flash[:notice] = "Successfully created solution."
-
-      begin
-        address_book = User.emails(:except => @solution.user)
-        MailOffice.deliver_new_solution(address_book, @solution, solution_url(@solution), root_url) if address_book.size > 0
-      rescue Exception => e
-        flash[:error] = "There was an error dispatching notification emails (This is not your fault!)"
-        logger.error("Error: solution#create")
-        logger.error("Exception rescued while trying to dispatch notification emails")
-        logger.error("Exception message: #{e.message}")
-
-      end
-
+      mail_solution(@solution)
       redirect_to @solution.problem
     else
       render :action => 'new'
@@ -76,5 +65,19 @@ class SolutionsController < ApplicationController
 
   def find_solution
     @solution = Solution.find(params[:id])
+  end
+
+  def mail_solution(solution)
+    begin
+      address_book = User.emails(:except => solution.user)
+      MailOffice.deliver_new_solution(address_book, solution, 
+                                      solution_url(solution), 
+                                      root_url) unless address_book.empty?
+    rescue Exception => e
+      flash[:error] = "There was an error dispatching notification emails (This is not your fault!)"
+      logger.error("Error: solution#create")
+      logger.error("Exception rescued while trying to dispatch notification emails")
+      logger.error("Exception message: #{e.message}")
+    end
   end
 end
