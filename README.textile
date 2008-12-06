@@ -1,11 +1,32 @@
 h1. ¿Cómo vamos?
 
-Is an application to keep track of solved problems by different users on online programming judges.
+¿Cómo vamos? is an application to keep track of solved problems by different users on online programming judges.
 
-h2. Installation
+h2. Brief installation
 
 * git clone the project.
 * Edit the config/database.yml as appropiated.
 * Edit the SMTP server configuration in config/environment.rb
 * rake db:migrate the database.
 * Start the server. That's it!
+
+h2. Deployment to an online server using Apache
+
+* Access the server using ssh
+* git clone the project into a non-public folder
+* Make sure the shebangs of files public/dispatch.cgi, public/dispatch.fcgi and public/dispatch.rb are correct.
+* Edit the SMTP configuration in config/environment.rb
+* Change the environment into production:
+** Run rake environment RAILS_ENV=production
+** Uncomment the line ENV['RAILS_ENV'] ||= 'production' in config/environment.rb
+* Create the production database using phpMyAdmin or whatever.
+* Edit the production section in config/database.yml as appropiated.
+* Migrate the database by running rake db:migrate RAILS_ENV=production
+* Make sure there is a .htaccess inside public/  This file should redirect petitions into the cgi dispatcher (A default .htaccess is included).
+* Make a symbolic link into public/ that is accessible from the net, for example, ln -sf ~/como_vamos/public ~/www/como_vamos
+* That's it! Point your browswer to to the symbolic link created on the previous step.
+
+h2. Live demo
+
+This application is runing on http://comovamos.factorcomun.org
+
