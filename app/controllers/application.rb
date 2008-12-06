@@ -31,7 +31,7 @@ class ApplicationController < ActionController::Base
     begin
       redirect_to where
     rescue
-      redirect_to ("/")
+      redirect_to("/")
     end
   end
 end
