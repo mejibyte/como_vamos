@@ -57,6 +57,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @users.sort!{ |x, y| y.count_solved_problems <=> x.count_solved_problems }
   end
 
   def destroy

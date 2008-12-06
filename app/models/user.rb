@@ -111,6 +111,10 @@ class User < ActiveRecord::Base
     eligible.collect { |user| user.email }
   end
 
+  def count_solved_problems
+    self.solved_problems.uniq.size
+  end
+
   protected
   # before filter
   def encrypt_password
