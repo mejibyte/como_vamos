@@ -34,7 +34,7 @@
 <ul>
   <% for problem in @user.solved_problems.uniq -%>
   <li>
-    <%= link_to problem.full_title, problem_path -%> from <%= link_to problem.judge.name, judge_path(problem.judge) -%>
+    <%= link_to problem.full_title, problem_path(problem) -%> from <%= link_to problem.judge.name, judge_path(problem.judge) -%>
   </li>
   <% end -%>
 </ul>
