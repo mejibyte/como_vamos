@@ -3,8 +3,9 @@
     <%= h "Solution ##{solution_counter}" %>
 
 
-    <%= link_to_function(image_tag("icons/magnifier.png", :alt => "Hide/show solution"),
-        "$('solution_#{solution_counter}').toggle()") %>
+    <%= link_to_function image_tag("icons/magnifier.png", :alt => "Hide/show solution") do |page|
+    page["solution_#{solution_counter}"].toggle
+    end %>
 
 
     <% if logged_in? -%>
@@ -40,3 +41,4 @@
 </div>
 
 <%= javascript_tag "$('solution_#{solution_counter}').hide()" %>
+
