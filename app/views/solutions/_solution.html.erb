@@ -1,31 +1,42 @@
 <div class="list_element">
   <h3>
     <%= h "Solution ##{solution_counter}" %>
+
+
+    <%= link_to_function(image_tag("icons/magnifier.png", :alt => "Hide/show solution"),
+        "$('solution_#{solution_counter}').toggle()") %>
+
+
     <% if logged_in? -%>
     <%= link_to image_tag("icons/pencil.png", :alt => "Edit"), edit_solution_path(solution) if current_user.authorized?(solution) %>
     <%= link_to image_tag("icons/cross.png", :alt =>"Delete"), solution, :confirm => 'Are you sure?', :method => :delete if current_user.authorized?(solution) %>
     <% end -%>
- </h3>
+  </h3>
   <%=h "Submitted by " %> <%= link_to solution.user.name, solution.user %> <%= h "on #{solution.created_at}" %>
 
-  <div class="list_element">
-    <h4>Explanation</h4>
-    <div>
-      <%= solution.explanation %>
+  <div id= <%= "solution_#{solution_counter}" %> >
+
+
+    <div class="list_element">
+      <h4>Explanation</h4>
+      <div>
+        <%= solution.explanation %>
+      </div>
+    </div>
+
+    <div class="list_element">
+      <h4>Source code</h4>
+      <div>
+        <pre class="prettyprint">
+          <%= h solution.source_code_as_text  %>
+        </pre>
+      </div>
+      <div class="bottom_link">
+        <%= link_to image_tag("icons/arrow_down.png", :alt => "Download source"), solution.source_code.url %>
+        <%= link_to "Download source", solution.source_code.url %>
+      </div>
     </div>
   </div>
-
-  <div class="list_element">
-    <h4>Source code</h4>
-    <div>
-      <pre class="prettyprint">
-        <%= h solution.source_code_as_text  %>
-      </pre>
-    </div>
-    <div class="bottom_link">
-    <%= link_to image_tag("icons/arrow_down.png", :alt => "Download source"), solution.source_code.url %>
-    <%= link_to "Download source", solution.source_code.url %>
-    </div>
-  </div>
-
 </div>
+
+<%= javascript_tag "$('solution_#{solution_counter}').hide()" %>
