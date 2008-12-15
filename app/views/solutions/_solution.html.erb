@@ -13,7 +13,7 @@
     <%= link_to image_tag("icons/cross.png", :alt =>"Delete"), solution, :confirm => 'Are you sure?', :method => :delete if current_user.authorized?(solution) %>
     <% end -%>
   </h3>
-  <%=h "Submitted by " %> <%= link_to solution.user.name, solution.user %> <%= h "on #{solution.created_at}" %>
+  <%= link_to gravatar_for(solution.user, :size => 50, :alt => "Get your global net avatar now"), "http://www.gravatar.com", :target => "_blank" %> <%=h "Submitted by " %> <%= link_to solution.user.name, solution.user %> <%= h "on #{solution.created_at}" %>
 
   <div id= <%= "solution_#{solution_counter}" %> >
 
