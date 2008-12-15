@@ -7,15 +7,15 @@
   <%= f.text_field :judge_id, :class => "hidden" %>
   <%= f.text_field :owner_id, :class => "hidden" %>
   <p>
-    <%= f.label :number %><br />
+    <h3><%= f.label :number %></h3>
     <%= f.text_field :number %>
   </p>
   <p>
-    <%= f.label :title %><br />
+    <h3><%= f.label :title %></h3>
     <%= f.text_field :title %>
   </p>
   <p>
-    <%= f.label :url %><br />
+    <h3><%= f.label :url, "URL" %></h3>
     <%= f.text_field :url %>
   </p>
   <p><%= f.submit "Submit" %></p>

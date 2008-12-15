@@ -1,6 +1,7 @@
 <% title "New Solution" %>
 <div class="list_element">
-<%= render :partial => 'form' %>
+  You are going to submit a solution for problem <%=link_to @solution.problem.full_title, @solution.problem %> from <%= link_to @solution.problem.judge.name, @solution.problem.judge %>.
+  <%= render :partial => 'form' %>
 
-<p><%= link_to "Back to List", solutions_path %></p>
+  <p><%= link_to "Back to List", solutions_path %></p>
 </div>

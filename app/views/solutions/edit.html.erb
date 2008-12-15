@@ -1,6 +1,8 @@
 <% title "Edit Solution" %>
 <div class="list_element">
-<%= render :partial => 'form' %>
+  You are going to edit a solution for problem <%=link_to @solution.problem.full_title, @solution.problem %> from <%= link_to @solution.problem.judge.name, @solution.problem.judge %>.
+
+<%= render :partial => 'form', :locals => { :editing => true }  %>
 
 <p>
   <%= link_to "View All", problem_path(@solution.problem) %>
