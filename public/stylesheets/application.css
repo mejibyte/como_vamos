@@ -27,6 +27,10 @@ h2, h2 a {
   font-size: 20px;
 }
 
+h4, h4 a {
+  color: #732F1A;
+}
+
 ul {
   list-style-image: url(/images/icons/bullet_orange.png);
 }

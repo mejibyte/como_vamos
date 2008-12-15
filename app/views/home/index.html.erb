@@ -17,7 +17,7 @@
   <div class="list_element">
     <h3>Missing problems</h3>
     These are the problems that other people have solved but you are still missing: <br />
-
+    <h4 class="float-right"><%= pluralize @missing_problems.size, "problem" %>.</h4>
     <ul>
       <% for problem in @missing_problems -%>
       <li>
@@ -33,6 +33,7 @@
   <div class="list_element">
     <h3>Unsolved problems</h3>
     These are the problems that nobody has solved: <br />
+    <h4 class="float-right"><%= pluralize @unsolved_problems.size, "problem" %>.</h4>
     <ul>
       <% for problem in @unsolved_problems -%>
       <li>
@@ -46,7 +47,8 @@
   <% if @solved_problems.size > 0 -%>
   <div class="list_element">
     <h3>Solved problems</h3>
-    These are that problems that you have solved: <br />
+    These are the problems that you have solved: <br />
+    <h4 class="float-right"><%= pluralize @solved_problems.size, "problem" %>.</h4>
     <ul>
       <% for problem in @solved_problems.uniq -%>
       <li>
