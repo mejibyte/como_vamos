@@ -8,4 +8,22 @@ class ProblemTest < ActiveSupport::TestCase
     assert p.errors.invalid?(:url)
     assert p.errors.invalid?(:number)
   end
+
+  def test_full_title
+    title = Problem.first.full_title
+    assert_equal title, "1 - A Problem"
+  end
+
+  def test_solved
+    assert !Problem.first.solved?
+  end
+
+  def test_solved_by
+    assert !Problem.first.solved_by?(1)
+  end
+
+  def test_unsolved_problems
+    problems = Problem.unsolved_problems
+    assert_equal problems, Problem.all
+  end
 end

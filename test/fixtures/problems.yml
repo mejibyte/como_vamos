@@ -1,9 +1,11 @@
 one:
   judge_id: 1
-  title: MyString
-  url: MyString
+  title: A Problem
+  url: http://something.com
+  number: 1
 
 two:
   judge_id: 1
-  title: MyString
-  url: MyString
+  title: Another Problem
+  url: http://something.com
+  number: 2

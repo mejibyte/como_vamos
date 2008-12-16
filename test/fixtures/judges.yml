@@ -1,7 +1,7 @@
 one:
-  name: MyString
-  url: MyString
+  name: Test Judge
+  url: http://something.com
 
 two:
-  name: MyString
-  url: MyString
+  name: Another Test Judge
+  url: http://somethingelse.com
