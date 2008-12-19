@@ -1,20 +1,26 @@
-<% form_for @user do |f| -%>
+<script type="text/javascript">
+ $(document).ready(function(){
+	$("#userForm").validate();
+ });
+</script>
+
+<% form_for @user, :html => {:id => 'userForm'} do |f| -%>
 
 <p><label for="name">Name</label><br/>
-<%= f.text_field :name %></p>
+<%= f.text_field :name, :class => 'required' %></p>
 
 <p><label for="login">Login</label><br/>
-<%= f.text_field :login %></p>
+<%= f.text_field :login, :class => 'required' %></p>
 
 <p><label for="email">Email</label><br/>
-<%= f.text_field :email %></p>
+<%= f.text_field :email, :class => 'required', :email => true %></p>
 
 <% if show_password_field -%>
 <p><label for="password">Password</label><br/>
-<%= f.password_field :password %></p>
+<%= f.password_field :password, :class => 'required' %></p>
 
 <p><label for="password_confirmation">Confirm Password</label><br/>
-<%= f.password_field :password_confirmation %></p>
+<%= f.password_field :password_confirmation, :class => 'required' %></p>
 <% end -%>
 
 <p>
