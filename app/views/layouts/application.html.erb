@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>¿Cómo vamos?</title>
     <%= stylesheet_link_tag 'application' %>
-	<!-- :defaults loads jquery instead of prototype -->
+        <!-- :defaults loads jquery instead of prototype -->
     <%= javascript_include_tag :defaults, 'application', 'jquery.validate' %>
     <!-- google-code-prettify to embelish source code -->
     <%= stylesheet_link_tag 'prettify' %>
@@ -47,7 +47,8 @@
           <%= yield %>
       </div>
       <div id="footer">
-        Brought to you by Factor común.
+        Brought to you by Factor común. <br />
+        <%= link_to "This site is open-source.", "http://github.com/andmej/como_vamos" %>
       </div>
     </div>
   </body>
