@@ -28,7 +28,7 @@
 <h3>Solved problems</h3>
 
 <p>
-  <%= h "This user has solved #{@user.solved_problems.size} problems." %>
+  <%= h "This user has solved #{@user.solved_problems.uniq.size} problems." %>
 </p>
 
 <ul>
