@@ -71,7 +71,7 @@ class SolutionsController < ApplicationController
     begin
       address_book = User.emails(:except => solution.user)
       MailOffice.deliver_new_solution(address_book, solution, 
-                                      solution_url(solution), 
+                                      problem_url(solution.problem),
                                       root_url) unless address_book.empty?
     rescue Exception => e
       flash[:error] = "There was an error dispatching notification emails (This is not your fault!)"
