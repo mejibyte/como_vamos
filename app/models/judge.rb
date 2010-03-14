@@ -9,6 +9,10 @@ class Judge < ActiveRecord::Base
   def self.all_sorted
     self.all :order => "name ASC"
   end
+  
+  def to_param
+    [id,name.split].join("-")
+  end
 
   protected
   def url_is_valid
