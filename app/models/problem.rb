@@ -15,6 +15,10 @@ class Problem < ActiveRecord::Base
     "#{number} - #{title}"
   end
 
+  def to_param
+    [id, full_title.split].join("-")
+  end
+
   def solved?
     !self.solutions.empty?
   end
