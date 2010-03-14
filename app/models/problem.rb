@@ -16,7 +16,7 @@ class Problem < ActiveRecord::Base
   end
 
   def to_param
-    [id, full_title.split].join("-")
+    [id, title.split].join("-")
   end
 
   def solved?
