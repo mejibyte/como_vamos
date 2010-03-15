@@ -25,7 +25,7 @@ class User < ActiveRecord::Base
   attr_accessible :login, :email, :password, :password_confirmation, :name, :wants_emails
 
   def to_param
-    [id].join("-")
+    [id,login].join("-")
   end
 
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
