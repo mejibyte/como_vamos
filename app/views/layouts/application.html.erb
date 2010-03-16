@@ -25,12 +25,16 @@
 
         <% if logged_in? %>
         <%= link_to "Logout", session_path, :method => :delete %> |
+	<% if current_user.is_admin? %>
+	  <%= link_to "Stats", users_path %> | 
+	<% end %>
+
         <% else %>
-        <%= link_to "Login", new_session_path %> |
-        <%= link_to "Sign up", new_user_path %> |
-        <% end %>
+          <%= link_to "Login", new_session_path %> |
+          <%= link_to "Sign up", new_user_path %> |
+	<% end %>
           
-        <%= link_to "Stats", users_path %> | 
+        
         <%= link_to "About", "/about" %>
 
       </div>
