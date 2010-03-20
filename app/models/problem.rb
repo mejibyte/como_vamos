@@ -1,22 +1,24 @@
+require 'uri'
 class Problem < ActiveRecord::Base
   belongs_to :judge
   has_many :solutions, :dependent => :destroy
   has_many :solvers, :through => :solutions, :source => :user
   belongs_to :owner, :class_name => "User"
 
-
   validates_presence_of :title, :url, :number, :judge_id
   validates_uniqueness_of :number, :scope => [:judge_id]
   validates_uniqueness_of :url
 
   validate :url_is_valid
+  
+  make_permalink :title
 
   def full_title
     "#{number} - #{title}"
   end
 
   def to_param
-    [id, title.split].join("-")
+    permalink
   end
 
   def solved?

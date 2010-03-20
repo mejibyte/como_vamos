@@ -5,13 +5,15 @@ class Judge < ActiveRecord::Base
 
   validates_presence_of :name, :url
   validate :url_is_valid
+  
+  make_permalink :name
 
   def self.all_sorted
     self.all :order => "name ASC"
   end
   
   def to_param
-    [id,name.split].join("-")
+    permalink
   end
 
   protected

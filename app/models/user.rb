@@ -19,13 +19,15 @@ class User < ActiveRecord::Base
   validates_length_of       :email,    :within => 3..100
   validates_uniqueness_of   :login, :email, :case_sensitive => false
   before_save :encrypt_password
+  
+  make_permalink :login
 
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
   attr_accessible :login, :email, :password, :password_confirmation, :name, :wants_emails
 
   def to_param
-    [id,login].join("-")
+    permalink
   end
 
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
