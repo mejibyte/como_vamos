@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081204041258) do
+ActiveRecord::Schema.define(:version => 20100321161650) do
 
   create_table "judges", :force => true do |t|
     t.string   "name"
@@ -54,6 +54,9 @@ ActiveRecord::Schema.define(:version => 20081204041258) do
     t.boolean  "is_admin"
     t.boolean  "is_moderator"
     t.boolean  "wants_emails"
+    t.string   "persistence_token"
+    t.string   "login_count",                             :default => "0", :null => false
+    t.string   "last_login_at"
   end
 
 end

@@ -1,16 +1,19 @@
 ActionController::Routing::Routes.draw do |map|
+  map.login "login", :controller => "user_sessions", :action => "new"
+  map.logout "logout", :controller => "user_sessions", :action => "destroy"
+  map.signup "signup", :controller => "users", :action => "new"
+
   map.resources :solutions, :except => [:show, :index, :new]
   map.resources :users, :member => [ :edit_password ]
   map.resource :session
+  
   map.resources :judges do |judge|
     judge.resources :problems, :only => :new
   end
 
-
   map.resources :problems, :except => :new do |problem|
     problem.resources :solutions, :only => :new
   end
-
 
   map.root :controller => "home", :action => "index"
 

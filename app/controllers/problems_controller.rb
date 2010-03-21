@@ -18,10 +18,8 @@ class ProblemsController < ApplicationController
 
   def new
     @judge = Judge.find(params[:judge_id])
-    @problem = Problem.new
-    @problem.judge_id = @judge.id
-    @problem.owner_id = current_user.id
-
+    @problem = @judge.problems.new
+    @problem.owner = current_user
   end
 
   def create
@@ -35,6 +33,7 @@ class ProblemsController < ApplicationController
   end
 
   def edit
+    
   end
 
   def update
@@ -62,6 +61,10 @@ class ProblemsController < ApplicationController
 
   def find_problem
     @problem = Problem.find(params[:id])
+    if params[:id] != @problem.to_param
+      headers["Status"] = "301 Moved Permanently"
+      redirect_to problem_url(@problem)
+    end
   end
 
 end
