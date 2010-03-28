@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(:version => 20100321161650) do
     t.boolean  "is_moderator"
     t.boolean  "wants_emails"
     t.string   "persistence_token"
-    t.string   "login_count",                             :default => "0", :null => false
+    t.integer  "login_count",                             :default => 0, :null => false
     t.string   "last_login_at"
   end
 

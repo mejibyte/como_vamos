@@ -1,4 +1,3 @@
-require 'digest/sha1'
 class User < ActiveRecord::Base
 
   acts_as_authentic
@@ -14,13 +13,13 @@ class User < ActiveRecord::Base
   
 
   validates_presence_of     :login, :email, :name
-  validates_presence_of     :password,                   :if => :password_required?
-  validates_presence_of     :password_confirmation,      :if => :password_required?
-  validates_length_of       :password, :within => 4..40, :if => :password_required?
-  validates_confirmation_of :password,                   :if => :password_required?
-  validates_length_of       :login,    :within => 3..40
-  validates_length_of       :email,    :within => 3..100
-  validates_uniqueness_of   :login, :email, :case_sensitive => false
+#  validates_presence_of     :password,                   :if => :password_required?
+#  validates_presence_of     :password_confirmation,      :if => :password_required?
+#  validates_length_of       :password, :within => 4..40, :if => :password_required?
+#  validates_confirmation_of :password,                   :if => :password_required?
+#  validates_length_of       :login,    :within => 3..40
+#  validates_length_of       :email,    :within => 3..100
+#  validates_uniqueness_of   :login, :email, :case_sensitive => false
 
   # before_save :encrypt_password
   
@@ -29,6 +28,7 @@ class User < ActiveRecord::Base
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
   # attr_accessible :login, :email, :password, :password_confirmation, :name, :wants_emails
+  
   attr_accessible :login, :name, :email, :password, :password_confirmation, :wants_emails
 
   named_scope :want_emails, :conditions => {:wants_emails => true}
@@ -119,7 +119,7 @@ class User < ActiveRecord::Base
 
   # Returns the email addresses as an array of strings.
   def self.emails(options = {})
-    eligible = find_all_by_wants_emails(true)
+    eligible = User.want_emails.all(:select => :email) # find_all_by_wants_emails(true)   This new query will be faster!
     eligible.delete(options[:except]) if options[:except]
     eligible.collect { |user| user.email }
   end
@@ -128,17 +128,17 @@ class User < ActiveRecord::Base
     self.solved_problems.uniq.size
   end
 
-  protected
+  # protected
   # before filter
-  def encrypt_password
-    return if password.blank?
-    self.salt = Digest::SHA1.hexdigest("--#{Time.now.to_s}--#{login}--") if new_record?
-    self.crypted_password = encrypt(password)
-  end
-
-  def password_required?
-    crypted_password.blank? || !password.blank?
-  end
+  # def encrypt_password
+  #     return if password.blank?
+  #     self.salt = Digest::SHA1.hexdigest("--#{Time.now.to_s}--#{login}--") if new_record?
+  #     self.crypted_password = encrypt(password)
+  #   end
+  # 
+  #   def password_required?
+  #     crypted_password.blank? || !password.blank?
+  #   end
 
 
 end
