@@ -1,0 +1,11 @@
+one:
+  user_id: 1
+  commentable_id: 1
+  content: MyText
+  commentable_type: MyString
+
+two:
+  user_id: 1
+  commentable_id: 1
+  content: MyText
+  commentable_type: MyString
