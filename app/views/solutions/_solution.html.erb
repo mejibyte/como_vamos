@@ -1,10 +1,10 @@
 <div class="list_element">
   <h3>
-    <%= h "Solution ##{solution_counter}" %>
+    <%= h "Solution ##{solution_counter+1}" %>
 
 
     <%= link_to_function image_tag("icons/magnifier.png", :alt => "Hide/show solution") do |page|
-    page["solution_#{solution_counter}"].toggle
+    page["solution_#{solution_counter+1}"].toggle
     end %>
 
 
@@ -13,9 +13,9 @@
     <%= link_to image_tag("icons/cross.png", :alt =>"Delete"), solution, :confirm => 'Are you sure?', :method => :delete if current_user.authorized?(solution) %>
     <% end -%>
   </h3>
-  <%= link_to gravatar_for(solution.user, :size => 50, :alt => "Get your global net avatar now"), "http://www.gravatar.com", :target => "_blank" %> <%=h "Submitted by " %> <%= link_to solution.user.name, solution.user %> <%= h "on #{solution.created_at}" %>
+  <%= link_to gravatar_for(solution.user, :size => 50, :alt => "Get your global net avatar now"), "http://www.gravatar.com", :target => "_blank" %> <%=h "Submitted by " %> <%= link_to solution.user.name, solution.user %> <%= h "on #{solution.created_at.strftime("%B %e, %Y")}" %>
 
-  <div id= <%= "solution_#{solution_counter}" %> >
+  <div id= <%= "solution_#{solution_counter+1}" %> >
 
 
     <div class="list_element">
@@ -40,4 +40,4 @@
   </div>
 </div>
 
-<%= javascript_tag  "$('#solution_#{solution_counter}').hide();" %>
+<%= javascript_tag  "$('#solution_#{solution_counter+1}').hide();" %>

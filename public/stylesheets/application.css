@@ -4,6 +4,10 @@ body {
   font-size: 14px;
 }
 
+*{
+	outline: none;
+}
+
 a img {
   border: none;
 }
