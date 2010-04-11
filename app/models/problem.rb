@@ -32,7 +32,7 @@ class Problem < ActiveRecord::Base
   end
 
   def self.unsolved_problems
-    Problem.all.select { |p| !p.solved? }
+    Problem.all.select { |p| not p.solved? }
   end
 
   protected

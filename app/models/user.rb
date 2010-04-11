@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
   
 
   validates_presence_of     :login, :email, :name
+  
 #  validates_presence_of     :password,                   :if => :password_required?
 #  validates_presence_of     :password_confirmation,      :if => :password_required?
 #  validates_length_of       :password, :within => 4..40, :if => :password_required?
@@ -114,7 +115,7 @@ class User < ActiveRecord::Base
 
   # Find problems that other people has solved but I haven't.
   def missing_problems
-    Problem.all.select { |p| p.solved? and not p.solved_by?(self)}
+    Problem.solved.select { |p| not p.solved_by?(self)}
   end
 
   # Returns the email addresses as an array of strings.
