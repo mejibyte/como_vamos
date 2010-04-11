@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100331040409) do
+ActiveRecord::Schema.define(:version => 20100411051909) do
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id"
@@ -53,8 +53,8 @@ ActiveRecord::Schema.define(:version => 20100331040409) do
   create_table "users", :force => true do |t|
     t.string   "login"
     t.string   "email"
-    t.string   "crypted_password",          :limit => 40
-    t.string   "salt",                      :limit => 40
+    t.string   "crypted_password",          :limit => 128, :default => "", :null => false
+    t.string   "salt",                      :limit => 128, :default => "", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "remember_token"
@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(:version => 20100331040409) do
     t.boolean  "is_moderator"
     t.boolean  "wants_emails"
     t.string   "persistence_token"
-    t.integer  "login_count",                             :default => 0, :null => false
+    t.integer  "login_count",                              :default => 0,  :null => false
     t.string   "last_login_at"
   end
 

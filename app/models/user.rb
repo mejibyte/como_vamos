@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
 
-  acts_as_authentic
+  acts_as_authentic do |c|
+    c.transition_from_restful_authentication = true
+  end
 
   has_many :solutions, :dependent => :destroy
   has_many :solved_problems, :through => :solutions, :source => :problem
