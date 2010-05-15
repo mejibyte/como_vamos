@@ -21,7 +21,7 @@
     <div class="list_element">
       <h4>Explanation</h4>
       <div>
-        <%= solution.explanation %>
+        <%= simple_format(sanitize(solution.explanation)) %>
       </div>
     </div>
 
