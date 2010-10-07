@@ -14,6 +14,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.root :controller => "home", :action => "index"
 
+  map.about "/about", :controller => "home", :action => "about"
   map.connect "/about", :controller => "home", :action => "about"
 
   # Uncomment these route and go to /home/test_mail to test the SMTP server.
