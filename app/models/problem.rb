@@ -12,6 +12,8 @@ class Problem < ActiveRecord::Base
   validate :url_is_valid
   
   make_permalink :title
+  
+  named_scope :solved, :include => :solutions, :conditions => ['solutions.problem_id = ?', self.id]
 
   def full_title
     "#{number} - #{title}"
@@ -22,7 +24,7 @@ class Problem < ActiveRecord::Base
   end
 
   def solved?
-    !self.solutions.empty?
+    self.solutions.any?
   end
 
   def solved_by?(user)
@@ -30,7 +32,7 @@ class Problem < ActiveRecord::Base
   end
 
   def self.unsolved_problems
-    Problem.all.select { |p| !p.solved? }
+    Problem.all.select { |p| not p.solved? }
   end
 
   protected

@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <th>User</th>
+    <th>Commentable</th>
+    <th>Content</th>
+    <th>Commentable Type</th>
+  </tr>
+  <% for comment in @comments %>
+    <tr>
+      <td><%=h comment.user_id %></td>
+      <td><%=h comment.commentable_id %></td>
+      <td><%=h comment.content %></td>
+      <td><%=h comment.commentable_type %></td>
+      <td><%= link_to "Show", comment %></td>
+      <td><%= link_to "Edit", edit_comment_path(comment) %></td>
+      <td><%= link_to "Destroy", comment, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Comment", new_comment_path %></p>

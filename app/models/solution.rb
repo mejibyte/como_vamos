@@ -4,12 +4,9 @@ class Solution < ActiveRecord::Base
 
   validates_presence_of :explanation, :problem_id, :user_id
 
-
-
   has_attached_file :source_code,
                     :url => "/uploads/solutions/:id_:basename.:extension",
                     :path => ":rails_root/public/uploads/solutions/:id_:basename.:extension"
-
 
   validates_presence_of :source_code_file_name
 

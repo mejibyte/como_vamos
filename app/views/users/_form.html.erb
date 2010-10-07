@@ -28,6 +28,17 @@
 <label for="wants_emails"> I want to receive email notifications when new problems are solved</label>
 </p>
 
+<% if current_user and current_user.is_admin? %>
+  <h3> Admin Functions </h3>
+  <p>
+    <%= f.check_box :is_admin %>
+    <label for="wants_emails"> Admin Role</label>
+  </p>
+  <p>
+    <%= f.check_box :is_moderator %>
+    <label for="wants_emails"> Moderator Role</label>
+  </p>
+<% end %>
 <p><%= submit_tag "Submit" %></p>
 
 <% end %>

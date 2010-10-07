@@ -4,10 +4,6 @@ class UsersController < ApplicationController
   before_filter :find_user,        :only => [:show, :edit, :edit_password, :update, :destroy]
   before_filter :user_authorized?, :only => [:edit, :update, :destroy]
 
-
-  # Be sure to include AuthenticationSystem in Application Controller instead
-  include AuthenticatedSystem
-
   def show
   end
 
@@ -15,22 +11,15 @@ class UsersController < ApplicationController
   end
 
   def update
-    cookies.delete :auth_token
+    @user = User.find(params[:id])||(current_user if params[:id]==:current)
     if @user.update_attributes(params[:user])
-      flash[:notice] = "Successfully updated user."
-      redirect_to user_path(@user)
+      flash[:notice] = "Successfully updated profile."
+      redirect_to @user
     else
-      #if password wasn't sent, then we are editing the user
-      if params[:user][:password].nil?
-        render :action => 'edit'
-      else
-        render :action => 'edit_password'
-      end
-
+      render :action => 'edit'
     end
   end
 
-  # render new.rhtml
   def new
     @user = User.new
   end
@@ -39,17 +28,10 @@ class UsersController < ApplicationController
   end
 
   def create
-    cookies.delete :auth_token
-    # protects against session fixation attacks, wreaks havoc with
-    # request forgery protection.
-    # uncomment at your own risk
-    # reset_session
     @user = User.new(params[:user])
-    @user.save
-    if @user.errors.empty?
-      self.current_user = @user
-      redirect_back_or_default('/')
-      flash[:notice] = "Thanks for signing up!"
+    if @user.save
+      flash[:notice] = "Thank you for join!"
+      redirect_to @user
     else
       render :action => 'new'
     end

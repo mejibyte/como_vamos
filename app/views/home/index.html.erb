@@ -1,12 +1,13 @@
 <div class="list_element">
-  <% if !logged_in? %>
+  <% unless logged_in? %>
 
   <h3>Welcome, guest.</h3>
-  Please <%= link_to "login", new_session_path %> or <%= link_to "signup", new_user_path %>.
+  Please <%= link_to "login", login_path %> or <%= link_to "signup", new_user_path %>.
 
   Feel free to navigate anonymously, altough you won't be able to submit solutions until you register.
 
   <% else -%>
+  
   <h3>Welcome back, <%= h current_user.name %></h3>
 
   <div>

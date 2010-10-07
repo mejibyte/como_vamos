@@ -1,11 +1,10 @@
 == make_permalink
 
-http://github.com/febuiles/make_permalink
+http://github.com/nhocki/make_permalink
 
-make_permalink is a Rails plugin that allows you to easily create permalinks for attributes in your models.
+make_permalink is a Rails plugin that allows you to easily create permalinks for attributes in your models without having a column in the models table at your database.
 
 == Example
-
 
      class Post < ActiveRecord::Base
         make_permalink :title
@@ -14,9 +13,34 @@ make_permalink is a Rails plugin that allows you to easily create permalinks for
      p = Post.create(:title => "Hello World!")
      p.permalink   # => "1-hello-world"
 
+
+== Options
+
+  You can have a permalink that won't change non-ascii.
+  
+  <tt> :replace_nonascii </tt>:: If set to false non-ascii chars won't be replaced. Default is true
+  
+  class Post < ActiveRecord::Base
+    make_permalink :title, :replace_nonascii => false
+  end
+  
+  p = Post.create(:title => "Let's rock & roll")
+  p.permalink   # => "1-let-s-rock-roll"
+  
+  Notice that if you don't replace non-ascii chars the permalik would be
+  p.permalink  # => "1-lets-rock-and-roll"
+  
+
 == Bugs/Contact
 
+nhocki@gmail.com
 
-federico.builes@gmail.com
+
+== Contributors
+
+Nicolás Hock (nhocki) http://github.com/nhocki
+Federico Builes (febuiles) http://github.com/febuiles
+Sven Fuchs (svenfuchs) http://github.com/svenfuchs for the Stringex plugin
+
 
 Copyright (c) 2008 Federico Builes, released under the MIT license
