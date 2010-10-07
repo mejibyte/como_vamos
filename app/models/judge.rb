@@ -5,6 +5,8 @@ class Judge < ActiveRecord::Base
 
   validates_presence_of :name, :url
   
+  validates_uniqueness_of :name, :url
+  
   validate :url_is_valid
   
   make_permalink :name

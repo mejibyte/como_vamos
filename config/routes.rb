@@ -8,7 +8,6 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :solutions, :except => [:show, :index, :new]
   map.resources :users, :member => [ :edit_password ]
-  # map.resource :session
 
   map.resources :user_sessions
   
