@@ -16,6 +16,7 @@ Rails::Initializer.run do |config|
      :secret      => 'b1cde27ebf941bed2de522a16279a616c9a81a816d3895a023bffa143421a035971560493ba79337e5e90976af04c8e06e368ffb86598025d6c81c7bb6dde9a2'
   }
 
+  config.gem "authlogic"
 end
 
 
