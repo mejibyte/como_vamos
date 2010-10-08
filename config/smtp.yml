@@ -1,0 +1,16 @@
+development:
+  address: "mail.server.com"
+  port: 25
+  domain: "server.com"
+  authentication: "plain"
+  user_name: "noreply@server.com"
+  password: "th4_l33t_p4zZw0rd"
+
+production:
+  address: "mail.server.com"
+  port: 25
+  domain: "server.com"
+  authentication: "plain"
+  user_name: "noreply@server.com"
+  password: "th4_l33t_p4zZw0rd"
+

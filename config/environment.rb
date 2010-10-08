@@ -19,14 +19,6 @@ Rails::Initializer.run do |config|
   config.gem "authlogic"
 end
 
-
 ActionMailer::Base.raise_delivery_errors = true
 ActionMailer::Base.delivery_method = :smtp
-ActionMailer::Base.smtp_settings = {
-  :address => "mail.server.com",
-  :port => 25,
-  :domain => "server.com",
-  :authentication => :plain,
-  :user_name => "noreply@server.com",
-  :password => "th4_l33t_p4zZw0rd"
-}
+ActionMailer::Base.smtp_settings = YAML::load(File.open("#{RAILS_ROOT}/config/smtp.yml"))[RAILS_ENV]
