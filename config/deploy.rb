@@ -33,6 +33,7 @@ namespace :deploy do
 
   desc "Creates symbolic links to some config files"
   task :symlink_config_files do
+    run "ln -nfs #{shared_path}/config/environments/production.rb #{current_path}/config/environments/production.rb"
     run "ln -nfs #{shared_path}/config/database.yml #{current_path}/config/database.yml"
     run "ln -nfs #{shared_path}/config/smtp.yml #{current_path}/config/smtp.yml"
     run "ln -nfs #{shared_path}/uploads #{current_path}/public/uploads"
