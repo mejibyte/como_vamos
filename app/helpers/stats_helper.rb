@@ -10,6 +10,6 @@ module StatsHelper
     data = count.collect { |user, number| number }
     labels = count.collect { |user, number| "#{user.name} (#{total == 0 ? 0 : (100.0 * number / total).round}%)" }
 
-    Gchart.pie(:data => data, :labels => labels, :size => '695x390', :theme => :thirty7signals)
+    Gchart.pie(:data => data, :labels => labels, :size => '695x380', :theme => :thirty7signals)
   end
 end
