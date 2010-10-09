@@ -14,7 +14,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :problems, :except => :new do |problem|
     problem.resources :solutions, :only => :new
   end
-  map.resources :stats
+  map.resources :statistics, :controller => "stats"
   map.root :controller => "home", :action => "index"
   map.about "/about", :controller => "home", :action => "about"
 
