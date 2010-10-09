@@ -1,5 +1,7 @@
 one:
-  explanation: MyText
+  explanation: "This is a very nice solution to a very nice problem."
+  user_id: 1
 
 two:
-  explanation: MyText
+  explanation: "This one is not that cute but who cares. After all, this is a test!"
+  user_id: 2
