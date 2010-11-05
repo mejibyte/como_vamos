@@ -1,0 +1,26 @@
+<% title "Recent Problems" %>
+
+<% content_for :section_nav do %>
+  <p>
+    <%= link_to_unless_current "All problems", problems_path %> | 
+    <%= link_to_unless_current "Last 10 solved problems", recent_problems_path %> | 
+    <%= link_to_unless_current "Unsolved problems", unsolved_problems_path %>
+  </p>
+<% end %>
+
+<div class="list_element">
+  <h3>Recent Problems</h3>
+  <h4><%= pluralize @problems.size, "problem" %></h4>
+  <% if @problems.size > 1 %>
+    These are the last solved problems: <br />
+  <% else %>
+    This is the only problem that has a solution. It's feeling lonely, <%= link_to "solve more problems", unsolved_problems_path %>: <br />
+  <% end %>
+  <ul>
+    <% for problem in @problems -%>
+    <li>
+      <%= link_to problem.full_title, problem %> | From <%= link_to problem.judge.name, problem.judge -%> <br />
+    </li>
+    <% end -%>
+  </ul>
+</div>

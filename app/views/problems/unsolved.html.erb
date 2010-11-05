@@ -1,0 +1,30 @@
+<% title "Unsolved Problems" %>
+
+<% content_for :section_nav do %>
+  <p>
+    <%= link_to_unless_current "All problems", problems_path %> | 
+    <%= link_to_unless_current "Last 10 solved problems", recent_problems_path %> | 
+    <%= link_to_unless_current "Unsolved problems", unsolved_problems_path %>
+  </p>
+<% end %>
+
+<div class="list_element">
+  <h3>Unsolved Problems</h3>
+  <% if @problems.size > 0 %>
+    <h4><%= pluralize @problems.size, "problem" %></h4>
+    <% if @problems.size > 1 %>
+      These are the most difficult problems: <br />
+    <% else %>
+      This is the only problem that has no solution. You guys are on fire! <br />
+    <% end %>
+    <ul>
+      <% for problem in @problems -%>
+      <li>
+        <%= link_to problem.full_title, problem %> | From <%= link_to problem.judge.name, problem.judge -%> <br />
+      </li>
+      <% end -%>
+    <% else -%>
+      You've solved everything! You're just great!
+    <% end -%>
+  </ul>
+</div>

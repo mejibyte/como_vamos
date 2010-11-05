@@ -11,10 +11,10 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :judges do |judge|
     judge.resources :problems, :only => :new
   end
-  map.resources :problems, :except => :new do |problem|
+  map.resources :problems, :except => :new, :collection => {:recent => :get, :unsolved => :get} do |problem|
     problem.resources :solutions, :only => :new
   end
-  map.resources :statistics, :controller => "stats"
+  map.resources :statistics, :controller => "stats", :only => "index"
   map.root :controller => "home", :action => "index"
   map.about "/about", :controller => "home", :action => "about"
 

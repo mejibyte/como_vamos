@@ -51,6 +51,15 @@ class ProblemsController < ApplicationController
     flash[:notice] = "Successfully destroyed problem."
     redirect_to judge_path(judge)
   end
+  
+  
+  def recent
+    @problems = Problem.unique.solved_recently.limit(10).uniq
+  end
+  
+  def unsolved
+    @problems = Problem.unsolved_problems
+  end
 
 
   protected

@@ -13,8 +13,10 @@ class Problem < ActiveRecord::Base
   
   make_permalink :title
   
-  named_scope :solved, :include => :solutions, :conditions => ['solutions.problem_id = ?', self.id]
-  named_scope :solved_recently, :include => :solutions, :conditions => ['solutions.problem_id = ?', self.id], :order => "solutions.created_at DESC"
+  named_scope :solved, :joins => :solutions
+  named_scope :unique, :select => "DISTINCT problems.*"
+  named_scope :solved_recently, :joins => :solutions, :order => "solutions.created_at DESC"
+  named_scope :limit, lambda {|*args| {:limit => args.first || 10}}
 
   def full_title
     "#{number} - #{title}"

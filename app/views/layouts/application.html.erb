@@ -32,9 +32,9 @@
       <% end %>
       
       <%= link_to "About", about_path %>
+
     </div>
-
-
+    
     <div id="main">
       <%- flash.each do |name, msg| -%>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
@@ -43,6 +43,10 @@
       <%- if show_title? -%>
         <h1><%=h yield(:title) %></h1>
       <%- end -%>
+      
+      <div id="sub-nav">
+        <%= yield(:section_nav) %>
+      </div>
       
       <%= image_tag "pyramids.jpg", :style => "width: 100%" %>
       
