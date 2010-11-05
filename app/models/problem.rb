@@ -14,6 +14,7 @@ class Problem < ActiveRecord::Base
   make_permalink :title
   
   named_scope :solved, :include => :solutions, :conditions => ['solutions.problem_id = ?', self.id]
+  named_scope :solved_recently, :include => :solutions, :conditions => ['solutions.problem_id = ?', self.id], :order => "solutions.created_at DESC"
 
   def full_title
     "#{number} - #{title}"

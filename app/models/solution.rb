@@ -7,11 +7,14 @@ class Solution < ActiveRecord::Base
   has_attached_file :source_code,
                     :url => "/uploads/solutions/:id_:basename.:extension",
                     :path => ":rails_root/public/uploads/solutions/:id_:basename.:extension"
-
-  validates_presence_of :source_code_file_name
+  
+  #validates_attachment_content_type :source_code, :content_type => ["text/x-c++src", "application/octet-stream", "text/x-csrc", "text/x-c", "java/*", "text/plain", "text/x-java", "text/x-pascal", "text/x-cpp", "text/x-java-source"]
+  validates_attachment_presence :source_code
+  
+  # validates_presence_of :source_code_file_name
 
   validate :source_code_has_valid_extension
-
+  
   def accepted_extensions
     ["cpp", "cc", "c", "pas", "java"]
   end
