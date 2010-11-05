@@ -10,6 +10,7 @@ Rails::Initializer.run do |config|
    config.time_zone = 'Bogota'
 
    config.gem "googlecharts"
+   config.gem 'hoptoad_notifier'
 
    # Your secret key for verifying cookie session data integrity.
    # If you change this key, all old sessions will become invalid!

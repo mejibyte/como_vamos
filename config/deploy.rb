@@ -34,6 +34,7 @@ namespace :deploy do
   desc "Creates symbolic links to some config files"
   task :symlink_config_files do
     run "ln -nfs #{shared_path}/config/environments/production.rb #{current_path}/config/environments/production.rb"
+    run "ln -nfs #{shared_path}/config/initializers/hoptoad.rb #{current_path}/config/initializers/hoptoad.rb"
     run "ln -nfs #{shared_path}/config/database.yml #{current_path}/config/database.yml"
     run "ln -nfs #{shared_path}/config/smtp.yml #{current_path}/config/smtp.yml"
     run "ln -nfs #{shared_path}/uploads #{current_path}/public/uploads"
@@ -42,3 +43,10 @@ end
 
 
 after "deploy", "deploy:symlink_config_files"
+
+
+Dir[File.join(File.dirname(__FILE__), '..', 'vendor', 'gems', 'hoptoad_notifier-*')].each do |vendored_notifier|
+  $: << File.join(vendored_notifier, 'lib')
+end
+
+require 'hoptoad_notifier/capistrano'
