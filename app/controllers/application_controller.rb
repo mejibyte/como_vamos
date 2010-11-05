@@ -15,10 +15,46 @@ class ApplicationController < ActionController::Base
   # filter_parameter_logging :password
   
   #This will make the current_user and current_user_session methods available in the application
-  helper_method :current_user_session, :current_user, :logged_in?
+  helper_method :current_user_session, :current_user, :logged_in?, :deliver_email
+  
   filter_parameter_logging :password, :password_confirmation
+  
+  def build_hoptoad_notification exception, aditional_data={}
+    important_data = {}
+    important_data[:referer] = request.referer unless request.nil?
+    important_data[:logged_in] = current_user.nil? unless current_user.nil?
+    important_data[:user_info] = current_user.inspect unless current_user.nil?
+    important_data.reverse_merge!(aditional_data)
+    important_data.reverse_merge!(params)
 
+    notify_hoptoad(
+      :error_class    => exception.class,
+      :error_message  => exception.message,
+      :session        => session,
+      :request        => request,
+      :parameters     => important_data,
+      :backtrace      => caller
+    )
+  end
+  
   private
+  
+  def deliver_email objct = nil
+    unless block_given?
+      raise Exceptions::NoBlockGiven
+    end
+    begin
+      yield
+    rescue Exception => e
+      flash[:error] = "There was an error dispatching notification emails (This is not your fault!)"
+      build_hoptoad_notification e
+      logger.error("\n\n\n*************** Error: Emails#deliver! ***************")
+      logger.error("Exception rescued while trying to dispatch notification emails")
+      logger.error("Exception message: #{e.message}\n")
+      logger.error("*************** End of error log ***************\n\n\n")
+    end
+  end
+  
   def current_user_session
     return @current_user_session if defined?(@current_user_session)
     @current_user_session = UserSession.find

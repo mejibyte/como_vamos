@@ -31,7 +31,13 @@ class SolutionsController < ApplicationController
     @solution = Solution.new(params[:solution])
     if @solution.save
       flash[:notice] = "Successfully created solution."
-      mail_solution(@solution)
+      
+      deliver_email(@order) do
+        address_book = User.emails(:except => @solution.user)
+        MailOffice.deliver_new_solution(address_book, @solution, 
+                                        problem_url(@solution.problem),
+                                        root_url) unless address_book.empty?
+      end
       redirect_to @solution.problem
     else
       render :action => 'new'
