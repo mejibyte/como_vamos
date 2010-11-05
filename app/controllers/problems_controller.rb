@@ -54,7 +54,7 @@ class ProblemsController < ApplicationController
   
   
   def recent
-    @problems = Problem.unique.solved_recently.limit(10).uniq
+    @problems = Problem.unique.solved_recently.limit(30).uniq
   end
   
   def unsolved

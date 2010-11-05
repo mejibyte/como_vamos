@@ -3,7 +3,7 @@
 <% content_for :section_nav do %>
   <p>
     <%= link_to_unless_current "All problems", problems_path %> | 
-    <%= link_to_unless_current "Last 10 solved problems", recent_problems_path %> | 
+    <%= link_to_unless_current "Last solved problems", recent_problems_path %> | 
     <%= link_to_unless_current "Unsolved problems", unsolved_problems_path %>
   </p>
 <% end %>

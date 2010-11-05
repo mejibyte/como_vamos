@@ -14,22 +14,6 @@
     You have <%= h current_user.solved_problems.uniq.size %> solved problems and <%= pluralize current_user.solutions.size, "solution" %>.
   </div>
 
-  <% if @missing_problems.size > 0 -%>
-  <div class="list_element">
-    <h3>Missing problems</h3>
-    <h4><%= pluralize @missing_problems.size, "problem" %></h4>
-    These are the problems that other people have solved but you are still missing: <br />
-    <ul>
-      <% for problem in @missing_problems -%>
-      <li>
-        <%= link_to problem.full_title, problem %> | Solved by <%= pluralize problem.solvers.uniq.size, "person" %>.
-        <br />
-      </li>
-      <% end -%>
-    </ul>
-  </div>
-  <% end %>
-
   <% if @unsolved_problems.size > 0 -%>
   <div class="list_element">
     <h3>Unsolved problems</h3>
