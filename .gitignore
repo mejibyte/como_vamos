@@ -7,3 +7,4 @@ tmp/**/*
 public/uploads/*
 config/database.yml
 config/deploy.rb
+config/initializers/hoptoad.rb
