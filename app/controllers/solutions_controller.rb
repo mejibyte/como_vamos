@@ -32,7 +32,7 @@ class SolutionsController < ApplicationController
     if @solution.save
       flash[:notice] = "Successfully created solution."
       
-      deliver_email(@order) do
+      deliver_email(@solution) do
         address_book = User.emails(:except => @solution.user)
         MailOffice.deliver_new_solution(address_book, @solution, 
                                         problem_url(@solution.problem),
