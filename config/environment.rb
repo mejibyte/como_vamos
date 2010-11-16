@@ -22,4 +22,4 @@ end
 
 ActionMailer::Base.raise_delivery_errors = true
 ActionMailer::Base.delivery_method = :smtp
-ActionMailer::Base.smtp_settings = YAML::load(File.open("#{RAILS_ROOT}/config/smtp.yml"))[RAILS_ENV]
+ActionMailer::Base.smtp_settings = HashWithIndifferentAccess.new(YAML::load(File.open("#{RAILS_ROOT}/config/smtp.yml"))[RAILS_ENV])
