@@ -15,12 +15,12 @@ class ApplicationController < ActionController::Base
   # Uncomment this to filter the contents of submitted sensitive data parameters
   # from your application log (in this case, all fields with names like "password").
   # filter_parameter_logging :password
-  
+
   #This will make the current_user and current_user_session methods available in the application
   helper_method :current_user_session, :current_user, :logged_in?, :deliver_email
-  
+
   filter_parameter_logging :password, :password_confirmation
-  
+
   def build_hoptoad_notification exception, aditional_data={}
     important_data = {}
     important_data[:referer] = request.referer unless request.nil?
@@ -38,13 +38,13 @@ class ApplicationController < ActionController::Base
       :backtrace      => caller
     )
   end
-  
+
   def mailer_set_url_options
     ActionMailer::Base.default_url_options[:host] = request.host_with_port
   end
-  
+
   private
-  
+
   def deliver_email objct = nil
     unless block_given?
       raise Exceptions::NoBlockGiven
@@ -52,6 +52,7 @@ class ApplicationController < ActionController::Base
     begin
       yield
     rescue Exception => e
+      true
       flash[:error] = "There was an error dispatching notification emails (This is not your fault!)"
       build_hoptoad_notification e
       logger.error("\n\n\n*************** Error: Emails#deliver! ***************")
@@ -60,7 +61,7 @@ class ApplicationController < ActionController::Base
       logger.error("*************** End of error log ***************\n\n\n")
     end
   end
-  
+
   def current_user_session
     return @current_user_session if defined?(@current_user_session)
     @current_user_session = UserSession.find
@@ -109,7 +110,7 @@ class ApplicationController < ActionController::Base
   #def is_logged_in
   #  redirect_unauthorized(:back, "You must be logged in to perform this action.") unless logged_in?
   #end
-  
+
   alias :is_logged_in :require_user
   alias :logged_in? :current_user
 
